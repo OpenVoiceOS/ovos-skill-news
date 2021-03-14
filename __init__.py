@@ -74,7 +74,8 @@ def abc():
 def npr():
     url = "https://www.npr.org/rss/podcast.php?id=500005"
     feed = extract_rss(url)
-    return feed.split("?")[0]
+    if feed:
+        return feed.split("?")[0]
 
 
 def extract_rss(feed_url):
