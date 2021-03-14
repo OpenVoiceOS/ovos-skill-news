@@ -1,4 +1,4 @@
-# <img src='./res/icon/euronews.png' card_color='#40DBB0' width='50' height='50' style='vertical-align:bottom'/> News Streams
+# <img src='./res/icon/news.png' card_color='#40DBB0' width='50' height='50' style='vertical-align:bottom'/> News Streams
 
 News Streams catalog
 
