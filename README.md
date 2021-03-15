@@ -14,33 +14,30 @@ PRs adding new feeds welcome, especially for unsupported languages
 
 Supported stations include:
 
-- [EN-CA] CBC News
-- [EN-AU] ABC News Australia
-- [EN-GB] BBC News
-- [EN-GB] EuroNews (video + audio)
-- [EN-US] Associated Press (AP) Hourly Radio News
+- [EN / PT / ES / DE / RU / IT / FR] EuroNews (video + audio)
+- [EN / DE / ES] Deutsche Welle (video + audio)
+- [EN / EN-US / EN-GB / FR] Russia Today (video + audio)
+- [EN-US] SkyStream (video + audio)
+- [EN-US] TWC - The Weather Channel (video + audio)
+- [EN-US] AP - Associated Press Hourly Radio News
 - [EN-US] Fox News
 - [EN-US] NPR News Now
 - [EN-US] PBS NewsHour
 - [EN-US] GPB - Georgia Public Broadcasting
-- [EN-US] SkyStream (video + audio)
-- [EN-US] TWC - The Wheater Channel (video + audio)
-- [RU] EuroNews (video + audio)
-- [IT] EuroNews (video + audio)
-- [FR] EuroNews (video + audio)
+- [EN-GB] BBC News
+- [EN-CA] CBC News
+- [EN-AU] ABC News Australia
 - [ES-ES] RNE Radio Nacional de España
-- [ES-ES] EuroNews (video + audio)
 - [CA-ES] CCMA Catalunya Informació
 - [PT-PT] TSF Rádio Notícias
 - [PT-PT] Noticiários RDP África
-- [PT-PT] EuroNews (video + audio)
 - [NL] VRT Nieuws
 - [DE] Ö3 Nachrichten
 - [DE] DLF
 - [DE] WDR
-- [DE] EuroNews (video + audio)
 - [FI] YLE
 - [SV] Ekot
+
 
 ### Installation
 

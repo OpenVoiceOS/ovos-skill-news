@@ -112,10 +112,78 @@ class NewsSkill(BetterCommonPlaySkill):
         "ca": "CCMA",
         "es": "RNE",
         "en-gb": "BBC",
-        "en-us": "NPR"
+        "en-us": "NPR",
+        "fr": "France24",
+        "de": "DW"
     }
     # all news streams for better-cps
     lang2news = {
+        "en": {
+            "France24 english": {
+                "aliases": ["france 24"],
+                "youtube_channel": "https://www.youtube.com/channel/UCQfwfsi5VrQ8yKZ-UWmAEFg",
+                "uri": extract_yt_channel,
+                "media_type": CPSMatchType.NEWS,
+                "match_types": [CPSMatchType.GENERIC, CPSMatchType.VIDEO,
+                                CPSMatchType.TV, CPSMatchType.NEWS],
+                "playback": CPSPlayback.GUI,
+                "secondary_langs": ["fr"],
+                "image": join(dirname(__file__), "ui", "images", "FR24_EN.jpg")
+            },
+            "France24 english (audio)": {
+                "aliases": ["france 24"],
+                "youtube_channel": "https://www.youtube.com/channel/UCQfwfsi5VrQ8yKZ-UWmAEFg",
+                "uri": extract_yt_channel,
+                "media_type": CPSMatchType.NEWS,
+                "match_types": [CPSMatchType.GENERIC, CPSMatchType.AUDIO,
+                                CPSMatchType.NEWS],
+                "playback": CPSPlayback.AUDIO,
+                "secondary_langs": ["fr"],
+                "image": join(dirname(__file__), "ui", "images", "FR24_EN.jpg")
+            },
+            "DW english": {
+                "aliases": ["DW", "Deutsche Welle"],
+                "youtube_channel": "https://www.youtube.com/channel/UCknLrEdhRCp1aegoMqRaCZg",
+                "uri": extract_yt_channel,
+                "media_type": CPSMatchType.NEWS,
+                "match_types": [CPSMatchType.GENERIC, CPSMatchType.VIDEO,
+                                CPSMatchType.TV, CPSMatchType.NEWS],
+                "playback": CPSPlayback.GUI,
+                "image": join(dirname(__file__), "ui", "images", "DW.jpg")
+            },
+            "DW english (audio)": {
+                "aliases": ["DW", "Deutsche Welle"],
+                "youtube_channel": "https://www.youtube.com/channel/UCknLrEdhRCp1aegoMqRaCZg",
+                "uri": extract_yt_channel,
+                "media_type": CPSMatchType.NEWS,
+                "match_types": [CPSMatchType.GENERIC, CPSMatchType.AUDIO,
+                                CPSMatchType.NEWS],
+                "playback": CPSPlayback.AUDIO,
+                "image": join(dirname(__file__), "ui", "images", "DW.jpg")
+            },
+            "Russia Today": {
+                "aliases": ["RT", "Russia Today"],
+                "youtube_channel": "https://www.youtube.com/user/RussiaToday",
+                "uri": extract_yt_channel,
+                "media_type": CPSMatchType.NEWS,
+                "match_types": [CPSMatchType.GENERIC, CPSMatchType.VIDEO,
+                                CPSMatchType.TV, CPSMatchType.NEWS],
+                "playback": CPSPlayback.GUI,
+                "secondary_langs": ["ru"],
+                "image": join(dirname(__file__), "ui", "images", "RT.jpg")
+            },
+            "Russia Today (audio)": {
+                "aliases": ["RT", "Russia Today"],
+                "youtube_channel": "https://www.youtube.com/user/RussiaToday",
+                "uri": extract_yt_channel,
+                "media_type": CPSMatchType.NEWS,
+                "match_types": [CPSMatchType.GENERIC, CPSMatchType.AUDIO,
+                                CPSMatchType.NEWS],
+                "playback": CPSPlayback.AUDIO,
+                "secondary_langs": ["ru"],
+                "image": join(dirname(__file__), "ui", "images", "RT.jpg")
+            }
+        },
         "en-us": {
             "SkyStream": {
                 "aliases": ["skyuri", "sky uri", "sky news", "skynews"],
@@ -221,6 +289,30 @@ class NewsSkill(BetterCommonPlaySkill):
                 "image": join(dirname(__file__), "ui", "images", "PBS.png"),
                 "secondary_langs": ["en"]
             },
+            "Russia Today America": {
+                "aliases": ["RT", "Russia Today", "RT America",
+                            "Russia Today America"],
+                "youtube_channel": "https://www.youtube.com/channel/UCczrL-2b-gYK3l4yDld4XlQ",
+                "uri": extract_yt_channel,
+                "media_type": CPSMatchType.NEWS,
+                "match_types": [CPSMatchType.GENERIC, CPSMatchType.VIDEO,
+                                CPSMatchType.TV, CPSMatchType.NEWS],
+                "playback": CPSPlayback.GUI,
+                "secondary_langs": ["en", "ru"],
+                "image": join(dirname(__file__), "ui", "images", "RT_US.jpg")
+            },
+            "Russia Today America (audio)": {
+                "aliases": ["RT", "Russia Today", "RT America",
+                            "Russia Today America"],
+                "youtube_channel": "https://www.youtube.com/channel/UCczrL-2b-gYK3l4yDld4XlQ",
+                "uri": extract_yt_channel,
+                "media_type": CPSMatchType.NEWS,
+                "match_types": [CPSMatchType.GENERIC, CPSMatchType.AUDIO,
+                                CPSMatchType.NEWS],
+                "playback": CPSPlayback.AUDIO,
+                "secondary_langs": ["en", "ru"],
+                "image": join(dirname(__file__), "ui", "images", "RT_US.jpg")
+            }
         },
         "en-gb": {
             "BBC": {
@@ -258,6 +350,28 @@ class NewsSkill(BetterCommonPlaySkill):
                 "playback": CPSPlayback.AUDIO,
                 "secondary_langs": ["en"],
                 "image": join(dirname(__file__), "ui", "images", "euronews.png")
+            },
+            "Russia Today UK": {
+                "aliases": ["RT", "Russia Today", "RT UK", "Russia Today UK"],
+                "youtube_channel": "https://www.youtube.com/channel/UC_ab7FFA2ACk2yTHgNan8lQ",
+                "uri": extract_yt_channel,
+                "media_type": CPSMatchType.NEWS,
+                "match_types": [CPSMatchType.GENERIC, CPSMatchType.VIDEO,
+                                CPSMatchType.TV, CPSMatchType.NEWS],
+                "playback": CPSPlayback.GUI,
+                "secondary_langs": ["en", "ru"],
+                "image": join(dirname(__file__), "ui", "images", "RT_UK.jpg")
+            },
+            "Russia Today UK (audio)": {
+                "aliases": ["RT", "Russia Today", "RT UK", "Russia Today UK"],
+                "youtube_channel": "https://www.youtube.com/channel/UC_ab7FFA2ACk2yTHgNan8lQ",
+                "uri": extract_yt_channel,
+                "media_type": CPSMatchType.NEWS,
+                "match_types": [CPSMatchType.GENERIC, CPSMatchType.AUDIO,
+                                CPSMatchType.NEWS],
+                "playback": CPSPlayback.AUDIO,
+                "secondary_langs": ["en", "ru"],
+                "image": join(dirname(__file__), "ui", "images", "RT_UK.jpg")
             }
         },
         "en-au": {
@@ -328,10 +442,31 @@ class NewsSkill(BetterCommonPlaySkill):
                 "match_types": [CPSMatchType.GENERIC, CPSMatchType.AUDIO,
                                 CPSMatchType.NEWS],
                 "playback": CPSPlayback.AUDIO,
+                "secondary_langs": ["pt"],
                 "image": join(dirname(__file__), "ui", "images", "euronews.png")
             }
         },
         "de": {
+            "DW": {
+                "aliases": ["DW", "Deutsche Welle"],
+                "youtube_channel": "https://www.youtube.com/c/dwdeutsch",
+                "uri": extract_yt_channel,
+                "media_type": CPSMatchType.NEWS,
+                "match_types": [CPSMatchType.GENERIC, CPSMatchType.VIDEO,
+                                CPSMatchType.TV, CPSMatchType.NEWS],
+                "playback": CPSPlayback.GUI,
+                "image": join(dirname(__file__), "ui", "images", "DW.jpg")
+            },
+            "DW (audio)": {
+                "aliases": ["DW", "Deutsche Welle"],
+                "youtube_channel": "https://www.youtube.com/c/dwdeutsch",
+                "uri": extract_yt_channel,
+                "media_type": CPSMatchType.NEWS,
+                "match_types": [CPSMatchType.GENERIC, CPSMatchType.AUDIO,
+                                CPSMatchType.NEWS],
+                "playback": CPSPlayback.AUDIO,
+                "image": join(dirname(__file__), "ui", "images", "DW.jpg")
+            },
             "OE3": {
                 "aliases": ["OE3", "Ö3 Nachrichten"],
                 "uri": "https://oe3meta.orf.at/oe3mdata/StaticAudio/Nachrichten.mp3",
@@ -418,7 +553,29 @@ class NewsSkill(BetterCommonPlaySkill):
                 "image": join(dirname(__file__), "ui", "images", "rne.png"),
                 "playback": CPSPlayback.AUDIO
             },
-            "EuroNews ES": {
+            "France24 spanish": {
+                "aliases": ["france 24"],
+                "youtube_channel": "https://www.youtube.com/channel/UCUdOoVWuWmgo1wByzcsyKDQ",
+                "uri": extract_yt_channel,
+                "media_type": CPSMatchType.NEWS,
+                "match_types": [CPSMatchType.GENERIC, CPSMatchType.VIDEO,
+                                CPSMatchType.TV, CPSMatchType.NEWS],
+                "playback": CPSPlayback.GUI,
+                "secondary_langs": ["fr"],
+                "image": join(dirname(__file__), "ui", "images", "FR24_ES.jpg")
+            },
+            "France24 spanish (audio)": {
+                "aliases": ["france 24"],
+                "youtube_channel": "https://www.youtube.com/channel/UCUdOoVWuWmgo1wByzcsyKDQ",
+                "uri": extract_yt_channel,
+                "media_type": CPSMatchType.NEWS,
+                "match_types": [CPSMatchType.GENERIC, CPSMatchType.AUDIO,
+                                CPSMatchType.NEWS],
+                "playback": CPSPlayback.AUDIO,
+                "secondary_langs": ["fr"],
+                "image": join(dirname(__file__), "ui", "images", "FR24_ES.jpg")
+            },
+            "EuroNews spanish": {
                 "aliases": ["euro", "euronews", "Euro News", "european",
                             "european news"],
                 "youtube_channel": "https://www.youtube.com/user/euronewses",
@@ -429,7 +586,7 @@ class NewsSkill(BetterCommonPlaySkill):
                 "playback": CPSPlayback.GUI,
                 "image": join(dirname(__file__), "ui", "images", "euronews.png")
             },
-            "EuroNews ES (audio)": {
+            "EuroNews spanish (audio)": {
                 "aliases": ["euro", "euronews", "Euro News", "european",
                             "european news"],
                 "youtube_channel": "https://www.youtube.com/user/euronewses",
@@ -439,6 +596,26 @@ class NewsSkill(BetterCommonPlaySkill):
                                 CPSMatchType.NEWS],
                 "playback": CPSPlayback.AUDIO,
                 "image": join(dirname(__file__), "ui", "images", "euronews.png")
+            },
+            "DW spanish": {
+                "aliases": ["DW", "Deutsche Welle"],
+                "youtube_channel": "https://www.youtube.com/channel/UCT4Jg8h03dD0iN3Pb5L0PMA",
+                "uri": extract_yt_channel,
+                "media_type": CPSMatchType.NEWS,
+                "match_types": [CPSMatchType.GENERIC, CPSMatchType.VIDEO,
+                                CPSMatchType.TV, CPSMatchType.NEWS],
+                "playback": CPSPlayback.GUI,
+                "image": join(dirname(__file__), "ui", "images", "DW.jpg")
+            },
+            "DW spanish (audio)": {
+                "aliases": ["DW", "Deutsche Welle"],
+                "youtube_channel": "https://www.youtube.com/channel/UCT4Jg8h03dD0iN3Pb5L0PMA",
+                "uri": extract_yt_channel,
+                "media_type": CPSMatchType.NEWS,
+                "match_types": [CPSMatchType.GENERIC, CPSMatchType.AUDIO,
+                                CPSMatchType.NEWS],
+                "playback": CPSPlayback.AUDIO,
+                "image": join(dirname(__file__), "ui", "images", "DW.jpg")
             }
         },
         "ca": {
@@ -514,6 +691,26 @@ class NewsSkill(BetterCommonPlaySkill):
             }
         },
         "fr": {
+            "France24": {
+                "aliases": ["france 24"],
+                "youtube_channel": "https://www.youtube.com/channel/UCCCPCZNChQdGa9EkATeye4g",
+                "uri": extract_yt_channel,
+                "media_type": CPSMatchType.NEWS,
+                "match_types": [CPSMatchType.GENERIC, CPSMatchType.VIDEO,
+                                CPSMatchType.TV, CPSMatchType.NEWS],
+                "playback": CPSPlayback.GUI,
+                "image": join(dirname(__file__), "ui", "images", "FR24.jpg")
+            },
+            "France24 (audio)": {
+                "aliases": ["france 24"],
+                "youtube_channel": "https://www.youtube.com/channel/UCCCPCZNChQdGa9EkATeye4g",
+                "uri": extract_yt_channel,
+                "media_type": CPSMatchType.NEWS,
+                "match_types": [CPSMatchType.GENERIC, CPSMatchType.AUDIO,
+                                CPSMatchType.NEWS],
+                "playback": CPSPlayback.AUDIO,
+                "image": join(dirname(__file__), "ui", "images", "FR24.jpg")
+            },
             "EuroNews FR": {
                 "aliases": ["euro", "euronews", "Euro News", "european",
                             "european news"],
@@ -535,6 +732,28 @@ class NewsSkill(BetterCommonPlaySkill):
                                 CPSMatchType.NEWS],
                 "playback": CPSPlayback.AUDIO,
                 "image": join(dirname(__file__), "ui", "images", "euronews.png")
+            },
+            "Russia Today France": {
+                "aliases": ["RT", "Russia Today"],
+                "youtube_channel": "https://www.youtube.com/channel/UCqEVwTnDzlzKOGYNFemqnYA",
+                "uri": extract_yt_channel,
+                "media_type": CPSMatchType.NEWS,
+                "match_types": [CPSMatchType.GENERIC, CPSMatchType.VIDEO,
+                                CPSMatchType.TV, CPSMatchType.NEWS],
+                "playback": CPSPlayback.GUI,
+                "secondary_langs": ["ru"],
+                "image": join(dirname(__file__), "ui", "images", "RT_FR.jpg")
+            },
+            "Russia Today France (audio)": {
+                "aliases": ["RT", "Russia Today"],
+                "youtube_channel": "https://www.youtube.com/channel/UCqEVwTnDzlzKOGYNFemqnYA",
+                "uri": extract_yt_channel,
+                "media_type": CPSMatchType.NEWS,
+                "match_types": [CPSMatchType.GENERIC, CPSMatchType.AUDIO,
+                                CPSMatchType.NEWS],
+                "playback": CPSPlayback.AUDIO,
+                "secondary_langs": ["ru"],
+                "image": join(dirname(__file__), "ui", "images", "RT_FR.jpg")
             }
         }
     }
@@ -556,56 +775,70 @@ class NewsSkill(BetterCommonPlaySkill):
     # common play
     def clean_phrase(self, phrase):
         phrase = self.remove_voc(phrase, "news")
-        phrase = self.remove_voc(phrase, "pt-pt")
-        phrase = self.remove_voc(phrase, "en-au")
-        phrase = self.remove_voc(phrase, "en-us")
-        phrase = self.remove_voc(phrase, "en-ca")
-        phrase = self.remove_voc(phrase, "en-gb")
-        phrase = self.remove_voc(phrase, "es")
-        phrase = self.remove_voc(phrase, "it")
-        phrase = self.remove_voc(phrase, "fr")
-        phrase = self.remove_voc(phrase, "fi")
-        phrase = self.remove_voc(phrase, "de")
-        phrase = self.remove_voc(phrase, "sv")
-        phrase = self.remove_voc(phrase, "ru")
-        phrase = self.remove_voc(phrase, "nl")
-        phrase = self.remove_voc(phrase, "en")
-        phrase = self.remove_voc(phrase, "ca")
+
+        # special handling for channel name
+        # these channels include language .voc in their names, do not
+        # cleanup the phrase to improve matching
+        if not self.voc_match(phrase, "fr24") \
+            and not self.voc_match(phrase, "rt"):
+
+            phrase = self.remove_voc(phrase, "pt-pt")
+            phrase = self.remove_voc(phrase, "en-au")
+            phrase = self.remove_voc(phrase, "en-us")
+            phrase = self.remove_voc(phrase, "en-ca")
+            phrase = self.remove_voc(phrase, "en-gb")
+            phrase = self.remove_voc(phrase, "es")
+            phrase = self.remove_voc(phrase, "it")
+            phrase = self.remove_voc(phrase, "fi")
+            phrase = self.remove_voc(phrase, "de")
+            phrase = self.remove_voc(phrase, "sv")
+            phrase = self.remove_voc(phrase, "nl")
+            phrase = self.remove_voc(phrase, "en")
+            phrase = self.remove_voc(phrase, "ca")
+
         return phrase.strip()
 
     def match_lang(self, phrase):
-        lang = None
+        langs = []
         if self.voc_match(phrase, "pt-pt"):
-            lang = "pt-pt"
-        elif self.voc_match(phrase, "en-au"):
-            lang = "en-au"
-        elif self.voc_match(phrase, "en-us"):
-            lang = "en-us"
-        elif self.voc_match(phrase, "en-gb"):
-            lang = "en-gb"
-        elif self.voc_match(phrase, "en-ca"):
-            lang = "en-ca"
-        elif self.voc_match(phrase, "es"):
-            lang = "es"
-        elif self.voc_match(phrase, "ca"):
-            lang = "ca"
-        elif self.voc_match(phrase, "de"):
-            lang = "de"
-        elif self.voc_match(phrase, "nl"):
-            lang = "nl"
-        elif self.voc_match(phrase, "fi"):
-            lang = "fi"
-        elif self.voc_match(phrase, "sv"):
-            lang = "sv"
-        elif self.voc_match(phrase, "fr"):
-            lang = "fr"
-        elif self.voc_match(phrase, "ru"):
-            lang = "ru"
-        elif self.voc_match(phrase, "it"):
-            lang = "it"
-        elif self.voc_match(phrase, "en"):
-            lang = "en"
-        return lang
+            langs.append("pt-pt")
+        if self.voc_match(phrase, "en-au"):
+            langs.append("en-au")
+        if self.voc_match(phrase, "en-us"):
+            langs.append("en-us")
+        if self.voc_match(phrase, "en-gb"):
+            langs.append("en-gb")
+        if self.voc_match(phrase, "en-ca"):
+            langs.append("en-ca")
+        if self.voc_match(phrase, "en"):
+            langs.append("en")
+        if self.voc_match(phrase, "es"):
+            langs.append("es")
+        if self.voc_match(phrase, "ca"):
+            langs.append("ca")
+        if self.voc_match(phrase, "de"):
+            langs.append("de")
+        if self.voc_match(phrase, "nl"):
+            langs.append("nl")
+        if self.voc_match(phrase, "fi"):
+            langs.append("fi")
+        if self.voc_match(phrase, "sv"):
+            langs.append("sv")
+        if self.voc_match(phrase, "it"):
+            langs.append("it")
+
+        # special handling for channel name
+        # these channels include streams for other languages which should
+        # be selected according to the mycroft.conf instead
+        if self.voc_match(phrase, "fr") and \
+                not self.voc_match(phrase, "fr24"):
+            langs.append("fr")
+        if self.voc_match(phrase, "ru") and \
+                not self.voc_match(phrase, "rt"):
+            langs.append("ru")
+
+        langs += [l.split("-")[0] for l in langs]
+        return langs
 
     def CPS_search(self, phrase, media_type):
         """Analyze phrase to see if it is a play-able phrase with this skill.
@@ -626,12 +859,15 @@ class NewsSkill(BetterCommonPlaySkill):
             }
         """
         # requested language
-        lang = self.match_lang(phrase)
+        langs = self.match_lang(phrase) or []
 
         # base score
         score = 0
-        if media_type == CPSMatchType.NEWS or self.voc_match(phrase, "news"):
+        if media_type == CPSMatchType.NEWS or self.voc_match(phrase, "news")  \
+                or self.voc_match(phrase, "euronews"):
             score = 50
+            # youtube matches take a little longer to extract the streams
+            self.CPS_extend_timeout(1)
         # score penalty if media_type is vague
         elif media_type == CPSMatchType.GENERIC or \
                 media_type == CPSMatchType.VIDEO:
@@ -639,27 +875,29 @@ class NewsSkill(BetterCommonPlaySkill):
         elif media_type == CPSMatchType.RADIO:
             score -= 20
 
-        if self.voc_match(phrase, "euro"):
-            # euronews matches take a little longer to extract the streans
-            self.CPS_extend_timeout(1)
-
         phrase = self.clean_phrase(phrase)
 
         # default feed (gets score bonus)
-        default_feed = None
+        default_feeds = []
+
         if not phrase:
             # "play {lang} news"
-            # choose default feed for requested language
-            if lang and lang in self.langdefaults:
-                default_feed = self.langdefaults[lang]
-            else:
+            for lang in langs:
+                # choose default feed for requested language
+                if lang in self.langdefaults:
+                    feed = self.langdefaults[lang]
+                    if feed:
+                        default_feeds.append(feed)
+            if not langs:
                 # "play the news" -> no feed requested
                 # play user preference if set in skill settings
-                default_feed = self.settings.get("default_feed")
+                feed = self.settings.get("default_feed")
+                if feed:
+                    default_feeds.append(feed)
 
         # score individual results
         candidates = []
-        lang = lang or self.lang
+        langs = langs or [self.lang, self.lang.split("-")[0]]
         for l in self.lang2news:
             for k, v in self.lang2news[l].items():
                 # match name
@@ -667,11 +905,11 @@ class NewsSkill(BetterCommonPlaySkill):
                 v["match_confidence"] = score + alias_score * 60
 
                 # match languages
-                if lang == l or lang.split("-")[0] == l:
-                    v["match_confidence"] += 15  # lang bonus
-                elif lang in v.get("secondary_langs", []) or \
-                        lang.split("-")[0] in v.get("secondary_langs", []):
-                    v["match_confidence"] += 10 # smaller lang bonus
+                if l in langs:
+                    v["match_confidence"] += 20  # lang bonus
+                elif any([lang in v.get("secondary_langs", [])
+                          for lang in langs]):
+                    v["match_confidence"] += 10  # smaller lang bonus
                 else:
                     v["match_confidence"] -= 20  # wrong language penalty
 
@@ -688,7 +926,7 @@ class NewsSkill(BetterCommonPlaySkill):
 
                 # default news feed gets a nice bonus
                 # only happens if phrase doesnt really contain a query
-                if default_feed and k == default_feed:
+                if k in default_feeds:
                     v["match_confidence"] += 30
 
                 # final score
