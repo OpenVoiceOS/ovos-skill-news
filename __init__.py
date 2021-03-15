@@ -114,12 +114,12 @@ class NewsSkill(BetterCommonPlaySkill):
         "en-gb": "BBC",
         "en-us": "NPR",
         "fr": "France24",
-        "de": "DW"
+        "de": "Deutsche Welle"
     }
     # all news streams for better-cps
     lang2news = {
         "en": {
-            "France24 english": {
+            "France24 EN": {
                 "aliases": ["france 24"],
                 "youtube_channel": "https://www.youtube.com/channel/UCQfwfsi5VrQ8yKZ-UWmAEFg",
                 "uri": extract_yt_channel,
@@ -130,7 +130,7 @@ class NewsSkill(BetterCommonPlaySkill):
                 "secondary_langs": ["fr"],
                 "image": join(dirname(__file__), "ui", "images", "FR24_EN.jpg")
             },
-            "France24 english (audio)": {
+            "France24 EN (audio)": {
                 "aliases": ["france 24"],
                 "youtube_channel": "https://www.youtube.com/channel/UCQfwfsi5VrQ8yKZ-UWmAEFg",
                 "uri": extract_yt_channel,
@@ -141,7 +141,7 @@ class NewsSkill(BetterCommonPlaySkill):
                 "secondary_langs": ["fr"],
                 "image": join(dirname(__file__), "ui", "images", "FR24_EN.jpg")
             },
-            "DW english": {
+            "Deutsche Welle EN": {
                 "aliases": ["DW", "Deutsche Welle"],
                 "youtube_channel": "https://www.youtube.com/channel/UCknLrEdhRCp1aegoMqRaCZg",
                 "uri": extract_yt_channel,
@@ -151,7 +151,7 @@ class NewsSkill(BetterCommonPlaySkill):
                 "playback": CPSPlayback.GUI,
                 "image": join(dirname(__file__), "ui", "images", "DW.jpg")
             },
-            "DW english (audio)": {
+            "Deutsche Welle EN (audio)": {
                 "aliases": ["DW", "Deutsche Welle"],
                 "youtube_channel": "https://www.youtube.com/channel/UCknLrEdhRCp1aegoMqRaCZg",
                 "uri": extract_yt_channel,
@@ -447,7 +447,7 @@ class NewsSkill(BetterCommonPlaySkill):
             }
         },
         "de": {
-            "DW": {
+            "Deutsche Welle": {
                 "aliases": ["DW", "Deutsche Welle"],
                 "youtube_channel": "https://www.youtube.com/c/dwdeutsch",
                 "uri": extract_yt_channel,
@@ -457,7 +457,7 @@ class NewsSkill(BetterCommonPlaySkill):
                 "playback": CPSPlayback.GUI,
                 "image": join(dirname(__file__), "ui", "images", "DW.jpg")
             },
-            "DW (audio)": {
+            "Deutsche Welle (audio)": {
                 "aliases": ["DW", "Deutsche Welle"],
                 "youtube_channel": "https://www.youtube.com/c/dwdeutsch",
                 "uri": extract_yt_channel,
@@ -553,7 +553,7 @@ class NewsSkill(BetterCommonPlaySkill):
                 "image": join(dirname(__file__), "ui", "images", "rne.png"),
                 "playback": CPSPlayback.AUDIO
             },
-            "France24 spanish": {
+            "France24 ES": {
                 "aliases": ["france 24"],
                 "youtube_channel": "https://www.youtube.com/channel/UCUdOoVWuWmgo1wByzcsyKDQ",
                 "uri": extract_yt_channel,
@@ -564,7 +564,7 @@ class NewsSkill(BetterCommonPlaySkill):
                 "secondary_langs": ["fr"],
                 "image": join(dirname(__file__), "ui", "images", "FR24_ES.jpg")
             },
-            "France24 spanish (audio)": {
+            "France24 ES (audio)": {
                 "aliases": ["france 24"],
                 "youtube_channel": "https://www.youtube.com/channel/UCUdOoVWuWmgo1wByzcsyKDQ",
                 "uri": extract_yt_channel,
@@ -575,7 +575,7 @@ class NewsSkill(BetterCommonPlaySkill):
                 "secondary_langs": ["fr"],
                 "image": join(dirname(__file__), "ui", "images", "FR24_ES.jpg")
             },
-            "EuroNews spanish": {
+            "EuroNews ES": {
                 "aliases": ["euro", "euronews", "Euro News", "european",
                             "european news"],
                 "youtube_channel": "https://www.youtube.com/user/euronewses",
@@ -586,7 +586,7 @@ class NewsSkill(BetterCommonPlaySkill):
                 "playback": CPSPlayback.GUI,
                 "image": join(dirname(__file__), "ui", "images", "euronews.png")
             },
-            "EuroNews spanish (audio)": {
+            "EuroNews ES (audio)": {
                 "aliases": ["euro", "euronews", "Euro News", "european",
                             "european news"],
                 "youtube_channel": "https://www.youtube.com/user/euronewses",
@@ -597,7 +597,7 @@ class NewsSkill(BetterCommonPlaySkill):
                 "playback": CPSPlayback.AUDIO,
                 "image": join(dirname(__file__), "ui", "images", "euronews.png")
             },
-            "DW spanish": {
+            "Deutsche Welle ES": {
                 "aliases": ["DW", "Deutsche Welle"],
                 "youtube_channel": "https://www.youtube.com/channel/UCT4Jg8h03dD0iN3Pb5L0PMA",
                 "uri": extract_yt_channel,
@@ -607,7 +607,7 @@ class NewsSkill(BetterCommonPlaySkill):
                 "playback": CPSPlayback.GUI,
                 "image": join(dirname(__file__), "ui", "images", "DW.jpg")
             },
-            "DW spanish (audio)": {
+            "Deutsche Welle ES (audio)": {
                 "aliases": ["DW", "Deutsche Welle"],
                 "youtube_channel": "https://www.youtube.com/channel/UCT4Jg8h03dD0iN3Pb5L0PMA",
                 "uri": extract_yt_channel,
