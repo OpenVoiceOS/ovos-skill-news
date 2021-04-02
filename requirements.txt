@@ -1,5 +1,6 @@
 feedparser
 youtube-dl
 pafy
-ovos_utils>=0.0.8a1
+ovos_utils>=0.0.8
+ovos_workshop>=0.0.1a2
 youtube_searcher>=0.1.5
