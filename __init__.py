@@ -5,8 +5,8 @@ from os.path import join, dirname
 from pytz import timezone
 from mycroft.util.time import now_local
 from mycroft.util.parse import match_one
-from ovos_workshop.skills.common_play import BetterCommonPlaySkill
-from ovos_workshop.frameworks.cps import CPSMatchType, CPSPlayback, \
+from ovos_workshop.skills.common_play import OVOSCommonPlaybackSkill
+from ovos_workshop.frameworks.playback import CPSMatchType, CPSPlayback, \
     CPSMatchConfidence
 import requests
 from youtube_searcher import extract_videos
@@ -106,7 +106,7 @@ def extract_yt_channel(url):
 
 
 # Unified News Skill
-class NewsSkill(BetterCommonPlaySkill):
+class NewsSkill(OVOSCommonPlaybackSkill):
     # default feeds per language (optional)
     langdefaults = {
         "pt-pt": "TSF",
