@@ -117,7 +117,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         "fr": "France24",
         "de": "Deutsche Welle"
     }
-    # all news streams for better-cps
+    # all news streams for better-common_play
     lang2news = {
         "en": {
             "France24 EN": {
@@ -127,7 +127,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "media_type": CommonPlayMediaType.NEWS,
                 "match_types": [CommonPlayMediaType.GENERIC, CommonPlayMediaType.VIDEO,
                                 CommonPlayMediaType.TV, CommonPlayMediaType.NEWS],
-                "playback": CommonPlayPlaybackType.GUI,
+                "playback": CommonPlayPlaybackType.VIDEO,
                 "secondary_langs": ["fr"],
                 "image": join(dirname(__file__), "ui", "images", "FR24_EN.jpg")
             },
@@ -149,7 +149,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "media_type": CommonPlayMediaType.NEWS,
                 "match_types": [CommonPlayMediaType.GENERIC, CommonPlayMediaType.VIDEO,
                                 CommonPlayMediaType.TV, CommonPlayMediaType.NEWS],
-                "playback": CommonPlayPlaybackType.GUI,
+                "playback": CommonPlayPlaybackType.VIDEO,
                 "image": join(dirname(__file__), "ui", "images", "DW.jpg")
             },
             "Deutsche Welle EN (audio)": {
@@ -169,7 +169,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "media_type": CommonPlayMediaType.NEWS,
                 "match_types": [CommonPlayMediaType.GENERIC, CommonPlayMediaType.VIDEO,
                                 CommonPlayMediaType.TV, CommonPlayMediaType.NEWS],
-                "playback": CommonPlayPlaybackType.GUI,
+                "playback": CommonPlayPlaybackType.VIDEO,
                 "secondary_langs": ["ru"],
                 "image": join(dirname(__file__), "ui", "images", "RT.jpg")
             },
@@ -191,7 +191,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "uri": "https://skynews2-plutolive-vo.akamaized.net/cdhlsskynewsamericas/1013/latest.m3u8?serverSideAds=true",
                 "match_types": [CommonPlayMediaType.GENERIC, CommonPlayMediaType.VIDEO,
                                 CommonPlayMediaType.TV, CommonPlayMediaType.NEWS],
-                "playback": CommonPlayPlaybackType.GUI,
+                "playback": CommonPlayPlaybackType.VIDEO,
                 "media_type": CommonPlayMediaType.NEWS,
                 "image": join(dirname(__file__), "ui", "images", "skystream.png"),
                 "secondary_langs": ["en"]
@@ -215,7 +215,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "uri": "https://weather-lh.akamaihd.net/i/twc_1@92006/master.m3u8",
                 "match_types": [CommonPlayMediaType.GENERIC, CommonPlayMediaType.VIDEO,
                                 CommonPlayMediaType.TV, CommonPlayMediaType.NEWS],
-                "playback": CommonPlayPlaybackType.GUI,
+                "playback": CommonPlayPlaybackType.VIDEO,
                 "media_type": CommonPlayMediaType.NEWS,
                 "image": join(dirname(__file__), "ui", "images", "twc.png"),
                 "secondary_langs": ["en"]
@@ -298,7 +298,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "media_type": CommonPlayMediaType.NEWS,
                 "match_types": [CommonPlayMediaType.GENERIC, CommonPlayMediaType.VIDEO,
                                 CommonPlayMediaType.TV, CommonPlayMediaType.NEWS],
-                "playback": CommonPlayPlaybackType.GUI,
+                "playback": CommonPlayPlaybackType.VIDEO,
                 "secondary_langs": ["en", "ru"],
                 "image": join(dirname(__file__), "ui", "images", "RT_US.jpg")
             },
@@ -336,7 +336,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "media_type": CommonPlayMediaType.NEWS,
                 "match_types": [CommonPlayMediaType.GENERIC, CommonPlayMediaType.VIDEO,
                                 CommonPlayMediaType.TV, CommonPlayMediaType.NEWS],
-                "playback": CommonPlayPlaybackType.GUI,
+                "playback": CommonPlayPlaybackType.VIDEO,
                 "image": join(dirname(__file__), "ui", "images", "euronews.png"),
                 "secondary_langs": ["en"]
             },
@@ -359,7 +359,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "media_type": CommonPlayMediaType.NEWS,
                 "match_types": [CommonPlayMediaType.GENERIC, CommonPlayMediaType.VIDEO,
                                 CommonPlayMediaType.TV, CommonPlayMediaType.NEWS],
-                "playback": CommonPlayPlaybackType.GUI,
+                "playback": CommonPlayPlaybackType.VIDEO,
                 "secondary_langs": ["en", "ru"],
                 "image": join(dirname(__file__), "ui", "images", "RT_UK.jpg")
             },
@@ -430,7 +430,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "media_type": CommonPlayMediaType.NEWS,
                 "match_types": [CommonPlayMediaType.GENERIC, CommonPlayMediaType.VIDEO,
                                 CommonPlayMediaType.TV, CommonPlayMediaType.NEWS],
-                "playback": CommonPlayPlaybackType.GUI,
+                "playback": CommonPlayPlaybackType.VIDEO,
                 "image": join(dirname(__file__), "ui", "images", "euronews.png"),
                 "secondary_langs": ["pt"]
             },
@@ -455,7 +455,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "media_type": CommonPlayMediaType.NEWS,
                 "match_types": [CommonPlayMediaType.GENERIC, CommonPlayMediaType.VIDEO,
                                 CommonPlayMediaType.TV, CommonPlayMediaType.NEWS],
-                "playback": CommonPlayPlaybackType.GUI,
+                "playback": CommonPlayPlaybackType.VIDEO,
                 "image": join(dirname(__file__), "ui", "images", "DW.jpg")
             },
             "Deutsche Welle (audio)": {
@@ -504,7 +504,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "media_type": CommonPlayMediaType.NEWS,
                 "match_types": [CommonPlayMediaType.GENERIC, CommonPlayMediaType.VIDEO,
                                 CommonPlayMediaType.TV, CommonPlayMediaType.NEWS],
-                "playback": CommonPlayPlaybackType.GUI,
+                "playback": CommonPlayPlaybackType.VIDEO,
                 "image": join(dirname(__file__), "ui", "images", "euronews.png")
             },
             "EuroNews DE (audio)": {
@@ -561,7 +561,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "media_type": CommonPlayMediaType.NEWS,
                 "match_types": [CommonPlayMediaType.GENERIC, CommonPlayMediaType.VIDEO,
                                 CommonPlayMediaType.TV, CommonPlayMediaType.NEWS],
-                "playback": CommonPlayPlaybackType.GUI,
+                "playback": CommonPlayPlaybackType.VIDEO,
                 "secondary_langs": ["fr"],
                 "image": join(dirname(__file__), "ui", "images", "FR24_ES.jpg")
             },
@@ -584,7 +584,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "media_type": CommonPlayMediaType.NEWS,
                 "match_types": [CommonPlayMediaType.GENERIC, CommonPlayMediaType.VIDEO,
                                 CommonPlayMediaType.TV, CommonPlayMediaType.NEWS],
-                "playback": CommonPlayPlaybackType.GUI,
+                "playback": CommonPlayPlaybackType.VIDEO,
                 "image": join(dirname(__file__), "ui", "images", "euronews.png")
             },
             "EuroNews ES (audio)": {
@@ -605,7 +605,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "media_type": CommonPlayMediaType.NEWS,
                 "match_types": [CommonPlayMediaType.GENERIC, CommonPlayMediaType.VIDEO,
                                 CommonPlayMediaType.TV, CommonPlayMediaType.NEWS],
-                "playback": CommonPlayPlaybackType.GUI,
+                "playback": CommonPlayPlaybackType.VIDEO,
                 "image": join(dirname(__file__), "ui", "images", "DW.jpg")
             },
             "Deutsche Welle ES (audio)": {
@@ -652,7 +652,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "media_type": CommonPlayMediaType.NEWS,
                 "match_types": [CommonPlayMediaType.GENERIC, CommonPlayMediaType.VIDEO,
                                 CommonPlayMediaType.TV, CommonPlayMediaType.NEWS],
-                "playback": CommonPlayPlaybackType.GUI,
+                "playback": CommonPlayPlaybackType.VIDEO,
                 "image": join(dirname(__file__), "ui", "images", "euronews.png")
             },
             "EuroNews RU (audio)": {
@@ -676,7 +676,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "media_type": CommonPlayMediaType.NEWS,
                 "match_types": [CommonPlayMediaType.GENERIC, CommonPlayMediaType.VIDEO,
                                 CommonPlayMediaType.TV, CommonPlayMediaType.NEWS],
-                "playback": CommonPlayPlaybackType.GUI,
+                "playback": CommonPlayPlaybackType.VIDEO,
                 "image": join(dirname(__file__), "ui", "images", "euronews.png")
             },
             "EuroNews IT (audio)": {
@@ -699,7 +699,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "media_type": CommonPlayMediaType.NEWS,
                 "match_types": [CommonPlayMediaType.GENERIC, CommonPlayMediaType.VIDEO,
                                 CommonPlayMediaType.TV, CommonPlayMediaType.NEWS],
-                "playback": CommonPlayPlaybackType.GUI,
+                "playback": CommonPlayPlaybackType.VIDEO,
                 "image": join(dirname(__file__), "ui", "images", "FR24.jpg")
             },
             "France24 (audio)": {
@@ -720,7 +720,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "media_type": CommonPlayMediaType.NEWS,
                 "match_types": [CommonPlayMediaType.GENERIC, CommonPlayMediaType.VIDEO,
                                 CommonPlayMediaType.TV, CommonPlayMediaType.NEWS],
-                "playback": CommonPlayPlaybackType.GUI,
+                "playback": CommonPlayPlaybackType.VIDEO,
                 "image": join(dirname(__file__), "ui", "images", "euronews.png")
             },
             "EuroNews FR (audio)": {
@@ -741,7 +741,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "media_type": CommonPlayMediaType.NEWS,
                 "match_types": [CommonPlayMediaType.GENERIC, CommonPlayMediaType.VIDEO,
                                 CommonPlayMediaType.TV, CommonPlayMediaType.NEWS],
-                "playback": CommonPlayPlaybackType.GUI,
+                "playback": CommonPlayPlaybackType.VIDEO,
                 "secondary_langs": ["ru"],
                 "image": join(dirname(__file__), "ui", "images", "RT_FR.jpg")
             },
@@ -854,7 +854,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "match_confidence": CommonPlayMatchConfidence.HIGH,
                 "media_type":  CPSMatchType.MUSIC,
                 "uri": "https://audioservice.or.gui.will.play.this",
-                "playback": CommonPlayPlaybackType.GUI,
+                "playback": CommonPlayPlaybackType.VIDEO,
                 "image": "http://optional.audioservice.jpg",
                 "bg_image": "http://optional.audioservice.background.jpg"
             }
@@ -919,9 +919,9 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                     # filter audio / video if explicitly asked one or the other
                     v["match_confidence"] = 0
 
-                # favour GUI results over audio only
+                # favour VIDEO results over audio only
                 # meant to influence only matches that provide both options
-                if v["playback"] == CommonPlayPlaybackType.GUI and\
+                if v["playback"] == CommonPlayPlaybackType.VIDEO and\
                         media_type not in [CommonPlayMediaType.AUDIO, CommonPlayMediaType.RADIO]:
                     v["match_confidence"] += 5
 
