@@ -4,12 +4,14 @@ import re
 from os.path import join, dirname
 from pytz import timezone
 from mycroft.util.time import now_local
-from mycroft.util.parse import match_one
-from ovos_workshop.skills.common_play import OVOSCommonPlaybackSkill
+from ovos_utils.parse import match_one, MatchStrategy
+from ovos_workshop.skills.common_play import OVOSCommonPlaybackSkill, common_play_search
 from ovos_workshop.frameworks.playback import CommonPlayMediaType, CommonPlayPlaybackType, \
     CommonPlayMatchConfidence
 import requests
 from youtube_searcher import extract_videos
+from bs4 import BeautifulSoup
+from urllib.request import urlopen
 
 
 # news uri extractors
@@ -55,21 +57,17 @@ def gpb():
 
 def abc():
     """Custom news fetcher for ABC News Australia briefing"""
-    date = now_local(timezone('Australia/Sydney'))
-    hour = date.strftime('%H')
-    day = date.strftime('%d')
-    month = date.strftime('%m')
-    year = date.strftime('%Y')
-    url = f"https://abcmedia.akamaized.net/news/audio/news-briefings/top" \
-          f"-stories/{year}{month}/NAUs_{hour}00flash_{day}{month}_nola.mp3"
-    # If this hours news is unavailable try the hour before
-    response = requests.get(url)
-    if response.status_code != 200:
-        hour = str(int(hour) - 1)
-        url = f"https://abcmedia.akamaized.net/news/audio/news-briefings/top" \
-              f"-stories/{year}{month}/NAUs_{hour}00flash_{day}{month}_nola.mp3"
-
-    return url
+    domain = "https://www.abc.net.au"
+    latest_briefings_url = f"{domain}/radio/newsradio/news-briefings/"
+    soup = BeautifulSoup(urlopen(latest_briefings_url), features='html.parser')
+    result = soup.find(id="collection-grid3")
+    episode_page_link = result.find_all('a')[0]['href']
+    episode_page = urlopen(domain + episode_page_link)
+    episode_soup = BeautifulSoup(episode_page, features='html.parser')
+    mp3_url = \
+    episode_soup.find_all(attrs={"data-component": "DownloadButton"})[0][
+        'href']
+    return mp3_url
 
 
 def npr():
@@ -114,6 +112,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         "es": "RNE",
         "en-gb": "BBC",
         "en-us": "NPR",
+        "en-au": "ABC",
         "fr": "France24",
         "de": "Deutsche Welle"
     }
@@ -785,10 +784,8 @@ class NewsSkill(OVOSCommonPlaybackSkill):
     def __init__(self):
         super().__init__("News")
         self.supported_media = [CommonPlayMediaType.GENERIC,
-                                CommonPlayMediaType.AUDIO,
                                 CommonPlayMediaType.VIDEO,
                                 CommonPlayMediaType.TV,
-                                CommonPlayMediaType.RADIO,
                                 CommonPlayMediaType.NEWS]
         self.skill_icon = join(dirname(__file__), "ui", "news.png")
         self.default_bg = join(dirname(__file__), "ui", "bg.jpg")
@@ -864,7 +861,8 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         langs += [l.split("-")[0] for l in langs]
         return langs
 
-    def CPS_search(self, phrase, media_type):
+    @common_play_search()
+    def search_news(self, phrase, media_type):
         """Analyze phrase to see if it is a play-able phrase with this skill.
 
         Arguments:
@@ -887,17 +885,14 @@ class NewsSkill(OVOSCommonPlaybackSkill):
 
         # base score
         score = 0
-        if media_type == CommonPlayMediaType.NEWS or self.voc_match(phrase, "news")  \
-                or self.voc_match(phrase, "euronews"):
+        if media_type == CommonPlayMediaType.NEWS:
             score = 50
             # youtube matches take a little longer to extract the streams
-            self.CPS_extend_timeout(1)
+            self.CPS_extend_timeout(1.5)
+
         # score penalty if media_type is vague
-        elif media_type == CommonPlayMediaType.GENERIC or \
-                media_type == CommonPlayMediaType.VIDEO:
+        else:
             score -= 30
-        elif media_type == CommonPlayMediaType.RADIO:
-            score -= 20
 
         phrase = self.clean_phrase(phrase)
 
@@ -925,7 +920,8 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         for l in self.lang2news:
             for k, v in self.lang2news[l].items():
                 # match name
-                _, alias_score = match_one(phrase, v["aliases"])
+                _, alias_score = match_one(phrase, v["aliases"],
+                                           strategy=MatchStrategy.TOKEN_SET_RATIO)
                 v["match_confidence"] = score + alias_score * 60
 
                 # match languages
@@ -944,8 +940,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
 
                 # favour VIDEO results over audio only
                 # meant to influence only matches that provide both options
-                if v["playback"] == CommonPlayPlaybackType.VIDEO and\
-                        media_type not in [CommonPlayMediaType.AUDIO, CommonPlayMediaType.RADIO]:
+                if v["playback"] == CommonPlayPlaybackType.VIDEO:
                     v["match_confidence"] += 5
 
                 # default news feed gets a nice bonus
@@ -956,7 +951,8 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 # final score
                 v["match_confidence"] = min([v["match_confidence"], 100])
 
-                if v["match_confidence"] >= CommonPlayMatchConfidence.AVERAGE:
+                if v["match_confidence"] >= CommonPlayMatchConfidence.AVERAGE or \
+                        media_type == CommonPlayMediaType.NEWS:
                     if callable(v["uri"]):
                         if v.get("rss_feed"):
                             v["uri"] = v["uri"](v["rss_feed"])
@@ -969,9 +965,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                         v["title"] = v.get("title") or k
                         v["bg_image"] = v.get("bg_image") or self.default_bg
                         v["skill_logo"] = self.skill_icon
-                        candidates.append(v)
-
-        return candidates
+                        yield v
 
 
 def create_skill():
