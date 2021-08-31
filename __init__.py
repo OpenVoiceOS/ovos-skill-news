@@ -12,10 +12,11 @@ from ovos_utils.parse import match_one, MatchStrategy
 from ovos_workshop.frameworks.playback import CommonPlayMediaType, \
     CommonPlayPlaybackType, \
     CommonPlayMatchConfidence
+from ovos_workshop.frameworks.playback.stream_handlers import \
+    get_rss_first_stream
 from ovos_workshop.skills.common_play import OVOSCommonPlaybackSkill, \
     common_play_search
 from pytz import timezone
-from youtube_searcher import extract_videos
 
 
 # news uri extractors
@@ -76,35 +77,9 @@ def abc():
 
 def npr():
     url = "https://www.npr.org/rss/podcast.php?id=500005"
-    feed = extract_rss(url)
+    feed = get_rss_first_stream(url)
     if feed:
         return feed.split("?")[0]
-
-
-def extract_rss(feed_url):
-    try:
-        # parse RSS or XML feed
-        data = feedparser.parse(feed_url.strip())
-        # After the intro, find and start the news uri
-        # select the first link to an audio file
-
-        for link in data['entries'][0]['links']:
-            if 'audio' in link['type']:
-                # TODO return duration for proper display in UI
-                duration = link.get('length')
-                return link['href']
-    except Exception as e:
-        pass
-
-
-def extract_yt_channel(url):
-    try:
-        for e in extract_videos(url):
-            if not e["is_live"]:
-                continue
-            return e["url"]
-    except:
-        pass
 
 
 # Unified News Skill
@@ -125,8 +100,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         "en": {
             "France24 EN": {
                 "aliases": ["france 24"],
-                "youtube_channel": "https://www.youtube.com/channel/UCQfwfsi5VrQ8yKZ-UWmAEFg",
-                "uri": extract_yt_channel,
+                "uri": "youtube.channel.live//https://www.youtube.com/channel/UCQfwfsi5VrQ8yKZ-UWmAEFg",
                 "media_type": CommonPlayMediaType.NEWS,
                 "match_types": [CommonPlayMediaType.VIDEO,
                                 CommonPlayMediaType.TV,
@@ -137,8 +111,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
             },
             "Deutsche Welle EN": {
                 "aliases": ["DW", "Deutsche Welle"],
-                "youtube_channel": "https://www.youtube.com/channel/UCknLrEdhRCp1aegoMqRaCZg",
-                "uri": extract_yt_channel,
+                "uri": "youtube.channel.live//https://www.youtube.com/channel/UCknLrEdhRCp1aegoMqRaCZg",
                 "media_type": CommonPlayMediaType.NEWS,
                 "match_types": [CommonPlayMediaType.VIDEO,
                                 CommonPlayMediaType.TV,
@@ -148,8 +121,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
             },
             "Russia Today": {
                 "aliases": ["RT", "Russia Today"],
-                "youtube_channel": "https://www.youtube.com/user/RussiaToday",
-                "uri": extract_yt_channel,
+                "uri": "youtube.channel.live//https://www.youtube.com/user/RussiaToday",
                 "media_type": CommonPlayMediaType.NEWS,
                 "match_types": [CommonPlayMediaType.VIDEO,
                                 CommonPlayMediaType.TV,
@@ -201,8 +173,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                             "Associated Press News",
                             "Associated Press Radio News",
                             "Associated Press Hourly Radio News"],
-                "rss_feed": "https://www.spreaker.com/show/1401466/episodes/feed",
-                "uri": extract_rss,
+                "uri": "rss//https://www.spreaker.com/show/1401466/episodes/feed",
                 "match_types": [CommonPlayMediaType.NEWS,
                                 CommonPlayMediaType.RADIO],
                 "image": join(dirname(__file__), "ui", "images", "AP.png"),
@@ -212,8 +183,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
             },
             "FOX": {
                 "aliases": ["FOX News", "FOX", "Fox News Channel"],
-                "rss_feed": "http://feeds.foxnewsradio.com/FoxNewsRadio",
-                "uri": extract_rss,
+                "uri": "rss//http://feeds.foxnewsradio.com/FoxNewsRadio",
                 "match_types": [CommonPlayMediaType.NEWS,
                                 CommonPlayMediaType.RADIO],
                 "playback": CommonPlayPlaybackType.AUDIO,
@@ -236,8 +206,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "aliases": ["PBS News", "PBS", "PBS NewsHour", "PBS News Hour",
                             "National Public Broadcasting Service",
                             "Public Broadcasting Service News"],
-                "rss_feed": "https://www.pbs.org/newshour/feeds/rss/podcasts/show",
-                "uri": extract_rss,
+                "uri": "rss//https://www.pbs.org/newshour/feeds/rss/podcasts/show",
                 "match_types": [CommonPlayMediaType.NEWS,
                                 CommonPlayMediaType.RADIO],
                 "playback": CommonPlayPlaybackType.AUDIO,
@@ -248,8 +217,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
             "Russia Today America": {
                 "aliases": ["RT", "Russia Today", "RT America",
                             "Russia Today America"],
-                "youtube_channel": "https://www.youtube.com/channel/UCczrL-2b-gYK3l4yDld4XlQ",
-                "uri": extract_yt_channel,
+                "uri": "youtube.channel.live//https://www.youtube.com/channel/UCczrL-2b-gYK3l4yDld4XlQ",
                 "media_type": CommonPlayMediaType.NEWS,
                 "match_types": [CommonPlayMediaType.VIDEO,
                                 CommonPlayMediaType.TV,
@@ -263,8 +231,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
             "BBC": {
                 "aliases": ["British Broadcasting Corporation", "BBC",
                             "BBC News"],
-                "rss_feed": "https://podcasts.files.bbci.co.uk/p02nq0gn.rss",
-                "uri": extract_rss,
+                "uri": "rss//https://podcasts.files.bbci.co.uk/p02nq0gn.rss",
                 "match_types": [CommonPlayMediaType.NEWS,
                                 CommonPlayMediaType.RADIO],
                 "playback": CommonPlayPlaybackType.AUDIO,
@@ -275,8 +242,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
             "EuroNews": {
                 "aliases": ["euro", "euronews", "Euro News", "european",
                             "european news"],
-                "youtube_channel": "https://www.youtube.com/user/Euronews",
-                "uri": extract_yt_channel,
+                "uri": "youtube.channel.live//https://www.youtube.com/user/Euronews",
                 "media_type": CommonPlayMediaType.NEWS,
                 "match_types": [CommonPlayMediaType.VIDEO,
                                 CommonPlayMediaType.TV,
@@ -288,8 +254,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
             },
             "Russia Today UK": {
                 "aliases": ["RT", "Russia Today", "RT UK", "Russia Today UK"],
-                "youtube_channel": "https://www.youtube.com/channel/UC_ab7FFA2ACk2yTHgNan8lQ",
-                "uri": extract_yt_channel,
+                "uri": "youtube.channel.live//https://www.youtube.com/channel/UC_ab7FFA2ACk2yTHgNan8lQ",
                 "media_type": CommonPlayMediaType.NEWS,
                 "match_types": [CommonPlayMediaType.VIDEO,
                                 CommonPlayMediaType.TV,
@@ -315,8 +280,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
             "CBC": {
                 "aliases": ["Canadian Broadcasting Corporation", "CBC",
                             "CBC News"],
-                "uri": extract_rss,
-                "rss_feed": "https://www.cbc.ca/podcasting/includes/hourlynews.xml",
+                "uri": "rss//https://www.cbc.ca/podcasting/includes/hourlynews.xml",
                 "match_types": [CommonPlayMediaType.NEWS,
                                 CommonPlayMediaType.RADIO],
                 "playback": CommonPlayPlaybackType.AUDIO,
@@ -350,8 +314,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
             "EuroNews PT": {
                 "aliases": ["euro", "euronews", "Euro News", "european",
                             "european news"],
-                "youtube_channel": "https://www.youtube.com/user/euronewspt",
-                "uri": extract_yt_channel,
+                "uri": "youtube.channel.live//https://www.youtube.com/user/euronewspt",
                 "media_type": CommonPlayMediaType.NEWS,
                 "match_types": [CommonPlayMediaType.VIDEO,
                                 CommonPlayMediaType.TV,
@@ -365,8 +328,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         "de": {
             "Deutsche Welle": {
                 "aliases": ["DW", "Deutsche Welle"],
-                "youtube_channel": "https://www.youtube.com/c/dwdeutsch",
-                "uri": extract_yt_channel,
+                "uri": "youtube.channel.live//https://www.youtube.com/c/dwdeutsch",
                 "media_type": CommonPlayMediaType.NEWS,
                 "match_types": [CommonPlayMediaType.VIDEO,
                                 CommonPlayMediaType.TV,
@@ -385,8 +347,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
             },
             "DLF": {
                 "aliases": ["DLF", "deutschlandfunk"],
-                "rss_feed": "https://www.deutschlandfunk.de/podcast-nachrichten.1257.de.podcast.xml",
-                "uri": extract_rss,
+                "uri": "rss//https://www.deutschlandfunk.de/podcast-nachrichten.1257.de.podcast.xml",
                 "media_type": CommonPlayMediaType.NEWS,
                 "match_types": [CommonPlayMediaType.NEWS,
                                 CommonPlayMediaType.RADIO],
@@ -405,8 +366,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
             "EuroNews DE": {
                 "aliases": ["euro", "euronews", "Euro News", "european",
                             "european news"],
-                "youtube_channel": "https://www.youtube.com/user/euronewsde",
-                "uri": extract_yt_channel,
+                "uri": "youtube.channel.live//https://www.youtube.com/user/euronewsde",
                 "media_type": CommonPlayMediaType.NEWS,
                 "match_types": [CommonPlayMediaType.VIDEO,
                                 CommonPlayMediaType.TV,
@@ -430,8 +390,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         "sv": {
             "Ekot": {
                 "aliases": ["Ekot"],
-                "rss_feed": "https://api.sr.se/api/rss/pod/3795",
-                "uri": extract_rss,
+                "uri": "rss//https://api.sr.se/api/rss/pod/3795",
                 "media_type": CommonPlayMediaType.NEWS,
                 "match_types": [CommonPlayMediaType.NEWS,
                                 CommonPlayMediaType.RADIO],
@@ -443,9 +402,8 @@ class NewsSkill(OVOSCommonPlaybackSkill):
             "RNE": {
                 "aliases": ["RNE", "National Spanish Radio",
                             "Radio Nacional de España"],
-                "uri": extract_rss,
                 "media_type": CommonPlayMediaType.NEWS,
-                "rss_feed": "http://api.rtve.es/api/programas/36019/audios.rs",
+                "uri": "rss//http://api.rtve.es/api/programas/36019/audios.rs",
                 "match_types": [CommonPlayMediaType.NEWS,
                                 CommonPlayMediaType.RADIO],
                 "image": join(dirname(__file__), "ui", "images", "rne.png"),
@@ -453,8 +411,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
             },
             "France24 ES": {
                 "aliases": ["france 24"],
-                "youtube_channel": "https://www.youtube.com/channel/UCUdOoVWuWmgo1wByzcsyKDQ",
-                "uri": extract_yt_channel,
+                "uri": "youtube.channel.live//https://www.youtube.com/channel/UCUdOoVWuWmgo1wByzcsyKDQ",
                 "media_type": CommonPlayMediaType.NEWS,
                 "match_types": [CommonPlayMediaType.VIDEO,
                                 CommonPlayMediaType.TV,
@@ -466,8 +423,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
             "EuroNews ES": {
                 "aliases": ["euro", "euronews", "Euro News", "european",
                             "european news"],
-                "youtube_channel": "https://www.youtube.com/user/euronewses",
-                "uri": extract_yt_channel,
+                "uri": "youtube.channel.live//https://www.youtube.com/user/euronewses",
                 "media_type": CommonPlayMediaType.NEWS,
                 "match_types": [CommonPlayMediaType.VIDEO,
                                 CommonPlayMediaType.TV,
@@ -478,8 +434,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
             },
             "Deutsche Welle ES": {
                 "aliases": ["DW", "Deutsche Welle"],
-                "youtube_channel": "https://www.youtube.com/channel/UCT4Jg8h03dD0iN3Pb5L0PMA",
-                "uri": extract_yt_channel,
+                "uri": "youtube.channel.live//https://www.youtube.com/channel/UCT4Jg8h03dD0iN3Pb5L0PMA",
                 "media_type": CommonPlayMediaType.NEWS,
                 "match_types": [CommonPlayMediaType.VIDEO,
                                 CommonPlayMediaType.TV,
@@ -503,8 +458,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         "fi": {
             "YLE": {
                 "aliases": ["YLE", "YLE News Radio"],
-                "rss_feed": "https://feeds.yle.fi/areena/v1/series/1-1440981.rss",
-                "uri": extract_rss,
+                "uri": "rss//https://feeds.yle.fi/areena/v1/series/1-1440981.rss",
                 "media_type": CommonPlayMediaType.NEWS,
                 "match_types": [CommonPlayMediaType.NEWS,
                                 CommonPlayMediaType.RADIO],
@@ -516,8 +470,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
             "EuroNews RU": {
                 "aliases": ["euro", "euronews", "Euro News", "european",
                             "european news"],
-                "youtube_channel": "https://www.youtube.com/user/euronewsru",
-                "uri": extract_yt_channel,
+                "uri": "youtube.channel.live//https://www.youtube.com/user/euronewsru",
                 "media_type": CommonPlayMediaType.NEWS,
                 "match_types": [CommonPlayMediaType.VIDEO,
                                 CommonPlayMediaType.TV,
@@ -531,8 +484,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
             "EuroNews IT": {
                 "aliases": ["euro", "euronews", "Euro News", "european",
                             "european news"],
-                "youtube_channel": "https://www.youtube.com/user/euronewsit",
-                "uri": extract_yt_channel,
+                "uri": "youtube.channel.live//https://www.youtube.com/user/euronewsit",
                 "media_type": CommonPlayMediaType.NEWS,
                 "match_types": [CommonPlayMediaType.VIDEO,
                                 CommonPlayMediaType.TV,
@@ -545,8 +497,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         "fr": {
             "France24": {
                 "aliases": ["france 24"],
-                "youtube_channel": "https://www.youtube.com/channel/UCCCPCZNChQdGa9EkATeye4g",
-                "uri": extract_yt_channel,
+                "uri": "youtube.channel.live//https://www.youtube.com/channel/UCCCPCZNChQdGa9EkATeye4g",
                 "media_type": CommonPlayMediaType.NEWS,
                 "match_types": [CommonPlayMediaType.VIDEO,
                                 CommonPlayMediaType.TV,
@@ -557,8 +508,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
             "EuroNews FR": {
                 "aliases": ["euro", "euronews", "Euro News", "european",
                             "european news"],
-                "youtube_channel": "https://www.youtube.com/user/euronewsfr",
-                "uri": extract_yt_channel,
+                "uri": "youtube.channel.live//https://www.youtube.com/user/euronewsfr",
                 "media_type": CommonPlayMediaType.NEWS,
                 "match_types": [CommonPlayMediaType.VIDEO,
                                 CommonPlayMediaType.TV,
@@ -569,8 +519,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
             },
             "Russia Today France": {
                 "aliases": ["RT", "Russia Today"],
-                "youtube_channel": "https://www.youtube.com/channel/UCqEVwTnDzlzKOGYNFemqnYA",
-                "uri": extract_yt_channel,
+                "uri": "youtube.channel.live//https://www.youtube.com/channel/UCqEVwTnDzlzKOGYNFemqnYA",
                 "media_type": CommonPlayMediaType.NEWS,
                 "match_types": [CommonPlayMediaType.VIDEO,
                                 CommonPlayMediaType.TV,
@@ -687,8 +636,6 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         score = 0
         if media_type == CommonPlayMediaType.NEWS:
             score = 50
-            # youtube matches take a little longer to extract the streams
-            self.CPS_extend_timeout(2)
 
         # score penalty if media_type is vague
         else:
@@ -715,13 +662,13 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                     default_feeds.append(feed)
 
         # score individual results
-        candidates = []
         langs = langs or [self.lang, self.lang.split("-")[0]]
+        results = []
         for l in self.lang2news:
             for k, v in self.lang2news[l].items():
                 # match name
                 _, alias_score = match_one(phrase, v["aliases"],
-                                           strategy=MatchStrategy.TOKEN_SET_RATIO)
+                                           strategy=MatchStrategy.TOKEN_SORT_RATIO)
                 v["match_confidence"] = score + alias_score * 60
 
                 # match languages
@@ -746,12 +693,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                         media_type == CommonPlayMediaType.NEWS:
                     if callable(v["uri"]):
                         try:
-                            if v.get("rss_feed"):
-                                v["uri"] = v["uri"](v["rss_feed"])
-                            elif v.get("youtube_channel"):
-                                v["uri"] = v["uri"](v["youtube_channel"])
-                            else:
-                                v["uri"] = v["uri"]()
+                            v["uri"] = v["uri"]()
                         except:
                             LOG.error(f"stream extraction failed for {k}")
                             continue
@@ -759,7 +701,8 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                         v["title"] = v.get("title") or k
                         v["bg_image"] = v.get("bg_image") or self.default_bg
                         v["skill_logo"] = self.skill_icon
-                        yield v
+                        results.append(v)
+        return results
 
 
 def create_skill():
