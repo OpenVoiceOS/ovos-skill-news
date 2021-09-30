@@ -9,11 +9,8 @@ from bs4 import BeautifulSoup
 from mycroft.util.time import now_local
 from ovos_utils.log import LOG
 from ovos_utils.parse import match_one, MatchStrategy
-from ovos_workshop.frameworks.playback import MediaType, \
-    PlaybackType, \
-    MatchConfidence
-from ovos_workshop.frameworks.playback.stream_handlers import \
-    get_rss_first_stream
+from ovos_plugin_common_play.ocp import MediaType, PlaybackType, MatchConfidence
+from ovos_plugin_common_play.ocp.stream_handlers import get_rss_first_stream
 from ovos_workshop.skills.common_play import OVOSCommonPlaybackSkill, \
     common_play_search
 from pytz import timezone
