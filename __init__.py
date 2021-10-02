@@ -7,12 +7,13 @@ import feedparser
 import requests
 from bs4 import BeautifulSoup
 from mycroft.util.time import now_local
+from ovos_plugin_common_play.ocp import MediaType, PlaybackType, \
+    MatchConfidence
+from ovos_plugin_common_play.ocp.stream_handlers import get_rss_first_stream
 from ovos_utils.log import LOG
 from ovos_utils.parse import match_one, MatchStrategy
-from ovos_plugin_common_play.ocp import MediaType, PlaybackType, MatchConfidence
-from ovos_plugin_common_play.ocp.stream_handlers import get_rss_first_stream
 from ovos_workshop.skills.common_play import OVOSCommonPlaybackSkill, \
-    common_play_search
+    ocp_search
 from pytz import timezone
 
 
@@ -607,7 +608,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         langs += [l.split("-")[0] for l in langs]
         return langs
 
-    @common_play_search()
+    @ocp_search()
     def search_news(self, phrase, media_type):
         """Analyze phrase to see if it is a play-able phrase with this skill.
 
