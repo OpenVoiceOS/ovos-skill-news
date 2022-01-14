@@ -14,12 +14,6 @@ PRs adding new feeds welcome, especially for unsupported languages
 
 Supported stations include:
 
-- [EN / PT / ES / DE / RU / IT / FR] EuroNews (video + audio)
-- [EN / ES / FR] France24 (video + audio)
-- [EN / DE / ES] Deutsche Welle (video + audio)
-- [EN / EN-US / EN-GB / FR] Russia Today (video + audio)
-- [EN-US] SkyStream (video + audio)
-- [EN-US] TWC - The Weather Channel (video + audio)
 - [EN-US] AP - Associated Press Hourly Radio News
 - [EN-US] Fox News
 - [EN-US] NPR News Now
@@ -27,11 +21,8 @@ Supported stations include:
 - [EN-US] GPB - Georgia Public Broadcasting
 - [EN-GB] BBC News
 - [EN-CA] CBC News
-- [EN-AU] ABC News Australia
 - [ES-ES] RNE Radio Nacional de España
-- [CA-ES] CCMA Catalunya Informació
 - [PT-PT] TSF Rádio Notícias
-- [PT-PT] Noticiários RDP África
 - [NL] VRT Nieuws
 - [DE] Ö3 Nachrichten
 - [DE] DLF

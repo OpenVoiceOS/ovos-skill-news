@@ -1,6 +1,2 @@
-feedparser
-youtube-dl
-pafy
-ovos_workshop>=0.0.5a1
-youtube_searcher>=0.1.5
+beautifulsoup4
 pytz
