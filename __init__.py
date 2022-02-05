@@ -68,13 +68,9 @@ class NewsSkill(OVOSCommonPlaybackSkill):
     # default feeds per language (optional)
     langdefaults = {
         "pt-pt": "TSF",
-        "ca": "CCMA",
         "es": "RNE",
         "en-gb": "BBC",
-        "en-us": "NPR",
-        "en-au": "ABC",
-        "fr": "France24",
-        "de": "Deutsche Welle"
+        "en-us": "NPR"
     }
     # all news streams
     lang2news = {
@@ -320,19 +316,14 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         entries = []
         default_feeds = []
 
-        # choose default feed for requested language
-        if self.lang in self.langdefaults:
-            feed = self.langdefaults.get(self.lang)
-            if feed:
-                default_feeds.append(feed)
         # play user preference if set in skill settings
         feed = self.settings.get("default_feed")
-        if feed:
-            default_feeds.append(feed)
+        if not feed and self.lang in self.langdefaults:
+            feed = self.langdefaults.get(self.lang)
 
         for l in self.lang2news:
             for k, v in self.lang2news[l].items():
-                if k in default_feeds:
+                if k == feed:
                     v["is_default"] = True
                 v["lang"] = l
                 v["title"] = v.get("title") or k
@@ -367,21 +358,32 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "bg_image": "http://optional.audioservice.background.jpg"
             }
         """
-        # requested language
-        langs = self.match_lang(phrase) or [self.lang, self.lang.split("-")[0]]
-
-        # base score
         base_score = 0
-        if media_type == MediaType.NEWS:
+        if media_type == MediaType.NEWS or self.voc_match(phrase, "news"):
             base_score = 50
+            if not phrase.strip():
+                base_score += 20  # "play the news", no query
 
-        phrase = self.clean_phrase(phrase)
+        pl = self.news_playlist()
+        # playlist result
+        yield {
+            "match_confidence": base_score,
+            "media_type": MediaType.NEWS,
+            "playlist": pl,
+            "playback": PlaybackType.AUDIO,
+            "image": self.skill_icon,
+            "bg_image": self.skill_icon,
+            "skill_icon": self.skill_icon,
+            "title": "Latest News (Station Playlist)",
+            "skill_id": self.skill_id
+        }
 
         # score individual results
-        for v in self.news_playlist():
-            v["match_confidence"] = self._score(phrase, v, langs=langs, base_score=base_score)
-            if v["match_confidence"] >= MatchConfidence.AVERAGE or \
-                    media_type == MediaType.NEWS:
+        langs = self.match_lang(phrase) or [self.lang, self.lang.split("-")[0]]
+        phrase = self.clean_phrase(phrase)
+        if media_type == MediaType.NEWS or (phrase and base_score > MatchConfidence.AVERAGE_LOW):
+            for v in pl:
+                v["match_confidence"] = self._score(phrase, v, langs=langs, base_score=base_score)
                 yield v
 
 
