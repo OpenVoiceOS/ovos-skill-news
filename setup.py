@@ -17,7 +17,7 @@ setup(
     package_data={'skill_news': ['locale/*', 'ui/*', 'res/*']},
     packages=['skill_news'],
     include_package_data=True,
-    install_requires=["ovos_workshop~=0.0.5a7", "pytz", "beautifulsoup4"],
+    install_requires=["ovos_workshop>=0.0.5a7", "pytz", "beautifulsoup4"],
     keywords='ovos skill plugin',
     entry_points={'ovos.plugin.skill': PLUGIN_ENTRY_POINT}
 )
