@@ -1,4 +1,4 @@
-name: Run Build Tests
+name: Run Pip Audit
 on:
   push:
     branches:
@@ -10,10 +10,6 @@ on:
 
 jobs:
   build_tests:
-    strategy:
-      max-parallel: 2
-      matrix:
-        python-version: [ 3.7, 3.8, 3.9, "3.10" ]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -37,3 +33,7 @@ jobs:
       - name: Install skill
         run: |
           pip install .
+      - uses: pypa/gh-action-pip-audit@v1.0.0
+        with:
+          ignore-vulns: |
+            GHSA-r9hx-vwmv-q579
