@@ -60,7 +60,7 @@ jobs:
           sudo apt install libfann-dev
       - name: Install ovos dependencies
         run: |
-          pip install ovos-plugin-manager ovos-core[skills_lgpl]>=0.0.5a28
+          pip install ovos-plugin-manager ovos-core[skills_lgpl] ovos-ocp-audio-plugin==0.0.3a10
       - name: Run unittests
         run: |
           pytest --cov=ovos-skill-template-repo --cov-report xml test/unittests
