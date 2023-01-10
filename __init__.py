@@ -1,66 +1,10 @@
-import re
-from datetime import timedelta
 from os.path import join, dirname
 
-import feedparser
-import requests
-from mycroft.util.time import now_local
 from ovos_plugin_common_play.ocp import MediaType, PlaybackType, \
     MatchConfidence
-from ovos_plugin_common_play.ocp.stream_handlers import get_rss_first_stream
-from ovos_utils.log import LOG
 from ovos_utils.parse import match_one, MatchStrategy
 from ovos_workshop.skills.common_play import OVOSCommonPlaybackSkill, \
     ocp_search, ocp_featured_media
-from pytz import timezone
-
-
-# news uri extractors
-def tsf():
-    """Custom inews fetcher for TSF news."""
-    feed = ('https://www.tsf.pt/stream/audio/{year}/{month:02d}/'
-            'noticias/{day:02d}/not{hour:02d}.mp3')
-    uri = None
-    i = 0
-    status = 404
-    date = now_local(timezone('Portugal'))
-    while status != 200 and i < 6:
-        uri = feed.format(hour=date.hour, year=date.year,
-                          month=date.month, day=date.day)
-        status = requests.get(uri).status_code
-        date -= timedelta(hours=1)
-        i += 1
-    if status != 200:
-        return None
-    return uri
-
-
-def gpb():
-    """Custom news fetcher for GBP news."""
-    feed = 'http://feeds.feedburner.com/gpbnews/GeorgiaRSS?format=xml'
-    data = feedparser.parse(feed)
-    next_link = None
-    for entry in data['entries']:
-        # Find the first mp3 link with "GPB {time} Headlines" in title
-        if 'GPB' in entry['title'] and 'Headlines' in entry['title']:
-            next_link = entry['links'][0]['href']
-            break
-    html = requests.get(next_link)
-    # Find the first mp3 link
-    # Note that the latest mp3 may not be news,
-    # but could be an interview, etc.
-    mp3_find = re.search(r'href="(?P<mp3>.+\.mp3)"'.encode(), html.content)
-    if mp3_find is None:
-        return None
-    url = mp3_find.group('mp3').decode('utf-8')
-    return url
-
-
-def npr():
-    url = "https://www.npr.org/rss/podcast.php?id=500005"
-    feed = get_rss_first_stream(url)
-    if feed:
-        return feed["uri"].split("?")[0]
 
 
 # Unified News Skill
@@ -78,7 +22,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
             "GPB": {
                 "aliases": ["Georgia Public Broadcasting", "GPB",
                             "Georgia Public Radio"],
-                "uri": gpb,
+                "uri": "news//http://feeds.feedburner.com/gpbnews",
                 "match_types": [MediaType.NEWS,
                                 MediaType.RADIO],
                 "playback": PlaybackType.AUDIO,
@@ -112,7 +56,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
             "NPR": {
                 "aliases": ["NPR News", "NPR", "National Public Radio",
                             "National Public Radio News", "NPR News Now"],
-                "uri": npr,
+                "uri": "news//https://www.npr.org/rss/podcast.php",
                 "match_types": [MediaType.NEWS,
                                 MediaType.RADIO],
                 "image": join(dirname(__file__), "ui", "images", "NPR.png"),
@@ -162,7 +106,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         "pt-pt": {
             "TSF": {
                 "aliases": ["TSF", "TSF Rádio Notícias", "TSF Notícias"],
-                "uri": tsf,
+                "uri": "news//https://www.tsf.pt/stream",
                 "media_type": MediaType.NEWS,
                 "match_types": [MediaType.NEWS,
                                 MediaType.RADIO],
@@ -285,7 +229,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
             langs.append("sv")
 
         langs += [l.split("-")[0] for l in langs]
-        return langs
+        return list(set(langs))
 
     def _score(self, phrase, entry, langs=None, base_score=0):
         score = base_score
@@ -329,12 +273,6 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 v["title"] = v.get("title") or k
                 v["bg_image"] = v.get("bg_image") or self.default_bg
                 v["skill_logo"] = self.skill_icon
-                if callable(v["uri"]):
-                    try:
-                        v["uri"] = v["uri"]()
-                    except:
-                        LOG.error(f"stream extraction failed for {k}")
-                        continue
                 if v["uri"]:
                     entries.append(v)
         return entries
