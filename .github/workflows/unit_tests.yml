@@ -48,9 +48,6 @@ jobs:
           sudo apt-get update
           sudo apt install python3-dev
           python -m pip install build wheel
-      - name: Install core repo
-        run: |
-          pip install .
       - name: Install test dependencies
         run: |
           pip install pytest pytest-timeout pytest-cov
@@ -61,6 +58,9 @@ jobs:
       - name: Install ovos dependencies
         run: |
           pip install ovos-plugin-manager ovos-core[skills_lgpl]>=0.0.6a21
+      - name: Install core repo
+        run: |
+          pip install .
       - name: Run unittests
         run: |
           pytest --cov=ovos-skill-template-repo --cov-report xml test/unittests
