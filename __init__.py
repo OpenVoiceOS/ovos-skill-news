@@ -5,6 +5,8 @@ from ovos_plugin_common_play.ocp import MediaType, PlaybackType, \
 from ovos_utils.parse import match_one, MatchStrategy
 from ovos_workshop.skills.common_play import OVOSCommonPlaybackSkill, \
     ocp_search, ocp_featured_media
+from ovos_utils.process_utils import RuntimeRequirements
+from ovos_utils import classproperty
 
 
 # Unified News Skill
@@ -188,6 +190,18 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                                 MediaType.NEWS]
         self.skill_icon = join(dirname(__file__), "ui", "news.png")
         self.default_bg = join(dirname(__file__), "ui", "bg.jpg")
+
+    @classproperty
+    def runtime_requirements(self):
+        return RuntimeRequirements(internet_before_load=True,
+                                   network_before_load=True,
+                                   gui_before_load=False,
+                                   requires_internet=True,
+                                   requires_network=True,
+                                   requires_gui=False,
+                                   no_internet_fallback=False,
+                                   no_network_fallback=False,
+                                   no_gui_fallback=True)
 
     def clean_phrase(self, phrase):
         phrase = self.remove_voc(phrase, "news")
