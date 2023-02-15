@@ -2,7 +2,47 @@
 
 ## [Unreleased](https://github.com/OpenVoiceOS/skill-ovos-news/tree/HEAD)
 
-[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.2...HEAD)
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.3a5...HEAD)
+
+**Implemented enhancements:**
+
+- add ft [\#11](https://github.com/OpenVoiceOS/skill-ovos-news/pull/11) ([JarbasAl](https://github.com/JarbasAl))
+
+## [V0.0.3a5](https://github.com/OpenVoiceOS/skill-ovos-news/tree/V0.0.3a5) (2023-02-15)
+
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.3a4...V0.0.3a5)
+
+**Implemented enhancements:**
+
+- Feat/abc [\#9](https://github.com/OpenVoiceOS/skill-ovos-news/pull/9) ([JarbasAl](https://github.com/JarbasAl))
+
+## [V0.0.3a4](https://github.com/OpenVoiceOS/skill-ovos-news/tree/V0.0.3a4) (2023-02-15)
+
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.3a3...V0.0.3a4)
+
+**Implemented enhancements:**
+
+- feat/rdp\_africa [\#14](https://github.com/OpenVoiceOS/skill-ovos-news/pull/14) ([JarbasAl](https://github.com/JarbasAl))
+
+## [V0.0.3a3](https://github.com/OpenVoiceOS/skill-ovos-news/tree/V0.0.3a3) (2023-02-15)
+
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.3a2...V0.0.3a3)
+
+## [V0.0.3a2](https://github.com/OpenVoiceOS/skill-ovos-news/tree/V0.0.3a2) (2023-02-15)
+
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.3a1...V0.0.3a2)
+
+**Implemented enhancements:**
+
+- add sky news [\#12](https://github.com/OpenVoiceOS/skill-ovos-news/pull/12) ([JarbasAl](https://github.com/JarbasAl))
+
+**Fixed bugs:**
+
+- update VRT stream url [\#13](https://github.com/OpenVoiceOS/skill-ovos-news/pull/13) ([JarbasAl](https://github.com/JarbasAl))
+
+## [V0.0.3a1](https://github.com/OpenVoiceOS/skill-ovos-news/tree/V0.0.3a1) (2023-02-09)
+
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.2...V0.0.3a1)
 
 **Merged pull requests:**
 

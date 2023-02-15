@@ -17,6 +17,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         "es": "RNE",
         "en-gb": "BBC",
         "en-us": "NPR",
+        "en-au": "ABC",
         "it": "GR1"
     }
     # all news streams
@@ -78,6 +79,16 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "media_type": MediaType.NEWS,
                 "image": join(dirname(__file__), "ui", "images", "PBS.png"),
                 "secondary_langs": ["en"]
+            },
+            "FT": {
+                "aliases": ["Financial Times", "FT", "FT News Briefing"],
+                "uri": "news//https://www.ft.com",
+                "match_types": [MediaType.NEWS,
+                                MediaType.RADIO],
+                "playback": PlaybackType.AUDIO,
+                "media_type": MediaType.NEWS,
+                "image": join(dirname(__file__), "ui", "images", "FT.png"),
+                "secondary_langs": ["en"]
             }
         },
         "en-gb": {
@@ -90,6 +101,16 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "playback": PlaybackType.AUDIO,
                 "media_type": MediaType.NEWS,
                 "image": join(dirname(__file__), "ui", "images", "BBC.png"),
+                "secondary_langs": ["en"]
+            },
+            "SN": {
+                "aliases": ["Sky News"],
+                "uri": "http://video.news.sky.com/snr/news/snrnews.mp3",
+                "match_types": [MediaType.NEWS,
+                                MediaType.RADIO],
+                "playback": PlaybackType.AUDIO,
+                "media_type": MediaType.NEWS,
+                "image": join(dirname(__file__), "ui", "images", "sky-news-logo.svg"),
                 "secondary_langs": ["en"]
             }
         },
@@ -106,6 +127,19 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "secondary_langs": ["en"]
             }
         },
+        "en-au": {
+            "ABC": {
+                "aliases": ["Australian Broadcasting Corporation", "ABC",
+                            "ABC News"],
+                "uri": "news//https://www.abc.net.au/news",
+                "match_types": [MediaType.NEWS,
+                                MediaType.RADIO],
+                "playback": PlaybackType.AUDIO,
+                "media_type": MediaType.NEWS,
+                "image": join(dirname(__file__), "ui", "images", "ABC.png"),
+                "secondary_langs": ["en"]
+            }
+        },
         "pt-pt": {
             "TSF": {
                 "aliases": ["TSF", "TSF Rádio Notícias", "TSF Notícias"],
@@ -115,6 +149,16 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                                 MediaType.RADIO],
                 "playback": PlaybackType.AUDIO,
                 "image": join(dirname(__file__), "ui", "images", "tsf.png"),
+                "secondary_langs": ["pt"]
+            },
+            "RDP": {
+                "aliases": ["RDP", "RDP Africa"],
+                "uri": "rss//http://www.rtp.pt/play/itunes/5442",
+                "media_type": MediaType.NEWS,
+                "match_types": [MediaType.NEWS,
+                                MediaType.RADIO],
+                "playback": PlaybackType.AUDIO,
+                "image": join(dirname(__file__), "ui", "images", "RDP.png"),
                 "secondary_langs": ["pt"]
             }
         },
@@ -141,7 +185,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         "nl": {
             "VRT": {
                 "aliases": ["VRT Nieuws", "VRT"],
-                "uri": "https://progressive-audio.lwc.vrtcdn.be/content/fixed/11_11niws-snip_hi.mp3",
+                "uri": "http://progressive-audio.vrtcdn.be/content/fixed/11_11niws-snip_hi.mp3",
                 "media_type": MediaType.NEWS,
                 "match_types": [MediaType.NEWS,
                                 MediaType.RADIO],
