@@ -2,7 +2,19 @@
 
 ## [Unreleased](https://github.com/OpenVoiceOS/skill-ovos-news/tree/HEAD)
 
-[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.2...HEAD)
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.3a1...HEAD)
+
+**Implemented enhancements:**
+
+- add sky news [\#12](https://github.com/OpenVoiceOS/skill-ovos-news/pull/12) ([JarbasAl](https://github.com/JarbasAl))
+
+**Fixed bugs:**
+
+- update VRT stream url [\#13](https://github.com/OpenVoiceOS/skill-ovos-news/pull/13) ([JarbasAl](https://github.com/JarbasAl))
+
+## [V0.0.3a1](https://github.com/OpenVoiceOS/skill-ovos-news/tree/V0.0.3a1) (2023-02-09)
+
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.2...V0.0.3a1)
 
 **Merged pull requests:**
 
