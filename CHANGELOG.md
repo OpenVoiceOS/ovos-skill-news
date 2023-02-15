@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/OpenVoiceOS/skill-ovos-news/tree/HEAD)
+## [V0.0.3a2](https://github.com/OpenVoiceOS/skill-ovos-news/tree/V0.0.3a2) (2023-02-15)
 
-[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.3a1...HEAD)
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.3a1...V0.0.3a2)
 
 **Implemented enhancements:**
 
