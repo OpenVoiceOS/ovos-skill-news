@@ -1,5 +1,17 @@
 # Changelog
 
+## [Unreleased](https://github.com/OpenVoiceOS/skill-ovos-news/tree/HEAD)
+
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.3a3...HEAD)
+
+**Implemented enhancements:**
+
+- feat/rdp\_africa [\#14](https://github.com/OpenVoiceOS/skill-ovos-news/pull/14) ([JarbasAl](https://github.com/JarbasAl))
+
+## [V0.0.3a3](https://github.com/OpenVoiceOS/skill-ovos-news/tree/V0.0.3a3) (2023-02-15)
+
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.3a2...V0.0.3a3)
+
 ## [V0.0.3a2](https://github.com/OpenVoiceOS/skill-ovos-news/tree/V0.0.3a2) (2023-02-15)
 
 [Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.3a1...V0.0.3a2)
