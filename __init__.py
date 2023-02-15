@@ -140,7 +140,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         "nl": {
             "VRT": {
                 "aliases": ["VRT Nieuws", "VRT"],
-                "uri": "https://progressive-audio.lwc.vrtcdn.be/content/fixed/11_11niws-snip_hi.mp3",
+                "uri": "http://progressive-audio.vrtcdn.be/content/fixed/11_11niws-snip_hi.mp3",
                 "media_type": MediaType.NEWS,
                 "match_types": [MediaType.NEWS,
                                 MediaType.RADIO],
