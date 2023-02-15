@@ -78,6 +78,16 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "media_type": MediaType.NEWS,
                 "image": join(dirname(__file__), "ui", "images", "PBS.png"),
                 "secondary_langs": ["en"]
+            },
+            "FT": {
+                "aliases": ["Financial Times", "FT", "FT News Briefing"],
+                "uri": "news//https://www.ft.com",
+                "match_types": [MediaType.NEWS,
+                                MediaType.RADIO],
+                "playback": PlaybackType.AUDIO,
+                "media_type": MediaType.NEWS,
+                "image": join(dirname(__file__), "ui", "images", "FT.png"),
+                "secondary_langs": ["en"]
             }
         },
         "en-gb": {
