@@ -115,6 +115,16 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "playback": PlaybackType.AUDIO,
                 "image": join(dirname(__file__), "ui", "images", "tsf.png"),
                 "secondary_langs": ["pt"]
+            },
+            "RDP": {
+                "aliases": ["RDP", "RDP Africa"],
+                "uri": "rss//http://www.rtp.pt/play/itunes/5442",
+                "media_type": MediaType.NEWS,
+                "match_types": [MediaType.NEWS,
+                                MediaType.RADIO],
+                "playback": PlaybackType.AUDIO,
+                "image": join(dirname(__file__), "ui", "images", "RDP.png"),
+                "secondary_langs": ["pt"]
             }
         },
         "de": {
