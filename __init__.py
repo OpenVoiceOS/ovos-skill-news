@@ -90,6 +90,16 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "media_type": MediaType.NEWS,
                 "image": join(dirname(__file__), "ui", "images", "BBC.png"),
                 "secondary_langs": ["en"]
+            },
+            "SN": {
+                "aliases": ["Sky News"],
+                "uri": "http://video.news.sky.com/snr/news/snrnews.mp3",
+                "match_types": [MediaType.NEWS,
+                                MediaType.RADIO],
+                "playback": PlaybackType.AUDIO,
+                "media_type": MediaType.NEWS,
+                "image": join(dirname(__file__), "ui", "images", "sky-news-logo.svg"),
+                "secondary_langs": ["en"]
             }
         },
         "en-ca": {
