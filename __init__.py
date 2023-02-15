@@ -17,7 +17,8 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         "es": "RNE",
         "en-gb": "BBC",
         "en-us": "NPR",
-        "en-au": "ABC"
+        "en-au": "ABC",
+        "it": "GR1"
     }
     # all news streams
     lang2news = {
@@ -223,6 +224,17 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "match_types": [MediaType.NEWS,
                                 MediaType.RADIO],
                 "image": join(dirname(__file__), "ui", "images", "Yle.png"),
+                "playback": PlaybackType.AUDIO
+            }
+        },
+        "it": {
+            "GR1": {
+                "aliases": ["GR1", "Rai GR1", "Rai", "Radio Giornale 1"],
+                "uri": "news//https://www.raiplaysound.it",
+                "media_type": MediaType.NEWS,
+                "match_types": [MediaType.NEWS,
+                                MediaType.RADIO],
+                "image": join(dirname(__file__), "ui", "images", "RG1.jpg"),
                 "playback": PlaybackType.AUDIO
             }
         }
