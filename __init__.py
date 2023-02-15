@@ -16,7 +16,8 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         "pt-pt": "TSF",
         "es": "RNE",
         "en-gb": "BBC",
-        "en-us": "NPR"
+        "en-us": "NPR",
+        "en-au": "ABC"
     }
     # all news streams
     lang2news = {
@@ -112,6 +113,19 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "playback": PlaybackType.AUDIO,
                 "media_type": MediaType.NEWS,
                 "image": join(dirname(__file__), "ui", "images", "CBC.png"),
+                "secondary_langs": ["en"]
+            }
+        },
+        "en-au": {
+            "ABC": {
+                "aliases": ["Australian Broadcasting Corporation", "ABC",
+                            "ABC News"],
+                "uri": "news//https://www.abc.net.au/news",
+                "match_types": [MediaType.NEWS,
+                                MediaType.RADIO],
+                "playback": PlaybackType.AUDIO,
+                "media_type": MediaType.NEWS,
+                "image": join(dirname(__file__), "ui", "images", "ABC.png"),
                 "secondary_langs": ["en"]
             }
         },
