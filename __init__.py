@@ -15,9 +15,11 @@ class NewsSkill(OVOSCommonPlaybackSkill):
     langdefaults = {
         "pt-pt": "TSF",
         "es": "RNE",
+        "ca-es": "CCMA",
         "en-gb": "BBC",
         "en-us": "NPR",
         "en-au": "ABC",
+        "en-ca": "CBC",
         "it": "GR1"
     }
     # all news streams
@@ -214,6 +216,18 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                                 MediaType.RADIO],
                 "image": join(dirname(__file__), "ui", "images", "rne.png"),
                 "playback": PlaybackType.AUDIO
+            }
+        },
+        "ca-es": {
+            "CCMA": {
+                "aliases": ["CCMA", "Catalunya Informació"],
+                "media_type": MediaType.NEWS,
+                "uri": "https://de1.api.radio-browser.info/pls/url/69bc7084-523c-11ea-be63-52543be04c81",
+                "match_types": [MediaType.NEWS,
+                                MediaType.RADIO],
+                "image": join(dirname(__file__), "ui", "images", "CCMA.jpeg"),
+                "playback": PlaybackType.AUDIO,
+                "secondary_langs": ["es"]
             }
         },
         "fi": {
