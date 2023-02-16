@@ -151,6 +151,16 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "image": join(dirname(__file__), "ui", "images", "tsf.png"),
                 "secondary_langs": ["pt"]
             },
+            "RTP": {
+                "aliases": ["RTP", "Antena 1", "Noticiario Nacional"],
+                "uri": "rss//http://www.rtp.pt/play/itunes/7496",
+                "media_type": MediaType.NEWS,
+                "match_types": [MediaType.NEWS,
+                                MediaType.RADIO],
+                "playback": PlaybackType.AUDIO,
+                "image": join(dirname(__file__), "ui", "images", "RTP_1.png"),
+                "secondary_langs": ["pt"]
+            },
             "RDP": {
                 "aliases": ["RDP", "RDP Africa"],
                 "uri": "rss//http://www.rtp.pt/play/itunes/5442",
