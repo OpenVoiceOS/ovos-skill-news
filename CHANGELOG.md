@@ -2,7 +2,15 @@
 
 ## [Unreleased](https://github.com/OpenVoiceOS/skill-ovos-news/tree/HEAD)
 
-[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.3a7...HEAD)
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.3a8...HEAD)
+
+**Implemented enhancements:**
+
+- add CCMA [\#15](https://github.com/OpenVoiceOS/skill-ovos-news/pull/15) ([JarbasAl](https://github.com/JarbasAl))
+
+## [V0.0.3a8](https://github.com/OpenVoiceOS/skill-ovos-news/tree/V0.0.3a8) (2023-02-15)
+
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.3a7...V0.0.3a8)
 
 **Implemented enhancements:**
 
