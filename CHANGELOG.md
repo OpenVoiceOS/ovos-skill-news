@@ -2,7 +2,16 @@
 
 ## [Unreleased](https://github.com/OpenVoiceOS/skill-ovos-news/tree/HEAD)
 
-[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.3a8...HEAD)
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.3a9...HEAD)
+
+**Implemented enhancements:**
+
+- feat/rtp\_noticias [\#16](https://github.com/OpenVoiceOS/skill-ovos-news/pull/16) ([JarbasAl](https://github.com/JarbasAl))
+- add HRI [\#8](https://github.com/OpenVoiceOS/skill-ovos-news/pull/8) ([JarbasAl](https://github.com/JarbasAl))
+
+## [V0.0.3a9](https://github.com/OpenVoiceOS/skill-ovos-news/tree/V0.0.3a9) (2023-02-16)
+
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.3a8...V0.0.3a9)
 
 **Implemented enhancements:**
 
