@@ -192,6 +192,15 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                                 MediaType.RADIO],
                 "image": join(dirname(__file__), "ui", "images", "DLF.png"),
                 "playback": PlaybackType.AUDIO
+            },
+            "HRI": {
+                "aliases": ["HRI", "hr Info", "Hessenschau"],
+                "uri": "rss//https://podcast.hr-online.de/der_tag_in_hessen/podcast.xm",
+                "media_type": MediaType.NEWS,
+                "match_types": [MediaType.NEWS,
+                                MediaType.RADIO],
+                "image": join(dirname(__file__), "ui", "images", "HRI.png"),
+                "playback": PlaybackType.AUDIO
             }
         },
         "nl": {
