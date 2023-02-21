@@ -1,5 +1,17 @@
 # Changelog
 
+## [Unreleased](https://github.com/OpenVoiceOS/skill-ovos-news/tree/HEAD)
+
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.3a11...HEAD)
+
+**Implemented enhancements:**
+
+- feat/npr\_streams [\#17](https://github.com/OpenVoiceOS/skill-ovos-news/pull/17) ([JarbasAl](https://github.com/JarbasAl))
+
+## [V0.0.3a11](https://github.com/OpenVoiceOS/skill-ovos-news/tree/V0.0.3a11) (2023-02-17)
+
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.3a10...V0.0.3a11)
+
 ## [V0.0.3a10](https://github.com/OpenVoiceOS/skill-ovos-news/tree/V0.0.3a10) (2023-02-17)
 
 [Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.3a9...V0.0.3a10)
