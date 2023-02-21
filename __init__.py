@@ -25,12 +25,10 @@ class NewsSkill(OVOSCommonPlaybackSkill):
     # all news streams
     lang2news = {
         "en-us": {
-            "GPB": {
-                "aliases": ["Georgia Public Broadcasting", "GPB",
-                            "Georgia Public Radio"],
-                "uri": "news//http://feeds.feedburner.com/gpbnews",
-                "match_types": [MediaType.NEWS,
-                                MediaType.RADIO],
+            "GT": {
+                "aliases": ["Georgia Today"],
+                "uri": "news//https://www.gpb.org/radio/programs/georgia-today",
+                "match_types": [MediaType.NEWS],
                 "playback": PlaybackType.AUDIO,
                 "media_type": MediaType.NEWS,
                 "image": join(dirname(__file__), "ui", "images", "gpb.png"),
@@ -42,8 +40,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                             "Associated Press Radio News",
                             "Associated Press Hourly Radio News"],
                 "uri": "rss//https://www.spreaker.com/show/1401466/episodes/feed",
-                "match_types": [MediaType.NEWS,
-                                MediaType.RADIO],
+                "match_types": [MediaType.NEWS],
                 "image": join(dirname(__file__), "ui", "images", "AP.png"),
                 "playback": PlaybackType.AUDIO,
                 "media_type": MediaType.NEWS,
@@ -52,8 +49,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
             "FOX": {
                 "aliases": ["FOX News", "FOX", "Fox News Channel"],
                 "uri": "rss//http://feeds.foxnewsradio.com/FoxNewsRadio",
-                "match_types": [MediaType.NEWS,
-                                MediaType.RADIO],
+                "match_types": [MediaType.NEWS],
                 "playback": PlaybackType.AUDIO,
                 "media_type": MediaType.NEWS,
                 "image": join(dirname(__file__), "ui", "images", "FOX.png"),
@@ -62,10 +58,9 @@ class NewsSkill(OVOSCommonPlaybackSkill):
             "NPR": {
                 "aliases": ["NPR News", "NPR", "National Public Radio",
                             "National Public Radio News", "NPR News Now"],
-                "uri": "news//https://www.npr.org/rss/podcast.php",
-                "match_types": [MediaType.NEWS,
-                                MediaType.RADIO],
-                "image": join(dirname(__file__), "ui", "images", "NPR.png"),
+                "uri": "news//https://www.npr.org/podcasts/500005/npr-news-now",
+                "match_types": [MediaType.NEWS],
+                "image": "https://media.npr.org/assets/img/2018/08/06/nprnewsnow_podcasttile_sq.webp",
                 "playback": PlaybackType.AUDIO,
                 "media_type": MediaType.NEWS,
                 "secondary_langs": ["en"]
@@ -75,8 +70,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                             "National Public Broadcasting Service",
                             "Public Broadcasting Service News"],
                 "uri": "rss//https://www.pbs.org/newshour/feeds/rss/podcasts/show",
-                "match_types": [MediaType.NEWS,
-                                MediaType.RADIO],
+                "match_types": [MediaType.NEWS],
                 "playback": PlaybackType.AUDIO,
                 "media_type": MediaType.NEWS,
                 "image": join(dirname(__file__), "ui", "images", "PBS.png"),
@@ -85,11 +79,129 @@ class NewsSkill(OVOSCommonPlaybackSkill):
             "FT": {
                 "aliases": ["Financial Times", "FT", "FT News Briefing"],
                 "uri": "news//https://www.ft.com",
-                "match_types": [MediaType.NEWS,
-                                MediaType.RADIO],
+                "match_types": [MediaType.NEWS],
                 "playback": PlaybackType.AUDIO,
                 "media_type": MediaType.NEWS,
                 "image": join(dirname(__file__), "ui", "images", "FT.png"),
+                "secondary_langs": ["en"]
+            },
+            "AN": {
+                "aliases": ["Alaska Nightly", "Alaska News Nightly"],
+                "uri": "news//https://www.npr.org/podcasts/828054805/alaska-news-nightly",
+                "match_types": [MediaType.NEWS],
+                "playback": PlaybackType.AUDIO,
+                "media_type": MediaType.NEWS,
+                "image": "https://media.npr.org/images/podcasts/primary/icon_828054805-1ce50401d43f15660a36275a8bf2ff454de62b2f.png",
+                "secondary_langs": ["en"]
+            },
+            "KBBI": {
+                "aliases": ["KBBI Newscast", "KBBI News", "KBBI"],
+                "uri": "news//https://www.npr.org/podcasts/1052142404/k-b-b-i-newscast",
+                "match_types": [MediaType.NEWS],
+                "playback": PlaybackType.AUDIO,
+                "media_type": MediaType.NEWS,
+                "image": "https://media.npr.org/images/podcasts/primary/icon_1052142404-2839f62f7db7bf2ec753fca56913bd7a1b52c428.png",
+                "secondary_langs": ["en"]
+            },
+            "ASPEN": {
+                "aliases": ["Aspen Public Radio Newscast",
+                            "Aspen Public Radio News",
+                            "Aspen Public Radio",
+                            "Aspen News"],
+                "uri": "news//https://www.npr.org/podcasts/1100476310/aspen-public-radio-newscast",
+                "match_types": [MediaType.NEWS],
+                "playback": PlaybackType.AUDIO,
+                "media_type": MediaType.NEWS,
+                "image": "https://media.npr.org/images/podcasts/primary/icon_1100476310-9b43c8bf959de6d90a5f59c58dc82ebc7b9b9258.png",
+                "secondary_langs": ["en"]
+            },
+            "SFN": {
+                "aliases": ["First News", "KRCB", "Sonoma News"],
+                "uri": "news//https://www.npr.org/podcasts/1090302835/first-news",
+                "match_types": [MediaType.NEWS],
+                "playback": PlaybackType.AUDIO,
+                "media_type": MediaType.NEWS,
+                "image": "https://media.npr.org/images/podcasts/primary/icon_1090302835-6b593e71a8d60b373ec735479dfbdd9e7f2e8cfe.png",
+                "secondary_langs": ["en"]
+            },
+            "NHNR": {
+                "aliases": ["N.H. News Recap",
+                            "New Hampshire Public Radio",
+                            "New Hampshire News"],
+                "uri": "news//https://www.npr.org/podcasts/1071428476/n-h-news-recap",
+                "match_types": [MediaType.NEWS],
+                "playback": PlaybackType.AUDIO,
+                "media_type": MediaType.NEWS,
+                "image": "https://media.npr.org/images/podcasts/primary/icon_1071428476-7bd7627d52d6c3fc7082a1524b1b10a49dde7444.png",
+                "secondary_langs": ["en"]
+            },
+            "NSPR": {
+                "aliases": ["NSPR Headlines",
+                            "North State News",
+                            "North State Public Radio"],
+                "uri": "news//https://www.npr.org/podcasts/1074915520/n-s-p-r-headlines",
+                "match_types": [MediaType.NEWS],
+                "playback": PlaybackType.AUDIO,
+                "media_type": MediaType.NEWS,
+                "image": "https://media.npr.org/images/podcasts/primary/icon_1074915520-8d70ce2af1d6db7fab8a42a9b4eb55dddb6eb69a.png",
+                "secondary_langs": ["en"]
+            },
+            "WSIU": {
+                "aliases": ["WSIU News", "WSIU Public Radio"],
+                "uri": "news//https://www.npr.org/podcasts/1038076755/w-s-i-u-news-updates",
+                "match_types": [MediaType.NEWS],
+                "playback": PlaybackType.AUDIO,
+                "media_type": MediaType.NEWS,
+                "image": "https://media.npr.org/images/podcasts/primary/icon_1038076755-aa4101ea9d54395c83b03d7dc7ac823047682192.jpg",
+                "secondary_langs": ["en"]
+            },
+            "SDPB": {
+                "aliases": ["SDPB", "SDPB News"],
+                "uri": "news//https://www.npr.org/podcasts/1031233995/s-d-p-b-news",
+                "match_types": [MediaType.NEWS],
+                "playback": PlaybackType.AUDIO,
+                "media_type": MediaType.NEWS,
+                "image": "https://media.npr.org/images/podcasts/primary/icon_1031233995-ae5c8fd4e932033b3b8e079cdc133703c2ef427c.jpg",
+                "secondary_langs": ["en"]
+            },
+            "KVCR": {
+                "aliases": ["Midday News", "KVCR News",
+                            "The Midday News Report"],
+                "uri": "news//https://www.npr.org/podcasts/1033362253/the-midday-news-report",
+                "match_types": [MediaType.NEWS],
+                "playback": PlaybackType.AUDIO,
+                "media_type": MediaType.NEWS,
+                "image": "https://media.npr.org/images/podcasts/primary/icon_1033362253-566d4a69caee465ebe1adf7d2949ae0c745e97b8.png",
+                "secondary_langs": ["en"]
+            },
+            "KHNS": {
+                "aliases": ["KHNS-FM Local News",
+                            "KHN News"],
+                "uri": "news//https://www.npr.org/podcasts/381444103/k-h-n-s-f-m-local-news",
+                "match_types": [MediaType.NEWS],
+                "playback": PlaybackType.AUDIO,
+                "media_type": MediaType.NEWS,
+                "image": "https://media.npr.org/images/podcasts/primary/icon_1111549375-c22ef178b4a5db87547aeb4c3c14dc8a8b1bc462.png",
+                "secondary_langs": ["en"]
+            },
+            "KGOU_AM": {
+                "aliases": ["KGOU AM NewsBrief",
+                            "KGOU Morning News"],
+                "uri": "news//https://www.npr.org/podcasts/1111549080/k-g-o-u-a-m-news-brief",
+                "match_types": [MediaType.NEWS],
+                "playback": PlaybackType.AUDIO,
+                "media_type": MediaType.NEWS,
+                "image": "https://media.npr.org/images/podcasts/primary/icon_1111549080-ebbfb83b98c966f38237d3e6ed729d659d098cb9.png",
+                "secondary_langs": ["en"]
+            },
+            "KGOU_PM": {
+                "aliases": ["KGOU PM NewsBrief",
+                            "KGOU Evening News"],
+                "uri": "news//https://www.npr.org/podcasts/1111549375/k-g-o-u-p-m-news-brief",
+                "match_types": [MediaType.NEWS],
+                "playback": PlaybackType.AUDIO,
+                "media_type": MediaType.NEWS,
+                "image": "https://media.npr.org/images/podcasts/primary/icon_1111549375-c22ef178b4a5db87547aeb4c3c14dc8a8b1bc462.png",
                 "secondary_langs": ["en"]
             }
         },
@@ -98,8 +210,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "aliases": ["British Broadcasting Corporation", "BBC",
                             "BBC News"],
                 "uri": "rss//https://podcasts.files.bbci.co.uk/p02nq0gn.rss",
-                "match_types": [MediaType.NEWS,
-                                MediaType.RADIO],
+                "match_types": [MediaType.NEWS],
                 "playback": PlaybackType.AUDIO,
                 "media_type": MediaType.NEWS,
                 "image": join(dirname(__file__), "ui", "images", "BBC.png"),
@@ -108,8 +219,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
             "SN": {
                 "aliases": ["Sky News"],
                 "uri": "http://video.news.sky.com/snr/news/snrnews.mp3",
-                "match_types": [MediaType.NEWS,
-                                MediaType.RADIO],
+                "match_types": [MediaType.NEWS],
                 "playback": PlaybackType.AUDIO,
                 "media_type": MediaType.NEWS,
                 "image": join(dirname(__file__), "ui", "images", "sky-news-logo.svg"),
@@ -121,8 +231,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "aliases": ["Canadian Broadcasting Corporation", "CBC",
                             "CBC News"],
                 "uri": "rss//https://www.cbc.ca/podcasting/includes/hourlynews.xml",
-                "match_types": [MediaType.NEWS,
-                                MediaType.RADIO],
+                "match_types": [MediaType.NEWS],
                 "playback": PlaybackType.AUDIO,
                 "media_type": MediaType.NEWS,
                 "image": join(dirname(__file__), "ui", "images", "CBC.png"),
@@ -134,8 +243,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "aliases": ["Australian Broadcasting Corporation", "ABC",
                             "ABC News"],
                 "uri": "news//https://www.abc.net.au/news",
-                "match_types": [MediaType.NEWS,
-                                MediaType.RADIO],
+                "match_types": [MediaType.NEWS],
                 "playback": PlaybackType.AUDIO,
                 "media_type": MediaType.NEWS,
                 "image": join(dirname(__file__), "ui", "images", "ABC.png"),
@@ -147,8 +255,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "aliases": ["TSF", "TSF Rádio Notícias", "TSF Notícias"],
                 "uri": "news//https://www.tsf.pt/stream",
                 "media_type": MediaType.NEWS,
-                "match_types": [MediaType.NEWS,
-                                MediaType.RADIO],
+                "match_types": [MediaType.NEWS],
                 "playback": PlaybackType.AUDIO,
                 "image": join(dirname(__file__), "ui", "images", "tsf.png"),
                 "secondary_langs": ["pt"]
@@ -157,8 +264,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "aliases": ["RTP", "Antena 1", "Noticiario Nacional"],
                 "uri": "rss//http://www.rtp.pt/play/itunes/7496",
                 "media_type": MediaType.NEWS,
-                "match_types": [MediaType.NEWS,
-                                MediaType.RADIO],
+                "match_types": [MediaType.NEWS],
                 "playback": PlaybackType.AUDIO,
                 "image": join(dirname(__file__), "ui", "images", "RTP_1.png"),
                 "secondary_langs": ["pt"]
@@ -167,8 +273,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "aliases": ["RDP", "RDP Africa"],
                 "uri": "rss//http://www.rtp.pt/play/itunes/5442",
                 "media_type": MediaType.NEWS,
-                "match_types": [MediaType.NEWS,
-                                MediaType.RADIO],
+                "match_types": [MediaType.NEWS],
                 "playback": PlaybackType.AUDIO,
                 "image": join(dirname(__file__), "ui", "images", "RDP.png"),
                 "secondary_langs": ["pt"]
@@ -179,8 +284,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "aliases": ["OE3", "Ö3 Nachrichten"],
                 "uri": "https://oe3meta.orf.at/oe3mdata/StaticAudio/Nachrichten.mp3",
                 "media_type": MediaType.NEWS,
-                "match_types": [MediaType.NEWS,
-                                MediaType.RADIO],
+                "match_types": [MediaType.NEWS],
                 "image": join(dirname(__file__), "ui", "images", "oe3.jpeg"),
                 "playback": PlaybackType.AUDIO
             },
@@ -188,14 +292,13 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "aliases": ["DLF", "deutschlandfunk"],
                 "uri": "rss//https://www.deutschlandfunk.de/podcast-nachrichten.1257.de.podcast.xml",
                 "media_type": MediaType.NEWS,
-                "match_types": [MediaType.NEWS,
-                                MediaType.RADIO],
+                "match_types": [MediaType.NEWS],
                 "image": join(dirname(__file__), "ui", "images", "DLF.png"),
                 "playback": PlaybackType.AUDIO
             },
             "HRI": {
                 "aliases": ["HRI", "hr Info", "Hessenschau"],
-                "uri": "rss//https://podcast.hr-online.de/der_tag_in_hessen/podcast.xm",
+                "uri": "rss//https://podcast.hr-online.de/der_tag_in_hessen/podcast.xml",
                 "media_type": MediaType.NEWS,
                 "match_types": [MediaType.NEWS,
                                 MediaType.RADIO],
@@ -208,8 +311,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "aliases": ["VRT Nieuws", "VRT"],
                 "uri": "http://progressive-audio.vrtcdn.be/content/fixed/11_11niws-snip_hi.mp3",
                 "media_type": MediaType.NEWS,
-                "match_types": [MediaType.NEWS,
-                                MediaType.RADIO],
+                "match_types": [MediaType.NEWS],
                 "image": join(dirname(__file__), "ui", "images", "vrt.png"),
                 "playback": PlaybackType.AUDIO
             }
@@ -219,8 +321,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "aliases": ["Ekot"],
                 "uri": "rss//https://api.sr.se/api/rss/pod/3795",
                 "media_type": MediaType.NEWS,
-                "match_types": [MediaType.NEWS,
-                                MediaType.RADIO],
+                "match_types": [MediaType.NEWS],
                 "image": join(dirname(__file__), "ui", "images", "Ekot.png"),
                 "playback": PlaybackType.AUDIO
             }
@@ -231,8 +332,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                             "Radio Nacional de España"],
                 "media_type": MediaType.NEWS,
                 "uri": "rss//http://api.rtve.es/api/programas/36019/audios.rs",
-                "match_types": [MediaType.NEWS,
-                                MediaType.RADIO],
+                "match_types": [MediaType.NEWS],
                 "image": join(dirname(__file__), "ui", "images", "rne.png"),
                 "playback": PlaybackType.AUDIO
             }
@@ -254,8 +354,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "aliases": ["YLE", "YLE News Radio"],
                 "uri": "rss//https://feeds.yle.fi/areena/v1/series/1-1440981.rss",
                 "media_type": MediaType.NEWS,
-                "match_types": [MediaType.NEWS,
-                                MediaType.RADIO],
+                "match_types": [MediaType.NEWS],
                 "image": join(dirname(__file__), "ui", "images", "Yle.png"),
                 "playback": PlaybackType.AUDIO
             }
@@ -265,8 +364,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "aliases": ["GR1", "Rai GR1", "Rai", "Radio Giornale 1"],
                 "uri": "news//https://www.raiplaysound.it",
                 "media_type": MediaType.NEWS,
-                "match_types": [MediaType.NEWS,
-                                MediaType.RADIO],
+                "match_types": [MediaType.NEWS],
                 "image": join(dirname(__file__), "ui", "images", "RG1.jpg"),
                 "playback": PlaybackType.AUDIO
             }
