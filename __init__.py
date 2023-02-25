@@ -20,7 +20,8 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         "en-us": "NPR",
         "en-au": "ABC",
         "en-ca": "CBC",
-        "it": "GR1"
+        "it": "GR1",
+        "de": "DLF - Die Nachrichten"
     }
     # all news streams
     lang2news = {
