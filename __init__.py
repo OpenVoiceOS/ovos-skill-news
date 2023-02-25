@@ -280,7 +280,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "secondary_langs": ["pt"]
             }
         },
-        "de": {
+        "de-de": {
             "OE3": {
                 "aliases": ["OE3", "Ö3 Nachrichten"],
                 "uri": "https://oe3meta.orf.at/oe3mdata/StaticAudio/Nachrichten.mp3",
