@@ -14,14 +14,14 @@ class NewsSkill(OVOSCommonPlaybackSkill):
     # default feeds per language (optional)
     langdefaults = {
         "pt-pt": "TSF",
-        "es": "RNE",
+        "es-es": "RNE",
         "ca-es": "CCMA",
         "en-gb": "BBC",
         "en-us": "NPR",
         "en-au": "ABC",
         "en-ca": "CBC",
-        "it": "GR1",
-        "de": "DLF - Die Nachrichten"
+        "it-it": "GR1",
+        "de-de": "DLF - Die Nachrichten"
     }
     # all news streams
     lang2news = {
