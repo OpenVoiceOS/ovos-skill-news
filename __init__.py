@@ -281,15 +281,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
             }
         },
         "de-de": {
-            "OE3": {
-                "aliases": ["OE3", "Ö3 Nachrichten"],
-                "uri": "https://oe3meta.orf.at/oe3mdata/StaticAudio/Nachrichten.mp3",
-                "media_type": MediaType.NEWS,
-                "match_types": [MediaType.NEWS],
-                "image": join(dirname(__file__), "ui", "images", "oe3.jpeg"),
-                "playback": PlaybackType.AUDIO
-            },
-            "DLF": {
+            "DLF - Die Nachrichten": {
                 "aliases": ["DLF", "deutschlandfunk"],
                 "uri": "rss//https://www.deutschlandfunk.de/podcast-nachrichten.1257.de.podcast.xml",
                 "media_type": MediaType.NEWS,
