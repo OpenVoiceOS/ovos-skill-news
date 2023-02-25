@@ -307,7 +307,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "playback": PlaybackType.AUDIO
             }
         },
-        "nl": {
+        "nl-nl": {
             "VRT": {
                 "aliases": ["VRT Nieuws", "VRT"],
                 "uri": "http://progressive-audio.vrtcdn.be/content/fixed/11_11niws-snip_hi.mp3",
@@ -317,7 +317,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "playback": PlaybackType.AUDIO
             }
         },
-        "sv": {
+        "sv-se": {
             "Ekot": {
                 "aliases": ["Ekot"],
                 "uri": "rss//https://api.sr.se/api/rss/pod/3795",
@@ -327,7 +327,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "playback": PlaybackType.AUDIO
             }
         },
-        "es": {
+        "es-es": {
             "RNE": {
                 "aliases": ["RNE", "National Spanish Radio",
                             "Radio Nacional de España"],
@@ -350,7 +350,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "secondary_langs": ["es"]
             }
         },
-        "fi": {
+        "fi-fi": {
             "YLE": {
                 "aliases": ["YLE", "YLE News Radio"],
                 "uri": "rss//https://feeds.yle.fi/areena/v1/series/1-1440981.rss",
@@ -360,7 +360,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "playback": PlaybackType.AUDIO
             }
         },
-        "it": {
+        "it-it": {
             "GR1": {
                 "aliases": ["GR1", "Rai GR1", "Rai", "Radio Giornale 1"],
                 "uri": "news//https://www.raiplaysound.it",
@@ -420,15 +420,15 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         if self.voc_match(phrase, "en"):
             langs.append("en")
         if self.voc_match(phrase, "es"):
-            langs.append("es")
+            langs.append("es-es")
         if self.voc_match(phrase, "de"):
-            langs.append("de")
+            langs.append("de-de")
         if self.voc_match(phrase, "nl"):
-            langs.append("nl")
+            langs.append("nl-nl")
         if self.voc_match(phrase, "fi"):
-            langs.append("fi")
+            langs.append("fi-fi")
         if self.voc_match(phrase, "sv"):
-            langs.append("sv")
+            langs.append("sv-se")
 
         langs += [l.split("-")[0] for l in langs]
         return list(set(langs))
@@ -460,23 +460,21 @@ class NewsSkill(OVOSCommonPlaybackSkill):
     @ocp_featured_media()
     def news_playlist(self):
         entries = []
-        default_feeds = []
+        
+        for lang in self.lang2news:
+            default_feed = self.langdefaults.get(lang)
+            if lang == self.lang:
+                default_feed = self.settings.get("default_feed") or default_feed
 
-        # play user preference if set in skill settings
-        feed = self.settings.get("default_feed")
-        if not feed and self.lang in self.langdefaults:
-            feed = self.langdefaults.get(self.lang)
-
-        for l in self.lang2news:
-            for k, v in self.lang2news[l].items():
-                if k == feed:
-                    v["is_default"] = True
-                v["lang"] = l
-                v["title"] = v.get("title") or k
-                v["bg_image"] = v.get("bg_image") or self.default_bg
-                v["skill_logo"] = self.skill_icon
-                if v["uri"]:
-                    entries.append(v)
+            for feed, config in self.lang2news[lang].items():
+                if feed == default_feed:
+                    config["is_default"] = True
+                config["lang"] = lang
+                config["title"] = config.get("title") or feed
+                config["bg_image"] = config.get("bg_image") or self.default_bg
+                config["skill_logo"] = self.skill_icon
+                if config["uri"]:
+                    entries.append(config)
         return entries
 
     @ocp_search()
