@@ -2,7 +2,15 @@
 
 ## [Unreleased](https://github.com/OpenVoiceOS/skill-ovos-news/tree/HEAD)
 
-[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.3a11...HEAD)
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.3a12...HEAD)
+
+**Merged pull requests:**
+
+- additional german feeds [\#19](https://github.com/OpenVoiceOS/skill-ovos-news/pull/19) ([emphasize](https://github.com/emphasize))
+
+## [V0.0.3a12](https://github.com/OpenVoiceOS/skill-ovos-news/tree/V0.0.3a12) (2023-02-21)
+
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.3a11...V0.0.3a12)
 
 **Implemented enhancements:**
 
