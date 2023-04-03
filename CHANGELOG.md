@@ -1,5 +1,18 @@
 # Changelog
 
+## [Unreleased](https://github.com/OpenVoiceOS/skill-ovos-news/tree/HEAD)
+
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.3...HEAD)
+
+**Merged pull requests:**
+
+- fix default feed [\#23](https://github.com/OpenVoiceOS/skill-ovos-news/pull/23) ([emphasize](https://github.com/emphasize))
+- german locale review [\#22](https://github.com/OpenVoiceOS/skill-ovos-news/pull/22) ([emphasize](https://github.com/emphasize))
+
+## [V0.0.3](https://github.com/OpenVoiceOS/skill-ovos-news/tree/V0.0.3) (2023-03-08)
+
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.3a14...V0.0.3)
+
 ## [V0.0.3a14](https://github.com/OpenVoiceOS/skill-ovos-news/tree/V0.0.3a14) (2023-02-28)
 
 [Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.3a13...V0.0.3a14)
