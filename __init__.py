@@ -348,8 +348,6 @@ class NewsSkill(OVOSCommonPlaybackSkill):
             "HRI": {
                 "aliases": ["HRI", "hr Info", "hessenschau", "hessen", "hessische"],
                 "uri": "rss//https://podcast.hr.de/der_tag_in_hessen/podcast.xml",
-                "aliases": ["HRI", "hr Info", "hessenschau", "hessen", "hessische"],
-                "uri": "rss//https://podcast.hr.de/der_tag_in_hessen/podcast.xml",
                 "media_type": MediaType.NEWS,
                 "match_types": [MediaType.NEWS],
                 "match_types": [MediaType.NEWS],
