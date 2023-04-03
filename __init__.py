@@ -345,62 +345,6 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "image": join(dirname(__file__), "ui", "images", "ARD_NM.jpg"),
                 "playback": PlaybackType.AUDIO
             },
-            "DLF - Der Tag": {
-                "aliases": ["DLF der tag", "D L F der tag", "deutschlandfunk der tag"],
-                "uri": "rss//https://www.deutschlandfunk.de/podcast-104.xml",
-                "media_type": MediaType.NEWS,
-                "match_types": [MediaType.NEWS],
-                "image": join(dirname(__file__), "ui", "images", "DLF_DT.png"),
-                "playback": PlaybackType.AUDIO
-            },
-            "DLF - Hintergrund": {
-                "aliases": ["DLF hintergrund", "D L F hintergrund", "deutschlandfunk hintergrund"],
-                "uri": "rss//https://www.deutschlandfunk.de/hintergrund-102.xml",
-                "media_type": MediaType.NEWS,
-                "match_types": [MediaType.NEWS],
-                "image": join(dirname(__file__), "ui", "images", "DLF_HG.jpeg"),
-                "playback": PlaybackType.AUDIO
-            },
-            "ARD - Tagesschau": {
-                "aliases": ["ARD", "A R D", "tagesschau"],
-                "uri": "rss//https://www.tagesschau.de/export/podcast/tagesschau_https/",
-                "media_type": MediaType.NEWS,
-                "match_types": [MediaType.NEWS],
-                "image": join(dirname(__file__), "ui", "images", "ARD_TS.jpg"),
-                "playback": PlaybackType.AUDIO
-            },
-            "ARD - Tagesschau (Kurzfassung)": {
-                "aliases": ["tagesschau kurzfassung"],
-                "uri": "rss//https://www.tagesschau.de/export/podcast/hi/tagesschau-in-100-sekunden/",
-                "media_type": MediaType.NEWS,
-                "match_types": [MediaType.NEWS],
-                "image": join(dirname(__file__), "ui", "images", "ARD_TS.jpg"),
-                "playback": PlaybackType.AUDIO
-            },
-            "ARD - Tagesschau (vor 20 Jahren)": {
-                "aliases": ["tagesschau vor 20 jahren", "tagesschau damals", "tagesschau früher", "vor 20 jahren"],
-                "uri": "rss//https://www.tagesschau.de/export/podcast/tagesschau-vor-20-jahren_https/",
-                "media_type": MediaType.NEWS,
-                "match_types": [MediaType.NEWS],
-                "image": join(dirname(__file__), "ui", "images", "ARD_TS20.jpg"),
-                "playback": PlaybackType.AUDIO
-            },
-            "ARD - Tagesthemen": {
-                "aliases": ["ARD tagesthemen", "tagesthemen"],
-                "uri": "rss//https://www.tagesschau.de/export/podcast/tagesthemen_https/",
-                "media_type": MediaType.NEWS,
-                "match_types": [MediaType.NEWS],
-                "image": join(dirname(__file__), "ui", "images", "ARD_TT.jpeg"),
-                "playback": PlaybackType.AUDIO
-            },
-            "ARD - Nachtmagazin": {
-                "aliases": ["ARD nachtmagazin", "nachtmagazin"],
-                "uri": "rss//https://www.tagesschau.de/export/podcast/nachtmagazin_https/",
-                "media_type": MediaType.NEWS,
-                "match_types": [MediaType.NEWS],
-                "image": join(dirname(__file__), "ui", "images", "ARD_NM.jpg"),
-                "playback": PlaybackType.AUDIO
-            },
             "HRI": {
                 "aliases": ["HRI", "hr Info", "hessenschau", "hessen", "hessische"],
                 "uri": "rss//https://podcast.hr.de/der_tag_in_hessen/podcast.xml",
@@ -410,70 +354,6 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "match_types": [MediaType.NEWS],
                 "match_types": [MediaType.NEWS],
                 "image": join(dirname(__file__), "ui", "images", "HRI.png"),
-                "playback": PlaybackType.AUDIO
-            },
-            "NDR": {
-                "aliases": ["NDR", "N D R", "ndr info", "norddeutscher rundfunk", "norddeutschland", "norddeutsche"],
-                "uri": "rss//https://www.ndr.de/nachrichten/info/podcast4370.xml",
-                "media_type": MediaType.NEWS,
-                "match_types": [MediaType.NEWS],
-                "image": join(dirname(__file__), "ui", "images", "NDR.png"),
-                "playback": PlaybackType.AUDIO
-            },
-            "FAZ - Frühdenker": {
-                "aliases": ["FAZ frühdenker", "frankfurter allgemeine", "frühdenker"],
-                "uri": "rss//https://fazfruehdenker.podigee.io/feed/mp3",
-                "media_type": MediaType.NEWS,
-                "match_types": [MediaType.NEWS, MediaType.PODCAST],
-                "image": join(dirname(__file__), "ui", "images", "FAZ_FD.jpeg"),
-                "playback": PlaybackType.AUDIO
-            },
-            "SZ - Auf den Punkt": {
-                "aliases": ["SZ", "S Z", "süddeutsche zeitung", "auf den punkt"],
-                "uri": "rss//https://sz-auf-den-punkt.podigee.io/feed/mp3",
-                "media_type": MediaType.NEWS,
-                "match_types": [MediaType.NEWS, MediaType.PODCAST],
-                "image": join(dirname(__file__), "ui", "images", "SZ.jpeg"),
-                "playback": PlaybackType.AUDIO
-            },
-            "Die Zeit - Was jetzt": {
-                "aliases": ["die zeit", "zeit", "zeit online", "was jetzt"],
-                "uri": "rss//https://wasjetzt.podigee.io/feed/mp3",
-                "media_type": MediaType.NEWS,
-                "match_types": [MediaType.NEWS, MediaType.PODCAST],
-                "image": join(dirname(__file__), "ui", "images", "ZEIT.png"),
-                "playback": PlaybackType.AUDIO
-            },
-            "Lage der Nation": {
-                "aliases": ["lage der nation", "die lage der nation"],
-                "uri": "rss//https://feeds.lagedernation.org/feeds/ldn-mp3.xml",
-                "media_type": MediaType.NEWS,
-                "match_types": [MediaType.NEWS, MediaType.PODCAST],
-                "image": join(dirname(__file__), "ui", "images", "LDN.jpg"),
-                "playback": PlaybackType.AUDIO
-            },
-            "Apokalypse und Filterkaffee": {
-                "aliases": ["Apokalypse und Filterkaffee"],
-                "uri": "rss//https://apokalypse-und-filterkaffee.podigee.io/feed/mp3",
-                "media_type": MediaType.NEWS,
-                "match_types": [MediaType.NEWS, MediaType.PODCAST],
-                "image": join(dirname(__file__), "ui", "images", "AUF.jpg"),
-                "playback": PlaybackType.AUDIO
-            },
-            "The Pioneer Briefing": {
-                "aliases": ["Pioneer", "pionier", "Pioneer Briefing"],
-                "uri": "rss//https://pcr.apple.com/id1428670057",
-                "media_type": MediaType.NEWS,
-                "match_types": [MediaType.NEWS, MediaType.PODCAST],
-                "image": join(dirname(__file__), "ui", "images", "TPB.jpg"),
-                "playback": PlaybackType.AUDIO
-            },
-            "OE3": {
-                "aliases": ["OE3", "Ö3 Nachrichten", "Österreich", "österreichische"],
-                "uri": "https://oe3meta.orf.at/oe3mdata/StaticAudio/Nachrichten.mp3",
-                "media_type": MediaType.NEWS,
-                "match_types": [MediaType.NEWS],
-                "image": join(dirname(__file__), "ui", "images", "oe3.jpeg"),
                 "playback": PlaybackType.AUDIO
             },
             "NDR": {
