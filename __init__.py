@@ -350,7 +350,6 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "uri": "rss//https://podcast.hr.de/der_tag_in_hessen/podcast.xml",
                 "media_type": MediaType.NEWS,
                 "match_types": [MediaType.NEWS],
-                "match_types": [MediaType.NEWS],
                 "image": join(dirname(__file__), "ui", "images", "HRI.png"),
                 "playback": PlaybackType.AUDIO
             },
