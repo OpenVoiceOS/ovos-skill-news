@@ -1,0 +1,530 @@
+{
+    "en-us": {
+        "GT": {
+            "aliases": [
+                "Georgia Today"
+            ],
+            "uri": "news//https://www.gpb.org/radio/programs/georgia-today",
+            "image": "./res/images/gpb.png",
+            "secondary_langs": [
+                "en"
+            ]
+        },
+        "AP": {
+            "aliases": [
+                "AP Hourly Radio News",
+                "Associated Press",
+                "Associated Press News",
+                "Associated Press Radio News",
+                "Associated Press Hourly Radio News"
+            ],
+            "uri": "rss//https://www.spreaker.com/show/1401466/episodes/feed",
+            "image": "./res/images/AP.png",
+            "secondary_langs": [
+                "en"
+            ]
+        },
+        "FOX": {
+            "aliases": [
+                "FOX News",
+                "FOX",
+                "Fox News Channel"
+            ],
+            "uri": "rss//http://feeds.foxnewsradio.com/FoxNewsRadio",
+            "image": "./res/images/FOX.png",
+            "secondary_langs": [
+                "en"
+            ]
+        },
+        "NPR": {
+            "aliases": [
+                "NPR News",
+                "NPR",
+                "National Public Radio",
+                "National Public Radio News",
+                "NPR News Now"
+            ],
+            "uri": "news//https://www.npr.org/podcasts/500005/npr-news-now",
+            "image": "https://media.npr.org/assets/img/2018/08/06/nprnewsnow_podcasttile_sq.webp",
+            "secondary_langs": [
+                "en"
+            ]
+        },
+        "PBS": {
+            "aliases": [
+                "PBS News",
+                "PBS",
+                "PBS NewsHour",
+                "PBS News Hour",
+                "National Public Broadcasting Service",
+                "Public Broadcasting Service News"
+            ],
+            "uri": "rss//https://www.pbs.org/newshour/feeds/rss/podcasts/show",
+            "image": "./res/images/PBS.png",
+            "secondary_langs": [
+                "en"
+            ]
+        },
+        "FT": {
+            "aliases": [
+                "Financial Times",
+                "FT",
+                "FT News Briefing"
+            ],
+            "uri": "news//https://www.ft.com",
+            "image": "./res/images/FT.png",
+            "secondary_langs": [
+                "en"
+            ]
+        },
+        "AN": {
+            "aliases": [
+                "Alaska Nightly",
+                "Alaska News Nightly"
+            ],
+            "uri": "news//https://www.npr.org/podcasts/828054805/alaska-news-nightly",
+            "image": "https://media.npr.org/images/podcasts/primary/icon_828054805-1ce50401d43f15660a36275a8bf2ff454de62b2f.png",
+            "secondary_langs": [
+                "en"
+            ]
+        },
+        "KBBI": {
+            "aliases": [
+                "KBBI Newscast",
+                "KBBI News",
+                "KBBI"
+            ],
+            "uri": "news//https://www.npr.org/podcasts/1052142404/k-b-b-i-newscast",
+            "image": "https://media.npr.org/images/podcasts/primary/icon_1052142404-2839f62f7db7bf2ec753fca56913bd7a1b52c428.png",
+            "secondary_langs": [
+                "en"
+            ]
+        },
+        "ASPEN": {
+            "aliases": [
+                "Aspen Public Radio Newscast",
+                "Aspen Public Radio News",
+                "Aspen Public Radio",
+                "Aspen News"
+            ],
+            "uri": "news//https://www.npr.org/podcasts/1100476310/aspen-public-radio-newscast",
+            "image": "https://media.npr.org/images/podcasts/primary/icon_1100476310-9b43c8bf959de6d90a5f59c58dc82ebc7b9b9258.png",
+            "secondary_langs": [
+                "en"
+            ]
+        },
+        "SFN": {
+            "aliases": [
+                "First News",
+                "KRCB",
+                "Sonoma News"
+            ],
+            "uri": "news//https://www.npr.org/podcasts/1090302835/first-news",
+            "image": "https://media.npr.org/images/podcasts/primary/icon_1090302835-6b593e71a8d60b373ec735479dfbdd9e7f2e8cfe.png",
+            "secondary_langs": [
+                "en"
+            ]
+        },
+        "NHNR": {
+            "aliases": [
+                "N.H. News Recap",
+                "New Hampshire Public Radio",
+                "New Hampshire News"
+            ],
+            "uri": "news//https://www.npr.org/podcasts/1071428476/n-h-news-recap",
+            "image": "https://media.npr.org/images/podcasts/primary/icon_1071428476-7bd7627d52d6c3fc7082a1524b1b10a49dde7444.png",
+            "secondary_langs": [
+                "en"
+            ]
+        },
+        "NSPR": {
+            "aliases": [
+                "NSPR Headlines",
+                "North State News",
+                "North State Public Radio"
+            ],
+            "uri": "news//https://www.npr.org/podcasts/1074915520/n-s-p-r-headlines",
+            "image": "https://media.npr.org/images/podcasts/primary/icon_1074915520-8d70ce2af1d6db7fab8a42a9b4eb55dddb6eb69a.png",
+            "secondary_langs": [
+                "en"
+            ]
+        },
+        "WSIU": {
+            "aliases": [
+                "WSIU News",
+                "WSIU Public Radio"
+            ],
+            "uri": "news//https://www.npr.org/podcasts/1038076755/w-s-i-u-news-updates",
+            "image": "https://media.npr.org/images/podcasts/primary/icon_1038076755-aa4101ea9d54395c83b03d7dc7ac823047682192.jpg",
+            "secondary_langs": [
+                "en"
+            ]
+        },
+        "SDPB": {
+            "aliases": [
+                "SDPB",
+                "SDPB News"
+            ],
+            "uri": "news//https://www.npr.org/podcasts/1031233995/s-d-p-b-news",
+            "image": "https://media.npr.org/images/podcasts/primary/icon_1031233995-ae5c8fd4e932033b3b8e079cdc133703c2ef427c.jpg",
+            "secondary_langs": [
+                "en"
+            ]
+        },
+        "KVCR": {
+            "aliases": [
+                "Midday News",
+                "KVCR News",
+                "The Midday News Report"
+            ],
+            "uri": "news//https://www.npr.org/podcasts/1033362253/the-midday-news-report",
+            "image": "https://media.npr.org/images/podcasts/primary/icon_1033362253-566d4a69caee465ebe1adf7d2949ae0c745e97b8.png",
+            "secondary_langs": [
+                "en"
+            ]
+        },
+        "KHNS": {
+            "aliases": [
+                "KHNS-FM Local News",
+                "KHN News"
+            ],
+            "uri": "news//https://www.npr.org/podcasts/381444103/k-h-n-s-f-m-local-news",
+            "image": "https://media.npr.org/images/podcasts/primary/icon_1111549375-c22ef178b4a5db87547aeb4c3c14dc8a8b1bc462.png",
+            "secondary_langs": [
+                "en"
+            ]
+        },
+        "KGOU_AM": {
+            "aliases": [
+                "KGOU AM NewsBrief",
+                "KGOU Morning News"
+            ],
+            "uri": "news//https://www.npr.org/podcasts/1111549080/k-g-o-u-a-m-news-brief",
+            "image": "https://media.npr.org/images/podcasts/primary/icon_1111549080-ebbfb83b98c966f38237d3e6ed729d659d098cb9.png",
+            "secondary_langs": [
+                "en"
+            ]
+        },
+        "KGOU_PM": {
+            "aliases": [
+                "KGOU PM NewsBrief",
+                "KGOU Evening News"
+            ],
+            "uri": "news//https://www.npr.org/podcasts/1111549375/k-g-o-u-p-m-news-brief",
+            "image": "https://media.npr.org/images/podcasts/primary/icon_1111549375-c22ef178b4a5db87547aeb4c3c14dc8a8b1bc462.png",
+            "secondary_langs": [
+                "en"
+            ]
+        }
+    },
+    "en-gb": {
+        "BBC": {
+            "aliases": [
+                "British Broadcasting Corporation",
+                "BBC",
+                "BBC News"
+            ],
+            "uri": "rss//https://podcasts.files.bbci.co.uk/p02nq0gn.rss",
+            "image": "./res/images/BBC.png",
+            "secondary_langs": [
+                "en"
+            ]
+        },
+        "SN": {
+            "aliases": [
+                "Sky News"
+            ],
+            "uri": "http://video.news.sky.com/snr/news/snrnews.mp3",
+            "image": "./res/images/sky-news-logo.svg",
+            "secondary_langs": [
+                "en"
+            ]
+        }
+    },
+    "en-ca": {
+        "CBC": {
+            "aliases": [
+                "Canadian Broadcasting Corporation",
+                "CBC",
+                "CBC News"
+            ],
+            "uri": "rss//https://www.cbc.ca/podcasting/includes/hourlynews.xml",
+            "image": "./res/images/CBC.png",
+            "secondary_langs": [
+                "en"
+            ]
+        }
+    },
+    "en-au": {
+        "ABC": {
+            "aliases": [
+                "Australian Broadcasting Corporation",
+                "ABC",
+                "ABC News"
+            ],
+            "uri": "news//https://www.abc.net.au/news",
+            "image": "./res/images/ABC.png",
+            "secondary_langs": [
+                "en"
+            ]
+        }
+    },
+    "pt-pt": {
+        "TSF": {
+            "aliases": [
+                "TSF",
+                "TSF Rádio Notícias",
+                "TSF Notícias"
+            ],
+            "uri": "news//https://www.tsf.pt/stream",
+            "image": "./res/images/tsf.png",
+            "secondary_langs": [
+                "pt"
+            ]
+        },
+        "RTP": {
+            "aliases": [
+                "RTP",
+                "Antena 1",
+                "Noticiario Nacional"
+            ],
+            "uri": "rss//http://www.rtp.pt/play/itunes/7496",
+            "image": "./res/images/RTP_1.png",
+            "secondary_langs": [
+                "pt"
+            ]
+        },
+        "RDP": {
+            "aliases": [
+                "RDP",
+                "RDP Africa"
+            ],
+            "uri": "rss//http://www.rtp.pt/play/itunes/5442",
+            "image": "./res/images/RDP.png",
+            "secondary_langs": [
+                "pt"
+            ]
+        }
+    },
+    "de-de": {
+        "DLF - Die Nachrichten": {
+            "aliases": [
+                "DLF",
+                "deutschlandfunk"
+            ],
+            "uri": "rss//https://www.deutschlandfunk.de/podcast-nachrichten.1257.de.podcast.xml",
+            "image": "./res/images/DLF.png"
+        },
+        "DLF - Der Tag": {
+            "aliases": [
+                "DLF der tag",
+                "D L F der tag",
+                "deutschlandfunk der tag"
+            ],
+            "uri": "rss//https://www.deutschlandfunk.de/podcast-104.xml",
+            "image": "./res/images/DLF_DT.png"
+        },
+        "DLF - Hintergrund": {
+            "aliases": [
+                "DLF hintergrund",
+                "D L F hintergrund",
+                "deutschlandfunk hintergrund"
+            ],
+            "uri": "rss//https://www.deutschlandfunk.de/hintergrund-102.xml",
+            "image": "./res/images/DLF_HG.jpeg"
+        },
+        "ARD - Tagesschau": {
+            "aliases": [
+                "ARD",
+                "A R D",
+                "tagesschau"
+            ],
+            "uri": "rss//https://www.tagesschau.de/export/podcast/tagesschau_https/",
+            "image": "./res/images/ARD_TS.jpg"
+        },
+        "ARD - Tagesschau (Kurzfassung)": {
+            "aliases": [
+                "tagesschau kurzfassung"
+            ],
+            "uri": "rss//https://www.tagesschau.de/export/podcast/hi/tagesschau-in-100-sekunden/",
+            "image": "./res/images/ARD_TS.jpg"
+        },
+        "ARD - Tagesschau (vor 20 Jahren)": {
+            "aliases": [
+                "tagesschau vor 20 jahren",
+                "tagesschau damals",
+                "tagesschau früher",
+                "vor 20 jahren"
+            ],
+            "uri": "rss//https://www.tagesschau.de/export/podcast/tagesschau-vor-20-jahren_https/",
+            "image": "./res/images/ARD_TS20.jpg"
+        },
+        "ARD - Tagesthemen": {
+            "aliases": [
+                "ARD tagesthemen",
+                "tagesthemen"
+            ],
+            "uri": "rss//https://www.tagesschau.de/export/podcast/tagesthemen_https/",
+            "image": "./res/images/ARD_TT.jpeg"
+        },
+        "ARD - Nachtmagazin": {
+            "aliases": [
+                "ARD nachtmagazin",
+                "nachtmagazin"
+            ],
+            "uri": "rss//https://www.tagesschau.de/export/podcast/nachtmagazin_https/",
+            "image": "./res/images/ARD_NM.jpg"
+        },
+        "HRI": {
+            "aliases": [
+                "HRI",
+                "hr Info",
+                "hessenschau",
+                "hessen",
+                "hessische"
+            ],
+            "uri": "rss//https://podcast.hr.de/der_tag_in_hessen/podcast.xml",
+            "image": "./res/images/HRI.png"
+        },
+        "NDR": {
+            "aliases": [
+                "NDR",
+                "N D R",
+                "ndr info",
+                "norddeutscher rundfunk",
+                "norddeutschland",
+                "norddeutsche"
+            ],
+            "uri": "rss//https://www.ndr.de/nachrichten/info/podcast4370.xml",
+            "image": "./res/images/NDR.png"
+        },
+        "FAZ - Frühdenker": {
+            "aliases": [
+                "FAZ frühdenker",
+                "frankfurter allgemeine",
+                "frühdenker"
+            ],
+            "uri": "rss//https://fazfruehdenker.podigee.io/feed/mp3",
+            "image": "./res/images/FAZ_FD.jpeg"
+        },
+        "SZ - Auf den Punkt": {
+            "aliases": [
+                "SZ",
+                "S Z",
+                "süddeutsche zeitung",
+                "auf den punkt"
+            ],
+            "uri": "rss//https://sz-auf-den-punkt.podigee.io/feed/mp3",
+            "image": "./res/images/SZ.jpeg"
+        },
+        "Die Zeit - Was jetzt": {
+            "aliases": [
+                "die zeit",
+                "zeit",
+                "zeit online",
+                "was jetzt"
+            ],
+            "uri": "rss//https://wasjetzt.podigee.io/feed/mp3",
+            "image": "./res/images/ZEIT.png"
+        },
+        "Lage der Nation": {
+            "aliases": [
+                "lage der nation",
+                "die lage der nation"
+            ],
+            "uri": "rss//https://feeds.lagedernation.org/feeds/ldn-mp3.xml",
+            "image": "./res/images/LDN.jpg"
+        },
+        "Apokalypse und Filterkaffee": {
+            "aliases": [
+                "Apokalypse und Filterkaffee"
+            ],
+            "uri": "rss//https://apokalypse-und-filterkaffee.podigee.io/feed/mp3",
+            "image": "./res/images/AUF.jpg"
+        },
+        "The Pioneer Briefing": {
+            "aliases": [
+                "Pioneer",
+                "pionier",
+                "Pioneer Briefing"
+            ],
+            "uri": "rss//https://pcr.apple.com/id1428670057",
+            "image": "./res/images/TPB.jpg"
+        },
+        "OE3": {
+            "aliases": [
+                "OE3",
+                "Ö3 Nachrichten",
+                "Österreich",
+                "österreichische"
+            ],
+            "uri": "https://oe3meta.orf.at/oe3mdata/StaticAudio/Nachrichten.mp3",
+            "image": "./res/images/oe3.jpeg"
+        }
+    },
+    "nl-nl": {
+        "VRT": {
+            "aliases": [
+                "VRT Nieuws",
+                "VRT"
+            ],
+            "uri": "http://progressive-audio.vrtcdn.be/content/fixed/11_11niws-snip_hi.mp3",
+            "image": "./res/images/vrt.png"
+        }
+    },
+    "sv-se": {
+        "Ekot": {
+            "aliases": [
+                "Ekot"
+            ],
+            "uri": "rss//https://api.sr.se/api/rss/pod/3795",
+            "image": "./res/images/Ekot.png"
+        }
+    },
+    "es-es": {
+        "RNE": {
+            "aliases": [
+                "RNE",
+                "National Spanish Radio",
+                "Radio Nacional de España"
+            ],
+            "uri": "rss//http://api.rtve.es/api/programas/36019/audios.rs",
+            "image": "./res/images/rne.png"
+        }
+    },
+    "ca-es": {
+        "CCMA": {
+            "aliases": [
+                "CCMA",
+                "Catalunya Informació"
+            ],
+            "uri": "https://de1.api.radio-browser.info/pls/url/69bc7084-523c-11ea-be63-52543be04c81",
+            "image": "./res/images/CCMA.jpeg",
+            "secondary_langs": [
+                "es"
+            ]
+        }
+    },
+    "fi-fi": {
+        "YLE": {
+            "aliases": [
+                "YLE",
+                "YLE News Radio"
+            ],
+            "uri": "rss//https://feeds.yle.fi/areena/v1/series/1-1440981.rss",
+            "image": "./res/images/Yle.png"
+        }
+    },
+    "it-it": {
+        "GR1": {
+            "aliases": [
+                "GR1",
+                "Rai GR1",
+                "Rai",
+                "Radio Giornale 1"
+            ],
+            "uri": "news//https://www.raiplaysound.it",
+            "image": "./res/images/RG1.jpg"
+        }
+    }
+}
