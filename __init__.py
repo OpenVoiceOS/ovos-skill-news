@@ -1,10 +1,9 @@
 from os.path import join, dirname
 
-from ovos_plugin_common_play.ocp import MediaType, PlaybackType, \
-    MatchConfidence
+from ovos_utils.ocp import MediaType, PlaybackType, MatchConfidence
 from ovos_utils.parse import match_one, MatchStrategy
-from ovos_workshop.skills.common_play import OVOSCommonPlaybackSkill, \
-    ocp_search, ocp_featured_media
+from ovos_workshop.skills.common_play import OVOSCommonPlaybackSkill
+from ovos_workshop.decorators import ocp_search, ocp_featured_media
 from ovos_utils.process_utils import RuntimeRequirements
 from ovos_utils import classproperty
 
@@ -483,12 +482,11 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         }
     }
 
-    def __init__(self):
-        super().__init__("News")
-        self.supported_media = [MediaType.GENERIC,
-                                MediaType.NEWS]
+    def __init__(self, *args, **kwargs):
+        self.supported_media = [MediaType.NEWS]
         self.skill_icon = join(dirname(__file__), "ui", "news.png")
         self.default_bg = join(dirname(__file__), "ui", "bg.jpg")
+        super().__init__(*args, **kwargs)
 
     @classproperty
     def runtime_requirements(self):
@@ -635,6 +633,3 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 v["match_confidence"] = self._score(phrase, v, langs=langs, base_score=base_score)
                 yield v
 
-
-def create_skill():
-    return NewsSkill()
