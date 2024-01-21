@@ -1,5 +1,17 @@
 # Changelog
 
+## [V0.0.4a3](https://github.com/OpenVoiceOS/skill-ovos-news/tree/V0.0.4a3) (2024-01-12)
+
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.4a2...V0.0.4a3)
+
+**Merged pull requests:**
+
+- modernize for core 0.0.8 [\#25](https://github.com/OpenVoiceOS/skill-ovos-news/pull/25) ([NeonJarbas](https://github.com/NeonJarbas))
+
+## [V0.0.4a2](https://github.com/OpenVoiceOS/skill-ovos-news/tree/V0.0.4a2) (2023-04-03)
+
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.4a1...V0.0.4a2)
+
 ## [V0.0.4a1](https://github.com/OpenVoiceOS/skill-ovos-news/tree/V0.0.4a1) (2023-04-03)
 
 [Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.3...V0.0.4a1)
