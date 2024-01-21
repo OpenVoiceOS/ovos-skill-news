@@ -5,7 +5,7 @@
                 "Georgia Today"
             ],
             "uri": "news//https://www.gpb.org/radio/programs/georgia-today",
-            "image": "/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/images/gpb.png",
+            "image": "./res/images/gpb.png",
             "secondary_langs": [
                 "en"
             ]
@@ -19,7 +19,7 @@
                 "Associated Press Hourly Radio News"
             ],
             "uri": "rss//https://www.spreaker.com/show/1401466/episodes/feed",
-            "image": "/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/images/AP.png",
+            "image": "./res/images/AP.png",
             "secondary_langs": [
                 "en"
             ]
@@ -31,7 +31,7 @@
                 "Fox News Channel"
             ],
             "uri": "rss//http://feeds.foxnewsradio.com/FoxNewsRadio",
-            "image": "/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/images/FOX.png",
+            "image": "./res/images/FOX.png",
             "secondary_langs": [
                 "en"
             ]
@@ -60,7 +60,7 @@
                 "Public Broadcasting Service News"
             ],
             "uri": "rss//https://www.pbs.org/newshour/feeds/rss/podcasts/show",
-            "image": "/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/images/PBS.png",
+            "image": "./res/images/PBS.png",
             "secondary_langs": [
                 "en"
             ]
@@ -72,7 +72,7 @@
                 "FT News Briefing"
             ],
             "uri": "news//https://www.ft.com",
-            "image": "/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/images/FT.png",
+            "image": "./res/images/FT.png",
             "secondary_langs": [
                 "en"
             ]
@@ -225,7 +225,7 @@
                 "BBC News"
             ],
             "uri": "rss//https://podcasts.files.bbci.co.uk/p02nq0gn.rss",
-            "image": "/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/images/BBC.png",
+            "image": "./res/images/BBC.png",
             "secondary_langs": [
                 "en"
             ]
@@ -235,7 +235,7 @@
                 "Sky News"
             ],
             "uri": "http://video.news.sky.com/snr/news/snrnews.mp3",
-            "image": "/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/images/sky-news-logo.svg",
+            "image": "./res/images/sky-news-logo.svg",
             "secondary_langs": [
                 "en"
             ]
@@ -249,7 +249,7 @@
                 "CBC News"
             ],
             "uri": "rss//https://www.cbc.ca/podcasting/includes/hourlynews.xml",
-            "image": "/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/images/CBC.png",
+            "image": "./res/images/CBC.png",
             "secondary_langs": [
                 "en"
             ]
@@ -263,7 +263,7 @@
                 "ABC News"
             ],
             "uri": "news//https://www.abc.net.au/news",
-            "image": "/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/images/ABC.png",
+            "image": "./res/images/ABC.png",
             "secondary_langs": [
                 "en"
             ]
@@ -277,7 +277,7 @@
                 "TSF Notícias"
             ],
             "uri": "news//https://www.tsf.pt/stream",
-            "image": "/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/images/tsf.png",
+            "image": "./res/images/tsf.png",
             "secondary_langs": [
                 "pt"
             ]
@@ -289,7 +289,7 @@
                 "Noticiario Nacional"
             ],
             "uri": "rss//http://www.rtp.pt/play/itunes/7496",
-            "image": "/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/images/RTP_1.png",
+            "image": "./res/images/RTP_1.png",
             "secondary_langs": [
                 "pt"
             ]
@@ -300,7 +300,7 @@
                 "RDP Africa"
             ],
             "uri": "rss//http://www.rtp.pt/play/itunes/5442",
-            "image": "/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/images/RDP.png",
+            "image": "./res/images/RDP.png",
             "secondary_langs": [
                 "pt"
             ]
@@ -313,7 +313,7 @@
                 "deutschlandfunk"
             ],
             "uri": "rss//https://www.deutschlandfunk.de/podcast-nachrichten.1257.de.podcast.xml",
-            "image": "/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/images/DLF.png"
+            "image": "./res/images/DLF.png"
         },
         "DLF - Der Tag": {
             "aliases": [
@@ -322,7 +322,7 @@
                 "deutschlandfunk der tag"
             ],
             "uri": "rss//https://www.deutschlandfunk.de/podcast-104.xml",
-            "image": "/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/images/DLF_DT.png"
+            "image": "./res/images/DLF_DT.png"
         },
         "DLF - Hintergrund": {
             "aliases": [
@@ -331,7 +331,7 @@
                 "deutschlandfunk hintergrund"
             ],
             "uri": "rss//https://www.deutschlandfunk.de/hintergrund-102.xml",
-            "image": "/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/images/DLF_HG.jpeg"
+            "image": "./res/images/DLF_HG.jpeg"
         },
         "ARD - Tagesschau": {
             "aliases": [
@@ -340,14 +340,14 @@
                 "tagesschau"
             ],
             "uri": "rss//https://www.tagesschau.de/export/podcast/tagesschau_https/",
-            "image": "/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/images/ARD_TS.jpg"
+            "image": "./res/images/ARD_TS.jpg"
         },
         "ARD - Tagesschau (Kurzfassung)": {
             "aliases": [
                 "tagesschau kurzfassung"
             ],
             "uri": "rss//https://www.tagesschau.de/export/podcast/hi/tagesschau-in-100-sekunden/",
-            "image": "/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/images/ARD_TS.jpg"
+            "image": "./res/images/ARD_TS.jpg"
         },
         "ARD - Tagesschau (vor 20 Jahren)": {
             "aliases": [
@@ -357,7 +357,7 @@
                 "vor 20 jahren"
             ],
             "uri": "rss//https://www.tagesschau.de/export/podcast/tagesschau-vor-20-jahren_https/",
-            "image": "/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/images/ARD_TS20.jpg"
+            "image": "./res/images/ARD_TS20.jpg"
         },
         "ARD - Tagesthemen": {
             "aliases": [
@@ -365,7 +365,7 @@
                 "tagesthemen"
             ],
             "uri": "rss//https://www.tagesschau.de/export/podcast/tagesthemen_https/",
-            "image": "/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/images/ARD_TT.jpeg"
+            "image": "./res/images/ARD_TT.jpeg"
         },
         "ARD - Nachtmagazin": {
             "aliases": [
@@ -373,7 +373,7 @@
                 "nachtmagazin"
             ],
             "uri": "rss//https://www.tagesschau.de/export/podcast/nachtmagazin_https/",
-            "image": "/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/images/ARD_NM.jpg"
+            "image": "./res/images/ARD_NM.jpg"
         },
         "HRI": {
             "aliases": [
@@ -384,7 +384,7 @@
                 "hessische"
             ],
             "uri": "rss//https://podcast.hr.de/der_tag_in_hessen/podcast.xml",
-            "image": "/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/images/HRI.png"
+            "image": "./res/images/HRI.png"
         },
         "NDR": {
             "aliases": [
@@ -396,7 +396,7 @@
                 "norddeutsche"
             ],
             "uri": "rss//https://www.ndr.de/nachrichten/info/podcast4370.xml",
-            "image": "/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/images/NDR.png"
+            "image": "./res/images/NDR.png"
         },
         "FAZ - Frühdenker": {
             "aliases": [
@@ -405,7 +405,7 @@
                 "frühdenker"
             ],
             "uri": "rss//https://fazfruehdenker.podigee.io/feed/mp3",
-            "image": "/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/images/FAZ_FD.jpeg"
+            "image": "./res/images/FAZ_FD.jpeg"
         },
         "SZ - Auf den Punkt": {
             "aliases": [
@@ -415,7 +415,7 @@
                 "auf den punkt"
             ],
             "uri": "rss//https://sz-auf-den-punkt.podigee.io/feed/mp3",
-            "image": "/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/images/SZ.jpeg"
+            "image": "./res/images/SZ.jpeg"
         },
         "Die Zeit - Was jetzt": {
             "aliases": [
@@ -425,7 +425,7 @@
                 "was jetzt"
             ],
             "uri": "rss//https://wasjetzt.podigee.io/feed/mp3",
-            "image": "/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/images/ZEIT.png"
+            "image": "./res/images/ZEIT.png"
         },
         "Lage der Nation": {
             "aliases": [
@@ -433,14 +433,14 @@
                 "die lage der nation"
             ],
             "uri": "rss//https://feeds.lagedernation.org/feeds/ldn-mp3.xml",
-            "image": "/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/images/LDN.jpg"
+            "image": "./res/images/LDN.jpg"
         },
         "Apokalypse und Filterkaffee": {
             "aliases": [
                 "Apokalypse und Filterkaffee"
             ],
             "uri": "rss//https://apokalypse-und-filterkaffee.podigee.io/feed/mp3",
-            "image": "/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/images/AUF.jpg"
+            "image": "./res/images/AUF.jpg"
         },
         "The Pioneer Briefing": {
             "aliases": [
@@ -449,7 +449,7 @@
                 "Pioneer Briefing"
             ],
             "uri": "rss//https://pcr.apple.com/id1428670057",
-            "image": "/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/images/TPB.jpg"
+            "image": "./res/images/TPB.jpg"
         },
         "OE3": {
             "aliases": [
@@ -459,7 +459,7 @@
                 "österreichische"
             ],
             "uri": "https://oe3meta.orf.at/oe3mdata/StaticAudio/Nachrichten.mp3",
-            "image": "/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/images/oe3.jpeg"
+            "image": "./res/images/oe3.jpeg"
         }
     },
     "nl-nl": {
@@ -469,7 +469,7 @@
                 "VRT"
             ],
             "uri": "http://progressive-audio.vrtcdn.be/content/fixed/11_11niws-snip_hi.mp3",
-            "image": "/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/images/vrt.png"
+            "image": "./res/images/vrt.png"
         }
     },
     "sv-se": {
@@ -478,7 +478,7 @@
                 "Ekot"
             ],
             "uri": "rss//https://api.sr.se/api/rss/pod/3795",
-            "image": "/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/images/Ekot.png"
+            "image": "./res/images/Ekot.png"
         }
     },
     "es-es": {
@@ -489,7 +489,7 @@
                 "Radio Nacional de España"
             ],
             "uri": "rss//http://api.rtve.es/api/programas/36019/audios.rs",
-            "image": "/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/images/rne.png"
+            "image": "./res/images/rne.png"
         }
     },
     "ca-es": {
@@ -499,7 +499,7 @@
                 "Catalunya Informació"
             ],
             "uri": "https://de1.api.radio-browser.info/pls/url/69bc7084-523c-11ea-be63-52543be04c81",
-            "image": "/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/images/CCMA.jpeg",
+            "image": "./res/images/CCMA.jpeg",
             "secondary_langs": [
                 "es"
             ]
@@ -512,7 +512,7 @@
                 "YLE News Radio"
             ],
             "uri": "rss//https://feeds.yle.fi/areena/v1/series/1-1440981.rss",
-            "image": "/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/images/Yle.png"
+            "image": "./res/images/Yle.png"
         }
     },
     "it-it": {
@@ -524,7 +524,7 @@
                 "Radio Giornale 1"
             ],
             "uri": "news//https://www.raiplaysound.it",
-            "image": "/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/images/RG1.jpg"
+            "image": "./res/images/RG1.jpg"
         }
     }
 }

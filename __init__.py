@@ -1,6 +1,6 @@
 from os.path import join, dirname
 
-from json_database import JsonStorageXDG
+from json_database import JsonStorage
 from ovos_utils import classproperty
 from ovos_utils.ocp import MediaType, PlaybackType
 from ovos_utils.parse import match_one, MatchStrategy
@@ -28,7 +28,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         self.supported_media = [MediaType.NEWS]
         self.skill_icon = join(dirname(__file__), "ui", "news.png")
         self.default_bg = join(dirname(__file__), "ui", "bg.jpg")
-        self.archive = JsonStorageXDG("News", subfolder="OCP")
+        self.archive = JsonStorage(f"{dirname(__file__)}/News.json")
         super().__init__(*args, **kwargs)
 
     @classproperty
@@ -124,6 +124,8 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                     config["is_default"] = True
                 config["lang"] = lang
                 config["title"] = config.get("title") or feed
+                config["image"] = config.get("image", "").replace("./res/images/",
+                                                                  f"{dirname(__file__)}/res/images/")
                 config["bg_image"] = config.get("bg_image") or self.default_bg
                 config["skill_logo"] = self.skill_icon
                 config["playback"] = PlaybackType.AUDIO
