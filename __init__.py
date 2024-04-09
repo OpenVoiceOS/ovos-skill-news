@@ -31,7 +31,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "match_types": [MediaType.NEWS],
                 "playback": PlaybackType.AUDIO,
                 "media_type": MediaType.NEWS,
-                "image": join(dirname(__file__), "ui", "images", "gpb.png"),
+                "image": join(dirname(__file__), "res", "images", "gpb.png"),
                 "secondary_langs": ["en"]
             },
             "AP": {
@@ -41,7 +41,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                             "Associated Press Hourly Radio News"],
                 "uri": "rss//https://www.spreaker.com/show/1401466/episodes/feed",
                 "match_types": [MediaType.NEWS],
-                "image": join(dirname(__file__), "ui", "images", "AP.png"),
+                "image": join(dirname(__file__), "res", "images", "AP.png"),
                 "playback": PlaybackType.AUDIO,
                 "media_type": MediaType.NEWS,
                 "secondary_langs": ["en"]
@@ -52,7 +52,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "match_types": [MediaType.NEWS],
                 "playback": PlaybackType.AUDIO,
                 "media_type": MediaType.NEWS,
-                "image": join(dirname(__file__), "ui", "images", "FOX.png"),
+                "image": join(dirname(__file__), "res", "images", "FOX.png"),
                 "secondary_langs": ["en"]
             },
             "NPR": {
@@ -73,7 +73,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "match_types": [MediaType.NEWS],
                 "playback": PlaybackType.AUDIO,
                 "media_type": MediaType.NEWS,
-                "image": join(dirname(__file__), "ui", "images", "PBS.png"),
+                "image": join(dirname(__file__), "res", "images", "PBS.png"),
                 "secondary_langs": ["en"]
             },
             "FT": {
@@ -82,7 +82,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "match_types": [MediaType.NEWS],
                 "playback": PlaybackType.AUDIO,
                 "media_type": MediaType.NEWS,
-                "image": join(dirname(__file__), "ui", "images", "FT.png"),
+                "image": join(dirname(__file__), "res", "images", "FT.png"),
                 "secondary_langs": ["en"]
             },
             "AN": {
@@ -213,7 +213,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "match_types": [MediaType.NEWS],
                 "playback": PlaybackType.AUDIO,
                 "media_type": MediaType.NEWS,
-                "image": join(dirname(__file__), "ui", "images", "BBC.png"),
+                "image": join(dirname(__file__), "res", "images", "BBC.png"),
                 "secondary_langs": ["en"]
             },
             "SN": {
@@ -222,7 +222,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "match_types": [MediaType.NEWS],
                 "playback": PlaybackType.AUDIO,
                 "media_type": MediaType.NEWS,
-                "image": join(dirname(__file__), "ui", "images", "sky-news-logo.svg"),
+                "image": join(dirname(__file__), "res", "images", "sky-news-logo.svg"),
                 "secondary_langs": ["en"]
             }
         },
@@ -234,7 +234,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "match_types": [MediaType.NEWS],
                 "playback": PlaybackType.AUDIO,
                 "media_type": MediaType.NEWS,
-                "image": join(dirname(__file__), "ui", "images", "CBC.png"),
+                "image": join(dirname(__file__), "res", "images", "CBC.png"),
                 "secondary_langs": ["en"]
             }
         },
@@ -246,7 +246,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "match_types": [MediaType.NEWS],
                 "playback": PlaybackType.AUDIO,
                 "media_type": MediaType.NEWS,
-                "image": join(dirname(__file__), "ui", "images", "ABC.png"),
+                "image": join(dirname(__file__), "res", "images", "ABC.png"),
                 "secondary_langs": ["en"]
             }
         },
@@ -257,7 +257,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "media_type": MediaType.NEWS,
                 "match_types": [MediaType.NEWS],
                 "playback": PlaybackType.AUDIO,
-                "image": join(dirname(__file__), "ui", "images", "tsf.png"),
+                "image": join(dirname(__file__), "res", "images", "tsf.png"),
                 "secondary_langs": ["pt"]
             },
             "RTP": {
@@ -266,7 +266,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "media_type": MediaType.NEWS,
                 "match_types": [MediaType.NEWS],
                 "playback": PlaybackType.AUDIO,
-                "image": join(dirname(__file__), "ui", "images", "RTP_1.png"),
+                "image": join(dirname(__file__), "res", "images", "RTP_1.png"),
                 "secondary_langs": ["pt"]
             },
             "RDP": {
@@ -275,7 +275,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "media_type": MediaType.NEWS,
                 "match_types": [MediaType.NEWS],
                 "playback": PlaybackType.AUDIO,
-                "image": join(dirname(__file__), "ui", "images", "RDP.png"),
+                "image": join(dirname(__file__), "res", "images", "RDP.png"),
                 "secondary_langs": ["pt"]
             }
         },
@@ -285,7 +285,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "uri": "rss//https://www.deutschlandfunk.de/podcast-nachrichten.1257.de.podcast.xml",
                 "media_type": MediaType.NEWS,
                 "match_types": [MediaType.NEWS],
-                "image": join(dirname(__file__), "ui", "images", "DLF.png"),
+                "image": join(dirname(__file__), "res", "images", "DLF.png"),
                 "playback": PlaybackType.AUDIO
             },
             "DLF - Der Tag": {
@@ -293,7 +293,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "uri": "rss//https://www.deutschlandfunk.de/podcast-104.xml",
                 "media_type": MediaType.NEWS,
                 "match_types": [MediaType.NEWS],
-                "image": join(dirname(__file__), "ui", "images", "DLF_DT.png"),
+                "image": join(dirname(__file__), "res", "images", "DLF_DT.png"),
                 "playback": PlaybackType.AUDIO
             },
             "DLF - Hintergrund": {
@@ -301,7 +301,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "uri": "rss//https://www.deutschlandfunk.de/hintergrund-102.xml",
                 "media_type": MediaType.NEWS,
                 "match_types": [MediaType.NEWS],
-                "image": join(dirname(__file__), "ui", "images", "DLF_HG.jpeg"),
+                "image": join(dirname(__file__), "res", "images", "DLF_HG.jpeg"),
                 "playback": PlaybackType.AUDIO
             },
             "ARD - Tagesschau": {
@@ -309,7 +309,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "uri": "rss//https://www.tagesschau.de/export/podcast/tagesschau_https/",
                 "media_type": MediaType.NEWS,
                 "match_types": [MediaType.NEWS],
-                "image": join(dirname(__file__), "ui", "images", "ARD_TS.jpg"),
+                "image": join(dirname(__file__), "res", "images", "ARD_TS.jpg"),
                 "playback": PlaybackType.AUDIO
             },
             "ARD - Tagesschau (Kurzfassung)": {
@@ -317,7 +317,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "uri": "rss//https://www.tagesschau.de/export/podcast/hi/tagesschau-in-100-sekunden/",
                 "media_type": MediaType.NEWS,
                 "match_types": [MediaType.NEWS],
-                "image": join(dirname(__file__), "ui", "images", "ARD_TS.jpg"),
+                "image": join(dirname(__file__), "res", "images", "ARD_TS.jpg"),
                 "playback": PlaybackType.AUDIO
             },
             "ARD - Tagesschau (vor 20 Jahren)": {
@@ -325,7 +325,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "uri": "rss//https://www.tagesschau.de/export/podcast/tagesschau-vor-20-jahren_https/",
                 "media_type": MediaType.NEWS,
                 "match_types": [MediaType.NEWS],
-                "image": join(dirname(__file__), "ui", "images", "ARD_TS20.jpg"),
+                "image": join(dirname(__file__), "res", "images", "ARD_TS20.jpg"),
                 "playback": PlaybackType.AUDIO
             },
             "ARD - Tagesthemen": {
@@ -333,7 +333,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "uri": "rss//https://www.tagesschau.de/export/podcast/tagesthemen_https/",
                 "media_type": MediaType.NEWS,
                 "match_types": [MediaType.NEWS],
-                "image": join(dirname(__file__), "ui", "images", "ARD_TT.jpeg"),
+                "image": join(dirname(__file__), "res", "images", "ARD_TT.jpeg"),
                 "playback": PlaybackType.AUDIO
             },
             "ARD - Nachtmagazin": {
@@ -341,7 +341,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "uri": "rss//https://www.tagesschau.de/export/podcast/nachtmagazin_https/",
                 "media_type": MediaType.NEWS,
                 "match_types": [MediaType.NEWS],
-                "image": join(dirname(__file__), "ui", "images", "ARD_NM.jpg"),
+                "image": join(dirname(__file__), "res", "images", "ARD_NM.jpg"),
                 "playback": PlaybackType.AUDIO
             },
             "HRI": {
@@ -349,7 +349,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "uri": "rss//https://podcast.hr.de/der_tag_in_hessen/podcast.xml",
                 "media_type": MediaType.NEWS,
                 "match_types": [MediaType.NEWS],
-                "image": join(dirname(__file__), "ui", "images", "HRI.png"),
+                "image": join(dirname(__file__), "res", "images", "HRI.png"),
                 "playback": PlaybackType.AUDIO
             },
             "NDR": {
@@ -357,7 +357,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "uri": "rss//https://www.ndr.de/nachrichten/info/podcast4370.xml",
                 "media_type": MediaType.NEWS,
                 "match_types": [MediaType.NEWS],
-                "image": join(dirname(__file__), "ui", "images", "NDR.png"),
+                "image": join(dirname(__file__), "res", "images", "NDR.png"),
                 "playback": PlaybackType.AUDIO
             },
             "FAZ - Frühdenker": {
@@ -365,7 +365,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "uri": "rss//https://fazfruehdenker.podigee.io/feed/mp3",
                 "media_type": MediaType.NEWS,
                 "match_types": [MediaType.NEWS, MediaType.PODCAST],
-                "image": join(dirname(__file__), "ui", "images", "FAZ_FD.jpeg"),
+                "image": join(dirname(__file__), "res", "images", "FAZ_FD.jpeg"),
                 "playback": PlaybackType.AUDIO
             },
             "SZ - Auf den Punkt": {
@@ -373,7 +373,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "uri": "rss//https://sz-auf-den-punkt.podigee.io/feed/mp3",
                 "media_type": MediaType.NEWS,
                 "match_types": [MediaType.NEWS, MediaType.PODCAST],
-                "image": join(dirname(__file__), "ui", "images", "SZ.jpeg"),
+                "image": join(dirname(__file__), "res", "images", "SZ.jpeg"),
                 "playback": PlaybackType.AUDIO
             },
             "Die Zeit - Was jetzt": {
@@ -381,7 +381,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "uri": "rss//https://wasjetzt.podigee.io/feed/mp3",
                 "media_type": MediaType.NEWS,
                 "match_types": [MediaType.NEWS, MediaType.PODCAST],
-                "image": join(dirname(__file__), "ui", "images", "ZEIT.png"),
+                "image": join(dirname(__file__), "res", "images", "ZEIT.png"),
                 "playback": PlaybackType.AUDIO
             },
             "Lage der Nation": {
@@ -389,7 +389,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "uri": "rss//https://feeds.lagedernation.org/feeds/ldn-mp3.xml",
                 "media_type": MediaType.NEWS,
                 "match_types": [MediaType.NEWS, MediaType.PODCAST],
-                "image": join(dirname(__file__), "ui", "images", "LDN.jpg"),
+                "image": join(dirname(__file__), "res", "images", "LDN.jpg"),
                 "playback": PlaybackType.AUDIO
             },
             "Apokalypse und Filterkaffee": {
@@ -397,7 +397,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "uri": "rss//https://apokalypse-und-filterkaffee.podigee.io/feed/mp3",
                 "media_type": MediaType.NEWS,
                 "match_types": [MediaType.NEWS, MediaType.PODCAST],
-                "image": join(dirname(__file__), "ui", "images", "AUF.jpg"),
+                "image": join(dirname(__file__), "res", "images", "AUF.jpg"),
                 "playback": PlaybackType.AUDIO
             },
             "The Pioneer Briefing": {
@@ -405,7 +405,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "uri": "rss//https://pcr.apple.com/id1428670057",
                 "media_type": MediaType.NEWS,
                 "match_types": [MediaType.NEWS, MediaType.PODCAST],
-                "image": join(dirname(__file__), "ui", "images", "TPB.jpg"),
+                "image": join(dirname(__file__), "res", "images", "TPB.jpg"),
                 "playback": PlaybackType.AUDIO
             },
             "OE3": {
@@ -413,7 +413,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "uri": "https://oe3meta.orf.at/oe3mdata/StaticAudio/Nachrichten.mp3",
                 "media_type": MediaType.NEWS,
                 "match_types": [MediaType.NEWS],
-                "image": join(dirname(__file__), "ui", "images", "oe3.jpeg"),
+                "image": join(dirname(__file__), "res", "images", "oe3.jpeg"),
                 "playback": PlaybackType.AUDIO
             }
         },
@@ -423,7 +423,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "uri": "http://progressive-audio.vrtcdn.be/content/fixed/11_11niws-snip_hi.mp3",
                 "media_type": MediaType.NEWS,
                 "match_types": [MediaType.NEWS],
-                "image": join(dirname(__file__), "ui", "images", "vrt.png"),
+                "image": join(dirname(__file__), "res", "images", "vrt.png"),
                 "playback": PlaybackType.AUDIO
             }
         },
@@ -433,7 +433,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "uri": "rss//https://api.sr.se/api/rss/pod/3795",
                 "media_type": MediaType.NEWS,
                 "match_types": [MediaType.NEWS],
-                "image": join(dirname(__file__), "ui", "images", "Ekot.png"),
+                "image": join(dirname(__file__), "res", "images", "Ekot.png"),
                 "playback": PlaybackType.AUDIO
             }
         },
@@ -444,7 +444,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "media_type": MediaType.NEWS,
                 "uri": "rss//http://api.rtve.es/api/programas/36019/audios.rs",
                 "match_types": [MediaType.NEWS],
-                "image": join(dirname(__file__), "ui", "images", "rne.png"),
+                "image": join(dirname(__file__), "res", "images", "rne.png"),
                 "playback": PlaybackType.AUDIO
             }
         },
@@ -455,7 +455,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "uri": "https://de1.api.radio-browser.info/pls/url/69bc7084-523c-11ea-be63-52543be04c81",
                 "match_types": [MediaType.NEWS,
                                 MediaType.RADIO],
-                "image": join(dirname(__file__), "ui", "images", "CCMA.jpeg"),
+                "image": join(dirname(__file__), "res", "images", "CCMA.jpeg"),
                 "playback": PlaybackType.AUDIO,
                 "secondary_langs": ["es"]
             }
@@ -466,7 +466,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "uri": "rss//https://feeds.yle.fi/areena/v1/series/1-1440981.rss",
                 "media_type": MediaType.NEWS,
                 "match_types": [MediaType.NEWS],
-                "image": join(dirname(__file__), "ui", "images", "Yle.png"),
+                "image": join(dirname(__file__), "res", "images", "Yle.png"),
                 "playback": PlaybackType.AUDIO
             }
         },
@@ -476,7 +476,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "uri": "news//https://www.raiplaysound.it",
                 "media_type": MediaType.NEWS,
                 "match_types": [MediaType.NEWS],
-                "image": join(dirname(__file__), "ui", "images", "RG1.jpg"),
+                "image": join(dirname(__file__), "res", "images", "RG1.jpg"),
                 "playback": PlaybackType.AUDIO
             }
         }
@@ -484,8 +484,8 @@ class NewsSkill(OVOSCommonPlaybackSkill):
 
     def __init__(self, *args, **kwargs):
         self.supported_media = [MediaType.NEWS]
-        self.skill_icon = join(dirname(__file__), "ui", "news.png")
-        self.default_bg = join(dirname(__file__), "ui", "bg.jpg")
+        self.skill_icon = join(dirname(__file__), "res", "news.png")
+        self.default_bg = join(dirname(__file__), "res", "bg.jpg")
         super().__init__(*args, **kwargs)
 
     @classproperty
