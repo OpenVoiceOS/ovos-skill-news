@@ -1,5 +1,17 @@
 # Changelog
 
+## [Unreleased](https://github.com/OpenVoiceOS/skill-ovos-news/tree/HEAD)
+
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.4a4...HEAD)
+
+**Closed issues:**
+
+- No module named 'mycroft\_bus\_client' [\#24](https://github.com/OpenVoiceOS/skill-ovos-news/issues/24)
+
+## [V0.0.4a4](https://github.com/OpenVoiceOS/skill-ovos-news/tree/V0.0.4a4) (2024-01-13)
+
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.4a3...V0.0.4a4)
+
 ## [V0.0.4a3](https://github.com/OpenVoiceOS/skill-ovos-news/tree/V0.0.4a3) (2024-01-12)
 
 [Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.4a2...V0.0.4a3)
