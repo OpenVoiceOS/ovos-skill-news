@@ -2,7 +2,15 @@
 
 ## [Unreleased](https://github.com/OpenVoiceOS/skill-ovos-news/tree/HEAD)
 
-[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.4a4...HEAD)
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.4a5...HEAD)
+
+**Implemented enhancements:**
+
+- feat/modernize [\#28](https://github.com/OpenVoiceOS/skill-ovos-news/pull/28) ([JarbasAl](https://github.com/JarbasAl))
+
+## [V0.0.4a5](https://github.com/OpenVoiceOS/skill-ovos-news/tree/V0.0.4a5) (2024-05-16)
+
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.4a4...V0.0.4a5)
 
 **Closed issues:**
 
