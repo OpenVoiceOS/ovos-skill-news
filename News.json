@@ -478,7 +478,10 @@
                 "VRT"
             ],
             "uri": "http://progressive-audio.vrtcdn.be/content/fixed/11_11niws-snip_hi.mp3",
-            "image": "./res/images/vrt.png"
+            "image": "./res/images/vrt.png",
+            "secondary_langs": [
+                "nl"
+            ]
         }
     },
     "sv-se": {
