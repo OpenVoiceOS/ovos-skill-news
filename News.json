@@ -273,7 +273,7 @@
         "DW": {
             "aliases": ["DW News", "DW", "DW News Channel"],
             "uri": "rss//https://rss.dw.com/syndication/feeds/podcast_en_newsbrief.33191-mrss.xml",
-            "image": "./res/images/DW.png",
+            "image": "https://static.dw.com/image/55134716_7.png",
             "secondary_langs": ["en"]
         }
     },
