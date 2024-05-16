@@ -463,6 +463,15 @@
         }
     },
     "nl-nl": {
+        "NOS": {
+            "aliases": [
+                "NOS Nieuws"
+            ],
+            "uri": "https://cdn.nos.nl/content/radio/ditisdenieuweurlvoorhetradiobulletinvoorgooglevanafjuli2019.mp3",
+            "image": "./res/images/nos.png"
+        }
+    },
+    "nl-be": {
         "VRT": {
             "aliases": [
                 "VRT Nieuws",
