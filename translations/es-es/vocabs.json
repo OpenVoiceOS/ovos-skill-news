@@ -1,0 +1,82 @@
+{
+    "video.voc": [
+        "video"
+    ],
+    "rt.voc": [
+        "Rusia"
+    ],
+    "it.voc": [
+        "Italia",
+        "Italiano"
+    ],
+    "en-ca.voc": [
+        "canadian",
+        "canada"
+    ],
+    "nl.voc": [
+        "Pa\u00edses Bajos",
+        "dutch",
+        "Nederlands"
+    ],
+    "ca.voc": [
+        "Catalu\u00f1a",
+        "Catalan"
+    ],
+    "euronews.voc": [
+        "euronews"
+    ],
+    "fr.voc": [
+        "Franco",
+        "Franc\u00e9s"
+    ],
+    "es.voc": [
+        "Espa\u00f1ol"
+    ],
+    "news.voc": [
+        "noticias"
+    ],
+    "en-au.voc": [
+        "australiana",
+        "australia"
+    ],
+    "pt-pt.voc": [
+        "Portugu\u00e9s",
+        "Portugal"
+    ],
+    "euro.voc": [
+        "europeas",
+        "euro"
+    ],
+    "en.voc": [
+        "Ingl\u00e9s"
+    ],
+    "de.voc": [
+        "Alem\u00e1n"
+    ],
+    "fr24.voc": [
+        "Francia 24",
+        "France24",
+        "Francia"
+    ],
+    "fi.voc": [
+        "finland",
+        "finnish"
+    ],
+    "sv.voc": [
+        "sweden",
+        "sueco"
+    ],
+    "en-gb.voc": [
+        "UK",
+        "Reino unido",
+        "Brit\u00e1nico"
+    ],
+    "ru.voc": [
+        "ruso",
+        "rusia"
+    ],
+    "en-us.voc": [
+        "Am\u00e9rica",
+        "Estados Unidos"
+    ]
+}
