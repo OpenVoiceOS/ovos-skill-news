@@ -21,9 +21,10 @@ for lang in os.listdir(tx):
             data = json.load(f)
         for fid, samples in data.items():
             if samples:
-                samples = [s.strip() for s in samples 
+                os.makedirs(f"{locale}/{lang.lower()}", exist_ok=True)
+                samples = [s.strip() for s in samples
                            if s and s.strip() != "[UNUSED]"]  # s may be None
-                with open(f"{locale}/{lang}/{fid}", "w") as f:
+                with open(f"{locale}/{lang.lower()}/{fid}", "w") as f:
                     f.write("\n".join(sorted(samples)))
 
     if os.path.isfile(dialogs):
@@ -31,9 +32,10 @@ for lang in os.listdir(tx):
             data = json.load(f)
         for fid, samples in data.items():
             if samples:
-                samples = [s.strip() for s in samples 
+                os.makedirs(f"{locale}/{lang.lower()}", exist_ok=True)
+                samples = [s.strip() for s in samples
                            if s and s.strip() != "[UNUSED]"]  # s may be None
-                with open(f"{locale}/{lang}/{fid}", "w") as f:
+                with open(f"{locale}/{lang.lower()}/{fid}", "w") as f:
                     f.write("\n".join(sorted(samples)))
 
     if os.path.isfile(vocs):
@@ -41,9 +43,10 @@ for lang in os.listdir(tx):
             data = json.load(f)
         for fid, samples in data.items():
             if samples:
-                samples = [s.strip() for s in samples 
+                os.makedirs(f"{locale}/{lang.lower()}", exist_ok=True)
+                samples = [s.strip() for s in samples
                            if s and s.strip() != "[UNUSED]"]  # s may be None
-                with open(f"{locale}/{lang}/{fid}", "w") as f:
+                with open(f"{locale}/{lang.lower()}/{fid}", "w") as f:
                     f.write("\n".join(sorted(samples)))
 
     if os.path.isfile(regexes):
@@ -51,8 +54,9 @@ for lang in os.listdir(tx):
             data = json.load(f)
         for fid, samples in data.items():
             if samples:
-                samples = [s.strip() for s in samples 
+                os.makedirs(f"{locale}/{lang.lower()}", exist_ok=True)
+                samples = [s.strip() for s in samples
                            if s and s.strip() != "[UNUSED]"]  # s may be None
-                with open(f"{locale}/{lang}/{fid}", "w") as f:
+                with open(f"{locale}/{lang.lower()}/{fid}", "w") as f:
                     f.write("\n".join(sorted(samples)))
 
