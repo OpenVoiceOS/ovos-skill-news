@@ -25,11 +25,11 @@ class NewsSkill(OVOSCommonPlaybackSkill):
     }
 
     def __init__(self, *args, **kwargs):
+        self.default_bg = join(dirname(__file__), "res", "bg.jpg")
+        self.archive = JsonStorage(f"{dirname(__file__)}/News.json")
         super().__init__(supported_media=[MediaType.NEWS, MediaType.GENERIC], 
                          skill_icon=join(dirname(__file__), "res", "news.png"), 
                          *args, **kwargs)
-        self.default_bg = join(dirname(__file__), "res", "bg.jpg")
-        self.archive = JsonStorage(f"{dirname(__file__)}/News.json")
 
     @classproperty
     def runtime_requirements(self):
