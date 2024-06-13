@@ -1,5 +1,18 @@
 # Changelog
 
+## [Unreleased](https://github.com/OpenVoiceOS/skill-ovos-news/tree/HEAD)
+
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.4a9...HEAD)
+
+**Implemented enhancements:**
+
+- NL news stream [\#18](https://github.com/OpenVoiceOS/skill-ovos-news/issues/18)
+- improve NL streams [\#29](https://github.com/OpenVoiceOS/skill-ovos-news/pull/29) ([JarbasAl](https://github.com/JarbasAl))
+
+## [V0.0.4a9](https://github.com/OpenVoiceOS/skill-ovos-news/tree/V0.0.4a9) (2024-05-25)
+
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.4a8...V0.0.4a9)
+
 ## [V0.0.4a8](https://github.com/OpenVoiceOS/skill-ovos-news/tree/V0.0.4a8) (2024-05-24)
 
 [Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.4a7...V0.0.4a8)
