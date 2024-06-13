@@ -23,7 +23,8 @@ Supported stations include:
 - [EN-CA] CBC News
 - [ES-ES] RNE Radio Nacional de España
 - [PT-PT] TSF Rádio Notícias
-- [NL] VRT Nieuws
+- [NL-NL] NOS
+- [NL-BE] VRT Nieuws
 - [DE] Ö3 Nachrichten
 - [DE] DLF
 - [DE] WDR
