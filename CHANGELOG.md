@@ -2,7 +2,19 @@
 
 ## [Unreleased](https://github.com/OpenVoiceOS/skill-ovos-news/tree/HEAD)
 
-[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.4a9...HEAD)
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.4a10...HEAD)
+
+**Implemented enhancements:**
+
+- add DW english feed [\#30](https://github.com/OpenVoiceOS/skill-ovos-news/pull/30) ([JarbasAl](https://github.com/JarbasAl))
+
+**Closed issues:**
+
+- Enhancement: DW News Feed [\#27](https://github.com/OpenVoiceOS/skill-ovos-news/issues/27)
+
+## [V0.0.4a10](https://github.com/OpenVoiceOS/skill-ovos-news/tree/V0.0.4a10) (2024-06-13)
+
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-news/compare/V0.0.4a9...V0.0.4a10)
 
 **Implemented enhancements:**
 
