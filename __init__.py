@@ -1,8 +1,9 @@
 from os.path import join, dirname
+from typing import Iterable, Union, List
 
 from json_database import JsonStorage
 from ovos_utils import classproperty
-from ovos_utils.ocp import MediaType, PlaybackType
+from ovos_workshop.backwards_compat import MediaType, PlaybackType, Playlist, PluginStream, dict2entry, MediaEntry
 from ovos_utils.parse import match_one, MatchStrategy
 from ovos_utils.process_utils import RuntimeRequirements
 from ovos_workshop.decorators import ocp_search, ocp_featured_media
@@ -93,32 +94,29 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         # match name
         _, alias_score = match_one(phrase, entry["aliases"],
                                    strategy=MatchStrategy.TOKEN_SORT_RATIO)
-        entry["match_confidence"] = score + alias_score * 60
+        match_confidence = score + alias_score * 60
 
         # match languages
         if entry["lang"] in langs:
-            entry["match_confidence"] += 25  # lang bonus
+            match_confidence += 25  # lang bonus
         elif any([lang in entry.get("secondary_langs", [])
                   for lang in langs]):
-            entry["match_confidence"] += 10  # smaller lang bonus
+            match_confidence += 10  # smaller lang bonus
         else:
-            entry["match_confidence"] -= 20  # wrong language penalty
+            match_confidence -= 20  # wrong language penalty
 
         # default news feed gets a nice bonus
         if entry.get("is_default"):
-            entry["match_confidence"] += 30
+            match_confidence += 30
 
-        return min([entry["match_confidence"], 100])
+        return min([match_confidence, 100])
 
-    @ocp_featured_media()
-    def news_playlist(self):
+    def read_db(self) -> List[dict]:
         entries = []
-
         for lang in self.archive:
             default_feed = self.langdefaults.get(lang)
             if lang == self.lang:
                 default_feed = self.settings.get("default_feed") or default_feed
-
             for feed, config in self.archive[lang].items():
                 if feed == default_feed:
                     config["is_default"] = True
@@ -134,8 +132,46 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                     entries.append(config)
         return entries
 
+    @ocp_featured_media()
+    def news_playlist(self) -> Playlist:
+        entries = Playlist(title="Latest News (Station Playlist)")
+        for config in self.read_db():
+            if config["uri"].startswith("rss//"):
+                entries.append(PluginStream(
+                    extractor_id="rss",
+                    stream=config["uri"].split("rss//")[-1],
+                    title=config.get("title"),
+                    image=config.get("image"),
+                    media_type=MediaType.NEWS,
+                    playback=PlaybackType.AUDIO,
+                    skill_icon=self.skill_icon,
+                    skill_id=self.skill_id)
+                )
+            elif config["uri"].startswith("news//"):
+                entries.append(PluginStream(
+                    extractor_id="news",
+                    stream=config["uri"].split("news//")[-1],
+                    title=config.get("title"),
+                    image=config.get("image"),
+                    media_type=MediaType.NEWS,
+                    playback=PlaybackType.AUDIO,
+                    skill_icon=self.skill_icon,
+                    skill_id=self.skill_id)
+                )
+            else:
+                entries.append(MediaEntry(
+                    uri=config["uri"],
+                    title=config.get("title"),
+                    image=config.get("image"),
+                    media_type=MediaType.NEWS,
+                    playback=PlaybackType.AUDIO,
+                    skill_icon=self.skill_icon,
+                    skill_id=self.skill_id)
+                )
+        return entries
+
     @ocp_search()
-    def search_news(self, phrase, media_type):
+    def search_news(self, phrase, media_type) -> Iterable[Union[Playlist, MediaType, PluginStream]]:
         """Analyze phrase to see if it is a play-able phrase with this skill.
 
         Arguments:
@@ -171,31 +207,28 @@ class NewsSkill(OVOSCommonPlaybackSkill):
             phrase = entities["news_provider"]
         else:
             phrase = self.clean_phrase(phrase)
+
         results = []
+        # playlist result
+        if pl and base_score >= 50:
+            results.append(pl)
 
         if entities or media_type == MediaType.NEWS:
-            for v in pl:
+            for v in self.read_db():
                 s = self._score(phrase, v, langs=langs, base_score=base_score)
                 if s <= 50:
                     continue
-                v["match_confidence"] = min(100, s)
+                if v["uri"].startswith("news//"):
+                    v["extractor_id"] = "news"
+                    v["stream"] = v["uri"].split("news//")[-1]
+                elif v["uri"].startswith("rss//"):
+                    v["extractor_id"] = "rss"
+                    v["stream"] = v["uri"].split("rss//")[-1]
+                v = dict2entry(v)
+                v.match_confidence = min(100, s)
                 results.append(v)
 
-        # playlist result
-        if pl and base_score >= 50:
-            results.append({
-                "match_confidence": base_score,
-                "media_type": MediaType.NEWS,
-                "playlist": pl,
-                "playback": PlaybackType.AUDIO,
-                "image": self.skill_icon,
-                "bg_image": self.skill_icon,
-                "skill_icon": self.skill_icon,
-                "title": "Latest News (Station Playlist)",
-                "skill_id": self.skill_id
-            })
-
-        return sorted(results, key=lambda k: k["match_confidence"], reverse=True)
+        return sorted(results, key=lambda k: k.match_confidence, reverse=True)
 
 
 if __name__ == "__main__":
