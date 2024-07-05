@@ -278,18 +278,6 @@
         }
     },
     "pt-pt": {
-        "TSF": {
-            "aliases": [
-                "TSF",
-                "TSF Rádio Notícias",
-                "TSF Notícias"
-            ],
-            "uri": "news//https://www.tsf.pt/stream",
-            "image": "./res/images/tsf.png",
-            "secondary_langs": [
-                "pt"
-            ]
-        },
         "RTP": {
             "aliases": [
                 "RTP",
