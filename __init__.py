@@ -14,7 +14,7 @@ from ovos_workshop.skills.common_play import OVOSCommonPlaybackSkill
 class NewsSkill(OVOSCommonPlaybackSkill):
     # default feeds per language (optional)
     langdefaults = {
-        "pt-pt": "TSF",
+        "pt-pt": "RTP",
         "es-es": "RNE",
         "ca-es": "CCMA",
         "en-gb": "BBC",
