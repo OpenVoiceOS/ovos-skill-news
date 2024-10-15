@@ -3,7 +3,7 @@ from typing import Iterable, Union, List
 
 from json_database import JsonStorage
 from ovos_utils import classproperty
-from ovos_workshop.backwards_compat import MediaType, PlaybackType, Playlist, PluginStream, dict2entry, MediaEntry
+from ovos_utils.ocp import MediaType, PlaybackType, Playlist, PluginStream, dict2entry, MediaEntry
 from ovos_utils.parse import match_one, MatchStrategy
 from ovos_utils.process_utils import RuntimeRequirements
 from ovos_workshop.decorators import ocp_search, ocp_featured_media
