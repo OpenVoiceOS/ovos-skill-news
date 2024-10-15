@@ -1,0 +1,84 @@
+{
+  "video.voc": [
+    "vídeo"
+  ],
+  "rt.voc": [
+    "Russia Today"
+  ],
+  "it.voc": [
+    "Italià\nItaliana",
+    "Itàlia"
+  ],
+  "en-ca.voc": [
+    "Canadà",
+    "canadenc\ncanadenca"
+  ],
+  "nl.voc": [
+    "neerlandès\nneerlandés\nholandès\nholandés",
+    "Països Baixos",
+    "Holanda"
+  ],
+  "ca.voc": [
+    "Català\nCatalana",
+    "Catalunya"
+  ],
+  "euronews.voc": [
+    "euronews"
+  ],
+  "fr.voc": [
+    "francès\nfrancés\nfrancesa",
+    "França"
+  ],
+  "es.voc": [
+    "espanyol\nespanyola"
+  ],
+  "news.voc": [
+    "notícies"
+  ],
+  "en-au.voc": [
+    "Austràlia",
+    "australià\naustraliana"
+  ],
+  "pt-pt.voc": [
+    "Portuguès\nPortugués\nPortuguesa",
+    "Portugal"
+  ],
+  "euro.voc": [
+    "euro",
+    "europeu\neuropea"
+  ],
+  "en.voc": [
+    "anglès\nanglés\nanglesa"
+  ],
+  "de.voc": [
+    "alemany\nalemanya"
+  ],
+  "fr24.voc": [
+    "France24",
+    "France 24",
+    "France vint-i-quatre",
+    "France vint i quatre"
+  ],
+  "fi.voc": [
+    "Finlàndia",
+    "finès\nfinés\nfinesa"
+  ],
+  "sv.voc": [
+    "Suècia",
+    "suec\nsueca"
+  ],
+  "en-gb.voc": [
+    "britànic\nbritànica",
+    "Regne Unit",
+    "Gran Bretanya"
+  ],
+  "ru.voc": [
+    "rus\nrussa",
+    "Rússia"
+  ],
+  "en-us.voc": [
+    "Amèrica",
+    "americà\namericana",
+    "Estats Units"
+  ]
+}
