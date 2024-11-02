@@ -3,7 +3,7 @@
     "video"
   ],
   "rt.voc": [
-    null
+    "Russia Today"
   ],
   "it.voc": [
     "italiensk",
@@ -54,10 +54,10 @@
     "tysk"
   ],
   "fr24.voc": [
-    null,
-    null,
-    null,
-    null
+    "France24",
+    "France 24",
+    "France twenty four",
+    "France twenty forth"
   ],
   "fi.voc": [
     "finland",
@@ -69,7 +69,7 @@
   ],
   "en-gb.voc": [
     "britisk",
-    null,
+    "united kingdom",
     "Storbritannien"
   ],
   "ru.voc": [
@@ -79,6 +79,6 @@
   "en-us.voc": [
     "Amerika",
     "amerikansk",
-    null
+    "united states"
   ]
 }
