@@ -1,12 +1,12 @@
 # Changelog
 
-## [0.1.4a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.1.4a1) (2024-11-02)
+## [0.1.5a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.1.5a1) (2024-11-05)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.1.3...0.1.4a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.1.4...0.1.5a1)
 
 **Merged pull requests:**
 
-- da-dk/translate [\#40](https://github.com/OpenVoiceOS/ovos-skill-news/pull/40) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+- fix:allow workshop 2.0.0 [\#42](https://github.com/OpenVoiceOS/ovos-skill-news/pull/42) ([JarbasAl](https://github.com/JarbasAl))
 
 
 
