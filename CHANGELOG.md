@@ -1,12 +1,12 @@
 # Changelog
 
-## [0.1.5a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.1.5a1) (2024-11-05)
+## [0.1.6a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.1.6a1) (2024-11-15)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.1.4...0.1.5a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.1.5...0.1.6a1)
 
 **Merged pull requests:**
 
-- fix:allow workshop 2.0.0 [\#42](https://github.com/OpenVoiceOS/ovos-skill-news/pull/42) ([JarbasAl](https://github.com/JarbasAl))
+- fix: add missing skill.json [\#44](https://github.com/OpenVoiceOS/ovos-skill-news/pull/44) ([JarbasAl](https://github.com/JarbasAl))
 
 
 
