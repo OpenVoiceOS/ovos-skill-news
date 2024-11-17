@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.7a2](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.1.7a2) (2024-11-17)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.1.7a1...0.1.7a2)
+
+**Merged pull requests:**
+
+- risolto [\#47](https://github.com/OpenVoiceOS/ovos-skill-news/pull/47) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+
 ## [0.1.7a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.1.7a1) (2024-11-17)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.1.6...0.1.7a1)
