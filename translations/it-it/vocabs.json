@@ -1,82 +1,84 @@
 {
-    "video.voc": [
-        "video"
-    ],
-    "rt.voc": [
-        "Russia Oggi"
-    ],
-    "it.voc": [
-        "Italia",
-        "Italian(o|a)"
-    ],
-    "en-ca.voc": [
-        "Canada",
-        "Canadese"
-    ],
-    "nl.voc": [
-        "Paesi Bassi",
-        "Olanda",
-        "Olandese"
-    ],
-    "ca.voc": [
-        "Catalano",
-        "Catalogna"
-    ],
-    "euronews.voc": [
-        "euronews"
-    ],
-    "fr.voc": [
-        "Francia",
-        "Francese"
-    ],
-    "es.voc": [
-        "Spagnolo"
-    ],
-    "news.voc": [
-        "Notizie",
-        "Notiziario"
-    ],
-    "en-au.voc": [
-        "Australiano",
-        "Australia"
-    ],
-    "pt-pt.voc": [
-        "Portogallo",
-        "Portoghese"
-    ],
-    "euro.voc": [
-        "Europeo",
-        "Europa"
-    ],
-    "en.voc": [
-        "Inglese"
-    ],
-    "de.voc": [
-        "Germania"
-    ],
-    "fr24.voc": [
-        "Francia 24",
-        "Francia"
-    ],
-    "fi.voc": [
-        "Finlandese",
-        "Finlandia"
-    ],
-    "sv.voc": [
-        "Svezia",
-        "Svedese"
-    ],
-    "en-gb.voc": [
-        "Inglese",
-        "Regno Unito",
-        "Gran Bretagna"
-    ],
-    "ru.voc": [
-        "Russia"
-    ],
-    "en-us.voc": [
-        "America",
-        "American(o|a)",
-        "Stati Uniti"
-    ]
+  "video.voc": [
+    "video"
+  ],
+  "rt.voc": [
+    "Russia Today"
+  ],
+  "it.voc": [
+    "Italian(o|a|i|e)",
+    "Italia"
+  ],
+  "en-ca.voc": [
+    "Canada",
+    "Canadese"
+  ],
+  "nl.voc": [
+    "olandes(e|i)",
+    "(Olanda|Paesi Bassi)",
+    "(Olanda|Paesi Bassi)"
+  ],
+  "ca.voc": [
+    "Catalan(o|a|i|e)",
+    "Catalogna"
+  ],
+  "euronews.voc": [
+    "euronews"
+  ],
+  "fr.voc": [
+    "Francia",
+    "Frances(e|i)"
+  ],
+  "es.voc": [
+    "Spagnol(o|a|i|e)"
+  ],
+  "news.voc": [
+    "Notizie"
+  ],
+  "en-au.voc": [
+    "Australian(o|a|i|e)",
+    "Australia"
+  ],
+  "pt-pt.voc": [
+    "Portoghes(e|i)",
+    "Portogallo"
+  ],
+  "euro.voc": [
+    "Europa",
+    "Europe(o|a|i|e)"
+  ],
+  "en.voc": [
+    "Ingles(e|i)"
+  ],
+  "de.voc": [
+    "Germania"
+  ],
+  "fr24.voc": [
+    "France24",
+    "France24",
+    "France24",
+    "France24"
+  ],
+  "fi.voc": [
+    "Finlandia",
+    "finlandes(e|i)"
+  ],
+  "sv.voc": [
+    "Svezia",
+    "svedes(e|i)"
+  ],
+  "en-gb.voc": [
+    "britannic(o|a|i|e)",
+    "Regno Unito",
+    "Gran Bretagna"
+  ],
+  "ru.voc": [
+    "russ(o|a|i|e)",
+    "Russia"
+  ],
+  "en-us.voc": [
+    "America",
+    "american(o|a|i|e)",
+    "Stati Uniti"
+  ]
 }
