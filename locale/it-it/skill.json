@@ -1,0 +1,38 @@
+{
+  "skill_id": "skill-ovos-news.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/skill-ovos-news",
+  "extra_plugins": {
+    "core": [
+
+    ],
+    "PHAL": [
+
+    ],
+    "listener": [
+
+    ],
+    "audio": [
+      "ovos-ocp-news-plugin"
+    ],
+    "media": [
+      "ovos-ocp-news-plugin"
+    ],
+    "gui": [
+
+    ]
+  },
+  "name": "Riproduttore di notizie",
+  "description": "Riproduttore di flussi radio da tutto il mondo",
+  "examples": [
+    "metti il giornale radio",
+    "metti npr news",
+    "metti euronews",
+    "metti il radiogiornale italiano",
+    "metti il giornale radio portoghese",
+    "metti il radiogiornale spagnolo"
+  ],
+  "tags": [
+    "notizie",
+    "informazione"
+  ]
+}

@@ -1,12 +1,28 @@
 # Changelog
 
-## [0.1.6a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.1.6a1) (2024-11-15)
+## [0.1.8a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.1.8a1) (2024-11-19)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.1.5...0.1.6a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.1.7a2...0.1.8a1)
 
 **Merged pull requests:**
 
-- fix: add missing skill.json [\#44](https://github.com/OpenVoiceOS/ovos-skill-news/pull/44) ([JarbasAl](https://github.com/JarbasAl))
+- fix:allow workshop 3.0.0 [\#51](https://github.com/OpenVoiceOS/ovos-skill-news/pull/51) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.1.7a2](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.1.7a2) (2024-11-17)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.1.7a1...0.1.7a2)
+
+**Merged pull requests:**
+
+- risolto [\#47](https://github.com/OpenVoiceOS/ovos-skill-news/pull/47) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+
+## [0.1.7a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.1.7a1) (2024-11-17)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.1.6...0.1.7a1)
+
+**Merged pull requests:**
+
+- added italian [\#48](https://github.com/OpenVoiceOS/ovos-skill-news/pull/48) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 
 
