@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.8a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.1.8a1) (2024-11-19)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.1.7a2...0.1.8a1)
+
+**Merged pull requests:**
+
+- fix:allow workshop 3.0.0 [\#51](https://github.com/OpenVoiceOS/ovos-skill-news/pull/51) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.7a2](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.1.7a2) (2024-11-17)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.1.7a1...0.1.7a2)
