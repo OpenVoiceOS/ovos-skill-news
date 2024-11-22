@@ -241,20 +241,6 @@
             ]
         }
     },
-    "en-ca": {
-        "CBC": {
-            "aliases": [
-                "Canadian Broadcasting Corporation",
-                "CBC",
-                "CBC News"
-            ],
-            "uri": "rss//https://www.cbc.ca/podcasting/includes/hourlynews.xml",
-            "image": "./res/images/CBC.png",
-            "secondary_langs": [
-                "en"
-            ]
-        }
-    },
     "en-au": {
         "ABC": {
             "aliases": [
