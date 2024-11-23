@@ -1,12 +1,12 @@
 # Changelog
 
-## [0.1.9a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.1.9a1) (2024-11-22)
+## [0.1.10a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.1.10a1) (2024-11-23)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.1.8...0.1.9a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.1.9...0.1.10a1)
 
 **Merged pull requests:**
 
-- fix: remove dead stream [\#53](https://github.com/OpenVoiceOS/ovos-skill-news/pull/53) ([JarbasAl](https://github.com/JarbasAl))
+- Add Catalan translation [\#56](https://github.com/OpenVoiceOS/ovos-skill-news/pull/56) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 
 
