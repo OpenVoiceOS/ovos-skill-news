@@ -1,0 +1,38 @@
+{
+  "skill_id": "skill-ovos-news.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/skill-ovos-news",
+  "extra_plugins": {
+    "core": [
+
+    ],
+    "PHAL": [
+
+    ],
+    "listener": [
+
+    ],
+    "audio": [
+      "ovos-ocp-nyhedsplugin"
+    ],
+    "media": [
+      "ovos-ocp-nyhedsplugin"
+    ],
+    "gui": [
+
+    ]
+  },
+  "name": "Nyhedsstrømme",
+  "description": "Nyheder fra hele kloden.",
+  "examples": [
+    "afspil nyhederne",
+    "spil npr nyheder",
+    "spil euronews",
+    "afspil catalanske nyheder",
+    "afspil portugisiske nyheder",
+    "afspil nyheder på spansk"
+  ],
+  "tags": [
+    "nyheder",
+    "information"
+  ]
+}
