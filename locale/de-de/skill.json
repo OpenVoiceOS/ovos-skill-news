@@ -1,0 +1,38 @@
+{
+  "skill_id": "skill-ovos-news.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/skill-ovos-news",
+  "extra_plugins": {
+    "core": [
+
+    ],
+    "PHAL": [
+
+    ],
+    "listener": [
+
+    ],
+    "audio": [
+      "ovos-ocp-news-plugin"
+    ],
+    "media": [
+      "ovos-ocp-news-plugin"
+    ],
+    "gui": [
+
+    ]
+  },
+  "name": "Nachrichten Streams",
+  "description": "Nachrichten-Streams aus der ganzen Welt.",
+  "examples": [
+    "Nachrichten abspielen\nspiele die Nachrichten ",
+    "NPR Nachrichten abspielen\nspiele NPR Nachrichten",
+    "euronews abspielen\nspiele euronews ",
+    "spiele katalanische Nachrichten",
+    "portugiesische Nachrichten abspielen",
+    "Nachrichten auf Spanisch abspielen"
+  ],
+  "tags": [
+    "Nachrichten",
+    "Information\nInformationen"
+  ]
+}
