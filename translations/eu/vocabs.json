@@ -1,0 +1,84 @@
+{
+    "video.voc": [
+        "bideo"
+    ],
+    "rt.voc": [
+        "Russia Today"
+    ],
+    "it.voc": [
+        "italiar",
+        "Italia"
+    ],
+    "en-ca.voc": [
+        "kanada",
+        "kanadar"
+    ],
+    "nl.voc": [
+        "Herbereak",
+        "Herbehereak",
+        "nederlandar"
+    ],
+    "ca.voc": [
+        "katalan",
+        "Katalunia"
+    ],
+    "euronews.voc": [
+        "euronews"
+    ],
+    "fr.voc": [
+        "frantses",
+        "frantzia"
+    ],
+    "es.voc": [
+        "espainiar"
+    ],
+    "news.voc": [
+        "berriak"
+    ],
+    "en-au.voc": [
+        "australia",
+        "australiar"
+    ],
+    "pt-pt.voc": [
+        "Portugal",
+        "portuges"
+    ],
+    "euro.voc": [
+        "euro",
+        "europear"
+    ],
+    "en.voc": [
+        "ingeles"
+    ],
+    "de.voc": [
+        "aleman"
+    ],
+    "fr24.voc": [
+        "France 24",
+        "Frantzia hogeita lau",
+        "Frantzia hogeita laugarren",
+        "France24"
+    ],
+    "fi.voc": [
+        "finlandia",
+        "finlandiar"
+    ],
+    "sv.voc": [
+        "Suedia",
+        "suediar"
+    ],
+    "en-gb.voc": [
+        "UK",
+        "britainiar",
+        "erresuma batua"
+    ],
+    "ru.voc": [
+        "Errusia",
+        "errusiar"
+    ],
+    "en-us.voc": [
+        "amerika",
+        "amerikar",
+        "estatu batuak"
+    ]
+}
