@@ -1,12 +1,20 @@
 # Changelog
 
-## [0.1.11a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.1.11a1) (2024-11-25)
+## [0.1.12a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.1.12a1) (2024-12-02)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.1.10...0.1.11a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.1.12a1...0.1.12a1)
 
 **Merged pull requests:**
 
-- da-dk/translate [\#58](https://github.com/OpenVoiceOS/ovos-skill-news/pull/58) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+- import galician translations [\#61](https://github.com/OpenVoiceOS/ovos-skill-news/pull/61) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.1.12a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.1.12a1) (2024-11-30)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.1.11...0.1.12a1)
+
+**Merged pull requests:**
+
+- de-de/translate [\#60](https://github.com/OpenVoiceOS/ovos-skill-news/pull/60) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 
 
