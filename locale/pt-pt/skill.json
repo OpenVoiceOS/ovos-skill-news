@@ -20,10 +20,12 @@
 
     ]
   },
+  "name": "Notícias",
+  "description": "Notícias de todo o mundo.",
   "examples": [
     "reproduza as notícias",
     "reproduzir notícias da NPR",
-    null,
+    "reproduzir euronews",
     "reproduzir notícias catalãs",
     "reproduzir notícias portuguesas",
     "reproduzir notícias em espanhol"
