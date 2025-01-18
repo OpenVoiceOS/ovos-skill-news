@@ -1,0 +1,37 @@
+{
+  "source": "https://github.com/OpenVoiceOS/skill-ovos-news",
+  "extra_plugins": {
+    "core": [
+
+    ],
+    "PHAL": [
+
+    ],
+    "listener": [
+
+    ],
+    "audio": [
+      "ovos-ocp-news-plugin"
+    ],
+    "media": [
+      "ovos-ocp-news-plugin"
+    ],
+    "gui": [
+
+    ]
+  },
+  "name": "Notícias",
+  "description": "Notícias de todo o mundo.",
+  "examples": [
+    "reproduza as notícias",
+    "reproduzir notícias da NPR",
+    "reproduzir euronews",
+    "reproduzir notícias catalãs",
+    "reproduzir notícias portuguesas",
+    "reproduzir notícias em espanhol"
+  ],
+  "tags": [
+    "notícias",
+    "informação"
+  ]
+}
