@@ -2,7 +2,9 @@ from os.path import join, dirname
 from typing import Iterable, Union, List
 
 from json_database import JsonStorage
+
 from ovos_utils import classproperty
+from ovos_utils.lang import standardize_lang_tag
 from ovos_utils.ocp import MediaType, PlaybackType, Playlist, PluginStream, dict2entry, MediaEntry
 from ovos_utils.parse import match_one, MatchStrategy
 from ovos_utils.process_utils import RuntimeRequirements
@@ -14,22 +16,22 @@ from ovos_workshop.skills.common_play import OVOSCommonPlaybackSkill
 class NewsSkill(OVOSCommonPlaybackSkill):
     # default feeds per language (optional)
     langdefaults = {
-        "pt-pt": "RTP",
-        "es-es": "RNE",
-        "ca-es": "CCMA",
-        "en-gb": "BBC",
-        "en-us": "NPR",
-        "en-au": "ABC",
-        "en-ca": "CBC",
-        "it-it": "GR1",
-        "de-de": "DLF - Die Nachrichten"
+        "pt-PT": "RTP",
+        "es-ES": "RNE",
+        "ca-ES": "CCMA",
+        "en-GB": "BBC",
+        "en-US": "NPR",
+        "en-AU": "ABC",
+        "en-CA": "CBC",
+        "it-IT": "GR1",
+        "de-DE": "DLF - Die Nachrichten"
     }
 
     def __init__(self, *args, **kwargs):
         self.default_bg = join(dirname(__file__), "res", "bg.jpg")
         self.archive = JsonStorage(f"{dirname(__file__)}/News.json")
-        super().__init__(supported_media=[MediaType.NEWS, MediaType.GENERIC], 
-                         skill_icon=join(dirname(__file__), "res", "news.png"), 
+        super().__init__(supported_media=[MediaType.NEWS, MediaType.GENERIC],
+                         skill_icon=join(dirname(__file__), "res", "news.png"),
                          *args, **kwargs)
 
     @classproperty
@@ -45,7 +47,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         self.register_ocp_keyword(MediaType.NEWS, "news_provider", news)
         # self.export_ocp_keywords_csv("news.csv")
 
-    def clean_phrase(self, phrase):
+    def clean_phrase(self, phrase: str) -> str:
         phrase = self.remove_voc(phrase, "news")
 
         phrase = self.remove_voc(phrase, "pt-pt")
@@ -61,7 +63,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
 
         return phrase.strip()
 
-    def match_lang(self, phrase):
+    def match_lang(self, phrase: str) -> List[str]:
         langs = []
         if self.voc_match(phrase, "pt-pt"):
             langs.append("pt-pt")
@@ -83,44 +85,57 @@ class NewsSkill(OVOSCommonPlaybackSkill):
             langs.append("fi-fi")
         if self.voc_match(phrase, "sv"):
             langs.append("sv-se")
-
-        langs += [l.split("-")[0] for l in langs]
+        langs = [standardize_lang_tag(l, macro=True) for l in langs]
         return list(set(langs))
 
     def _score(self, phrase, entry, langs=None, base_score=0):
+        # self.log.debug(f"### {entry}")
         score = base_score
-        langs = langs or [self.lang]
+        langs = langs or self.native_langs
+        # self.log.debug(f"\t- base score: {score}")
 
         # match name
         _, alias_score = match_one(phrase, entry["aliases"],
                                    strategy=MatchStrategy.TOKEN_SORT_RATIO)
         match_confidence = score + alias_score * 60
+        # self.log.debug(f"\t- fuzzy score: {match_confidence}")
 
         # match languages
-        if entry["lang"] in langs:
+        elang = standardize_lang_tag(entry["lang"])
+        elangs = set(standardize_lang_tag(l) for l in entry.get("secondary_langs", []))
+        elangs.add(elang)
+        if elang in langs:
             match_confidence += 25  # lang bonus
-        elif any([lang in entry.get("secondary_langs", [])
-                  for lang in langs]):
+        elif any([lang in elangs for lang in langs]):
             match_confidence += 10  # smaller lang bonus
         else:
             match_confidence -= 20  # wrong language penalty
+        # self.log.debug(f"\t- lang score: {match_confidence}")
+
+        # match country code
+        country = self.location["city"]["state"]["country"]["code"]
+        if any((l.endswith(f"-{country}") for l in elangs)):
+            match_confidence += 20  # bonus for news stations from user location
+            # self.log.debug(f"\t- location score: {match_confidence}")
 
         # default news feed gets a nice bonus
         if entry.get("is_default"):
-            match_confidence += 30
+            match_confidence += 10
+            # self.log.debug(f"\t- default station score: {match_confidence}")
 
         return min([match_confidence, 100])
 
     def read_db(self) -> List[dict]:
         entries = []
         for lang in self.archive:
+            std_lang = standardize_lang_tag(lang)
             default_feed = self.langdefaults.get(lang)
-            if lang == self.lang:
+            if std_lang == self.lang:
                 default_feed = self.settings.get("default_feed") or default_feed
             for feed, config in self.archive[lang].items():
                 if feed == default_feed:
                     config["is_default"] = True
-                config["lang"] = lang
+                config["lang"] = std_lang
                 config["title"] = config.get("title") or feed
                 config["image"] = config.get("image", "").replace("./res/images/",
                                                                   f"{dirname(__file__)}/res/images/")
@@ -202,7 +217,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         pl = self.news_playlist()
 
         # score individual results
-        langs = self.match_lang(phrase) or [self.lang, self.lang.split("-")[0]]
+        langs = self.match_lang(phrase) or self.native_langs
         if entities:
             phrase = entities["news_provider"]
         else:
