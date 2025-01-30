@@ -1,5 +1,5 @@
 {
-    "en-us": {
+    "en-US": {
         "GT": {
             "aliases": [
                 "Georgia Today"
@@ -217,7 +217,7 @@
             ]
         }
     },
-    "en-gb": {
+    "en-GB": {
         "BBC": {
             "aliases": [
                 "British Broadcasting Corporation",
@@ -241,7 +241,7 @@
             ]
         }
     },
-    "en-au": {
+    "en-AU": {
         "ABC": {
             "aliases": [
                 "Australian Broadcasting Corporation",
@@ -255,7 +255,7 @@
             ]
         }
     },
-    "en-de": {
+    "en-DE": {
         "DW": {
             "aliases": ["DW News", "DW", "DW News Channel"],
             "uri": "rss//https://rss.dw.com/syndication/feeds/podcast_en_newsbrief.33191-mrss.xml",
@@ -263,7 +263,7 @@
             "secondary_langs": ["en"]
         }
     },
-    "pt-pt": {
+    "pt-PT": {
         "RTP": {
             "aliases": [
                 "RTP",
@@ -288,7 +288,7 @@
             ]
         }
     },
-    "de-de": {
+    "de-DE": {
         "DLF - Die Nachrichten": {
             "aliases": [
                 "DLF",
@@ -444,7 +444,7 @@
             "image": "./res/images/oe3.jpeg"
         }
     },
-    "nl-nl": {
+    "nl-NL": {
         "NOS": {
             "aliases": [
                 "NOS Nieuws"
@@ -453,7 +453,7 @@
             "image": "./res/images/nos.png"
         }
     },
-    "nl-be": {
+    "nl-BE": {
         "VRT": {
             "aliases": [
                 "VRT Nieuws",
@@ -466,7 +466,7 @@
             ]
         }
     },
-    "sv-se": {
+    "sv-SE": {
         "Ekot": {
             "aliases": [
                 "Ekot"
@@ -475,7 +475,7 @@
             "image": "./res/images/Ekot.png"
         }
     },
-    "es-es": {
+    "es-ES": {
         "RNE": {
             "aliases": [
                 "RNE",
@@ -486,7 +486,7 @@
             "image": "./res/images/rne.png"
         }
     },
-    "ca-es": {
+    "ca-ES": {
         "CCMA": {
             "aliases": [
                 "CCMA",
@@ -499,7 +499,7 @@
             ]
         }
     },
-    "fi-fi": {
+    "fi-FI": {
         "YLE": {
             "aliases": [
                 "YLE",
@@ -509,7 +509,7 @@
             "image": "./res/images/Yle.png"
         }
     },
-    "it-it": {
+    "it-IT": {
         "GR1": {
             "aliases": [
                 "GR1",
