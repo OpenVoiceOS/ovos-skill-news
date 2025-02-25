@@ -1,12 +1,12 @@
 # Changelog
 
-## [0.1.14a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.1.14a1) (2025-01-30)
+## [0.1.15a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.1.15a1) (2025-02-25)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.1.13...0.1.14a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.1.14...0.1.15a1)
 
 **Merged pull requests:**
 
-- Fix/lang match [\#68](https://github.com/OpenVoiceOS/ovos-skill-news/pull/68) ([JarbasAl](https://github.com/JarbasAl))
+- gl/translate [\#70](https://github.com/OpenVoiceOS/ovos-skill-news/pull/70) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 
 
