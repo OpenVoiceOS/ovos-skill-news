@@ -1,5 +1,5 @@
 {
-  "source": "https://github.com/OpenVoiceOS/skill-ovos-news",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-news",
   "extra_plugins": {
     "core": [
 

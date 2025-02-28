@@ -4,7 +4,7 @@ import os
 from os import walk, path
 
 
-URL = "https://github.com/OpenVoiceOS/skill-ovos-news"
+URL = "https://github.com/OpenVoiceOS/ovos-skill-news"
 SKILL_CLAZZ = "NewsSkill"  # needs to match __init__.py class name
 PYPI_NAME = "skill-news"  # pip install PYPI_NAME
 
