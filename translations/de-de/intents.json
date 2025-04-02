@@ -1,0 +1,14 @@
+{
+  "news.intent": [
+    "(die) Nachrichten abspielen\nspiele (die) Nachrichten",
+    "erzähl mir die (Neuigkeiten|Nachrichten)\n",
+    "Was gibt es Neues\nWas sind die Nachrichten",
+    "Nachrichtenbericht\nNews Report",
+    "gib mir die (Neuigkeiten|Nachrichten)",
+    "Ich möchte die Nachrichten hören",
+    "kannst du mir die Nachrichten vorlesen",
+    "Aktuelle Nachrichten\nLetztes Nachrichten Update",
+    "(Nachrichten) Schlagzeilen",
+    "Ich möchte die Nachrichten hören"
+  ]
+}
