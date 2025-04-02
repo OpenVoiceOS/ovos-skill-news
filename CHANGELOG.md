@@ -1,12 +1,20 @@
 # Changelog
 
-## [0.1.14a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.1.14a1) (2025-01-30)
+## [0.2.0a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.2.0a1) (2025-04-02)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.1.13...0.1.14a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.1.15a1...0.2.0a1)
 
 **Merged pull requests:**
 
-- Fix/lang match [\#68](https://github.com/OpenVoiceOS/ovos-skill-news/pull/68) ([JarbasAl](https://github.com/JarbasAl))
+- feat: add "news.intent" for when ocp pipeline is not enabled or doesn… [\#72](https://github.com/OpenVoiceOS/ovos-skill-news/pull/72) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.1.15a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.1.15a1) (2025-02-25)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.1.14...0.1.15a1)
+
+**Merged pull requests:**
+
+- gl/translate [\#70](https://github.com/OpenVoiceOS/ovos-skill-news/pull/70) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 
 

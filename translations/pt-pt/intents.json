@@ -1,0 +1,15 @@
+{
+  "news.intent": [
+    "reproduzir as notícias",
+    "diga-me as notícias",
+    "quais são as notícias",
+    "reportagem de notícias",
+    "diz[-me] as notícias",
+    "[quero] ouvir as notícias [de última hora]",
+    "pode[s] ler as notícias [para mim]",
+    "últimas notícias",
+    "manchetes de notícias",
+    "notícias de última hora",
+    "gostaria de ouvir as notícias"
+  ]
+}
