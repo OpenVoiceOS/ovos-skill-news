@@ -492,7 +492,7 @@
                 "CCMA",
                 "Catalunya Informació"
             ],
-            "uri": "https://de1.api.radio-browser.info/pls/url/69bc7084-523c-11ea-be63-52543be04c81",
+            "uri": "https://directes-radio-int.3catdirectes.cat/live-content/catalunya-informacio-hls/master.m3u8",
             "image": "./res/images/CCMA.jpeg",
             "secondary_langs": [
                 "es"
