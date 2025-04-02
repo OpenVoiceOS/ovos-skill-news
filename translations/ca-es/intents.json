@@ -1,14 +1,14 @@
 {
   "news.intent": [
-    "reprodueix les notícies",
-    "digues-me les notícies",
+    "(escoltar|reprodueix) [les] notícies",
+    "(posem|digues-me) les notícies",
     "quines són les notícies",
-    "informe de notícies",
-    "dona'm les notícies",
+    "quines notícies hi ha",
+    "(dona'm|informe) de [les] notícies",
     "vull escoltar les notícies",
     "pots llegir-me les notícies",
     "últimes notícies",
     "titulars de notícies",
-    "m'agradaria escoltar les notícies"
+    "(Necessito saber|m'agradaria escoltar) [les] notícies"
   ]
 }
