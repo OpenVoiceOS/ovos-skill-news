@@ -1,12 +1,12 @@
 # Changelog
 
-## [0.2.2a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.2.2a1) (2025-04-02)
+## [0.3.0a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.3.0a1) (2025-04-02)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.2.1...0.2.2a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.2.2...0.3.0a1)
 
 **Merged pull requests:**
 
-- German translation of new intents [\#77](https://github.com/OpenVoiceOS/ovos-skill-news/pull/77) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+- feat: more catalan streams [\#79](https://github.com/OpenVoiceOS/ovos-skill-news/pull/79) ([JarbasAl](https://github.com/JarbasAl))
 
 
 
