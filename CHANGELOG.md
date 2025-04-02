@@ -1,16 +1,12 @@
 # Changelog
 
-## [0.2.1a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.2.1a1) (2025-04-02)
+## [0.2.2a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.2.2a1) (2025-04-02)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.2.0...0.2.1a1)
-
-**Closed issues:**
-
-- CCMA broken [\#73](https://github.com/OpenVoiceOS/ovos-skill-news/issues/73)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.2.1...0.2.2a1)
 
 **Merged pull requests:**
 
-- fix: CCMA stream [\#75](https://github.com/OpenVoiceOS/ovos-skill-news/pull/75) ([JarbasAl](https://github.com/JarbasAl))
+- German translation of new intents [\#77](https://github.com/OpenVoiceOS/ovos-skill-news/pull/77) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 
 
