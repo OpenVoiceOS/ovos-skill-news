@@ -8,7 +8,7 @@ from ovos_utils.lang import standardize_lang_tag
 from ovos_utils.ocp import MediaType, PlaybackType, Playlist, PluginStream, dict2entry, MediaEntry
 from ovos_utils.parse import match_one, MatchStrategy
 from ovos_utils.process_utils import RuntimeRequirements
-from ovos_workshop.decorators import ocp_search, ocp_featured_media
+from ovos_workshop.decorators import ocp_search, ocp_featured_media, intent_handler
 from ovos_workshop.skills.common_play import OVOSCommonPlaybackSkill
 
 
@@ -245,6 +245,15 @@ class NewsSkill(OVOSCommonPlaybackSkill):
 
         return sorted(results, key=lambda k: k.match_confidence, reverse=True)
 
+    @intent_handler("news.intent")
+    def handle_play_the_news(self, message):
+        utterance = message.data["utterance"]
+        self.acknowledge()  # short sound to know we are searching news
+        # create a playlist with results sorted by relevance
+        playlist = list(self.search_news(utterance, media_type=MediaType.NEWS))
+        self.play_media(media=playlist[0],
+                        disambiguation=playlist,
+                        playlist=playlist)
 
 if __name__ == "__main__":
     from ovos_utils.messagebus import FakeBus
