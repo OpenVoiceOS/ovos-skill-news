@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.0a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.2.0a1) (2025-04-02)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.1.15a1...0.2.0a1)
+
+**Merged pull requests:**
+
+- feat: add "news.intent" for when ocp pipeline is not enabled or doesn… [\#72](https://github.com/OpenVoiceOS/ovos-skill-news/pull/72) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.15a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.1.15a1) (2025-02-25)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.1.14...0.1.15a1)
