@@ -1,20 +1,16 @@
 # Changelog
 
-## [0.2.0a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.2.0a1) (2025-04-02)
+## [0.2.1a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.2.1a1) (2025-04-02)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.1.15a1...0.2.0a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.2.0...0.2.1a1)
 
-**Merged pull requests:**
+**Closed issues:**
 
-- feat: add "news.intent" for when ocp pipeline is not enabled or doesn… [\#72](https://github.com/OpenVoiceOS/ovos-skill-news/pull/72) ([JarbasAl](https://github.com/JarbasAl))
-
-## [0.1.15a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.1.15a1) (2025-02-25)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.1.14...0.1.15a1)
+- CCMA broken [\#73](https://github.com/OpenVoiceOS/ovos-skill-news/issues/73)
 
 **Merged pull requests:**
 
-- gl/translate [\#70](https://github.com/OpenVoiceOS/ovos-skill-news/pull/70) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+- fix: CCMA stream [\#75](https://github.com/OpenVoiceOS/ovos-skill-news/pull/75) ([JarbasAl](https://github.com/JarbasAl))
 
 
 
