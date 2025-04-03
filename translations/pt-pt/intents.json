@@ -13,7 +13,10 @@
     "o que dizem as notícias",
     "coloque as notícias do dia",
     "(notícias de última hora|qualquer notícia de última hora)",
-    "(me diga|explique-me|leia-me) as notícias de hoje"
+    "(me diga|explique-me|leia-me) as notícias de hoje",
+    "dê-me um resumo das notícias",
+    "diz-me as notícias de hoje (locais|regionais|)",
+    "alguma notícia de última hora (local|regional|)"
   ],
   "global_news.intent": [
     "O que aconteceu (no mundo|ao redor do mundo|internacionalmente)?",
