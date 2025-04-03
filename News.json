@@ -546,7 +546,6 @@
   "es-ES": {
     "SER": {
       "aliases": [
-        "RNE",
         "Noticias de la SER"
       ],
       "uri": "rss//https://fapi-top.prisasd.com/podcast/playser/boletines.xml",
