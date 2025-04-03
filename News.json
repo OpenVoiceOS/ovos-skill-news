@@ -544,6 +544,24 @@
     }
   },
   "es-ES": {
+    "SER": {
+      "aliases": [
+        "Noticias de la SER"
+      ],
+      "uri": "rss//https://fapi-top.prisasd.com/podcast/playser/boletines.xml",
+      "image": "./res/images/SER.png"
+    },
+    "radio-andalucia-informacion": {
+      "aliases": [
+        "radio andalucia informacion",
+        "andalucia informacion"
+      ],
+      "uri": "https://rtva-live-radio.flumotion.com/rtva/rai.mp3",
+      "image": "./res/images/RAndaluciaInfo.png",
+      "secondary_langs": [
+        "es"
+      ]
+    },
     "RNE": {
       "aliases": [
         "RNE",
@@ -566,6 +584,40 @@
         "es"
       ]
     },
+    "Sputnik": {
+      "aliases": [
+        "Sputnik"
+      ],
+      "uri": "https://icecast-rian.cdnvideo.ru/voicespa",
+      "image": "./res/images/Sputnik.png",
+      "world_news": true,
+      "secondary_langs": [
+        "es"
+      ]
+    },
+    "RFi": {
+      "aliases": [
+        "RFI Español",
+        "Radio France Internationale"
+      ],
+      "uri": "https://rfienespagnol64k.ice.infomaniak.ch/rfienespagnol-64.mp3",
+      "image": "./res/images/rfi_es.png",
+      "world_news": true,
+      "secondary_langs": [
+        "es", "fr"
+      ]
+    },
+    "CNN": {
+      "aliases": [
+        "CNN en Español"
+      ],
+      "uri": "https://tunein.cdnstream1.com/3517_96.aac/playlist.m3u8",
+      "image": "./res/images/CNNes.png",
+      "world_news": true,
+      "secondary_langs": [
+        "es", "en"
+      ]
+    },
     "France24": {
       "aliases": [
         "France 24",
@@ -585,7 +637,10 @@
         "CCMA",
         "Catalunya Informació"
       ],
-      "uri": "https://directes-radio-int.3catdirectes.cat/live-content/catalunya-informacio-hls/master.m3u8",
+      "uri": "https://shoutcast.ccma.cat/ccma/catalunyainformacio.mp3",
+      "alt_uris": [
+        "https://directes-radio-int.3catdirectes.cat/live-content/catalunya-informacio-hls/master.m3u8"
+      ],
       "image": "./res/images/CCMA.jpeg",
       "secondary_langs": [
         "es"
@@ -708,6 +763,28 @@
       "world_news": true,
       "secondary_langs": [
         "ru"
+      ]
+    }
+  },
+  "gl-ES": {
+    "Radio Galega": {
+      "aliases": [],
+      "uri": "https://crtvg-radiogalega-hls.flumotion.cloud/playlist.m3u8",
+      "image": "./res/images/RGalega.png",
+      "secondary_langs": [
+        "gl", "es"
+      ]
+    }
+  },
+  "ast-ES": {
+    "asturias-al-dia": {
+      "aliases": [
+        "asturias al dia"
+      ],
+      "uri": "rss//https://www.rtpa.es/rpa-podcast/1460738560.xml",
+      "image": "./res/images/Asturias.png",
+      "secondary_langs": [
+        "es", "gl", "ast"
       ]
     }
   }
