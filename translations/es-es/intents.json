@@ -1,19 +1,19 @@
 {
   "news.intent": [
-    "(escuchar|reproducir) [las] noticias",
-    "(ponme|dime|coloca|toca) (las|) noticias",
-    "(cuáles son|qué hay en|qué pasa en) las noticias",
-    "informe de noticias",
-    "(dame|informa|actualízame con) [las] noticias",
-    "(quiero|me gustaría|necesito) escuchar las noticias",
-    "(puedes|me puedes) leerme las noticias",
-    "últimas noticias",
-    "titulares de noticias",
-    "(me gustaría escuchar|necesito saber|actualízame sobre|actualízame con) [las] noticias",
-    "qué dicen las noticias",
-    "ponme las noticias del día",
+    "(escuchar|reproducir) [las] noticias (locales|regionales|actuales|últimas|)",
+    "(ponme|dime|coloca|toca) (las|) noticias (locales|regionales|actuales|últimas|)",
+    "(cuáles son|qué hay en|qué pasa en) las noticias (locales|regionales|actuales|últimas|)",
+    "informe de noticias (locales|regionales|actuales|últimas|)",
+    "(dame|informa|actualízame con) [las] noticias (locales|regionales|actuales|últimas|)",
+    "(quiero|me gustaría|necesito) escuchar las noticias (locales|regionales|actuales|últimas|)",
+    "(puedes|me puedes) leerme las noticias (locales|regionales|actuales|últimas|)",
+    "últimas noticias (locales|regionales|actuales|)",
+    "titulares de noticias (locales|regionales|actuales|del día|de hoy)",
+    "(me gustaría escuchar|necesito saber|actualízame sobre|actualízame con) [las] noticias (locales|regionales|actuales|del día|de hoy)",
+    "qué dicen las noticias (locales|regionales|actuales|del día|de hoy)",
+    "ponme las noticias (locales|regionales|actuales|del día|de hoy)",
     "(noticias de última hora|cualquier noticia de última hora)",
-    "(dime|explícame|léeme) las noticias de hoy"
+    "(dime|explícame|léeme) las noticias (locales|regionales|actuales|del día|de hoy)"
   ],
   "global_news.intent": [
     "¿Qué ha pasado (en el mundo|alrededor del mundo|a nivel internacional)?",
