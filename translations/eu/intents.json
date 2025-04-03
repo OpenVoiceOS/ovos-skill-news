@@ -1,14 +1,29 @@
 {
   "news.intent": [
-    "albisteak erreproduzitu",
-    "esan iezadazu albisteak",
-    "zeintzuk dira albisteak",
+    "(entzun|jokatu) [albisteak]",
+    "(jarri|esan|jarri|toka) (albisteak|)",
+    "(zeintzuk dira|zer dago albisteetan|zer gertatzen da albisteetan)",
     "albisteen txostena",
-    "eman iezadazu albisteak",
-    "albisteak entzun nahi ditut",
-    "albisteak irakur ditzakezu?",
-    "azken albisteak",
-    "albisteen titularrak",
-    "albisteak entzun nahi nituzke"
+    "(emadazu|informatu|eguneratu nazazu) [albisteekin]",
+    "(nahi dut|gustatuko litzaidake|behar dut) albisteak entzuteko",
+    "(irakurtzen al didazu|irakurri al didazu) albisteak",
+    "albisteen azken eguneraketa",
+    "albisteetako titularrak",
+    "(gustatuko litzaidake entzuteko|behar dut jakiteko|eguneratu nazazu|eguneratu nazazu) [albisteekin]",
+    "zer diote albisteek",
+    "jarri gaurko albisteak",
+    "(azken orduko albisteak|zein albiste azken ordukoak)",
+    "(esan|esplikatu|irakurri) gaurko albisteak"
+  ],
+  "global_news.intent": [
+    "Zer gertatu da (munduan|mundu osoan|nazioartean)?",
+    "(jarri|emadazu|azkenak|nahi dut|jarri) albiste (globalak|munduko|nazioarteko)",
+    "Esan albiste (globalak|munduko|nazioarteko)",
+    "Eman albiste (globalak|nazioarteko|munduko) eguneraketa",
+    "Zer da azken albiste (globalak|internazionalak|mundialak)?",
+    "Esan zer gertatzen den (munduan|nazioartean|munduan)",
+    "Badago albiste garrantzitsu (globalak|internazionalak|mundialak)?",
+    "Badago azken orduko albisterik (mundialki|internazionalki|globalki)?",
+    "Zer moduz doa mundua gaur?"
   ]
 }
