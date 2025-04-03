@@ -1,5 +1,13 @@
 {
-  "intro.dialog": [
-    "Grazas por instalares a Habilidade Noticias"
+  "news.error": [
+    "Non puiden atopar ningunha emisora de noticias para reproducir.",
+    "Sentímolo, parece que non hai ningunha emisora de noticias dispoñible neste momento.",
+    "Non puiden obter ningunha nova. Por favor, intentalo de novo máis tarde.",
+    "Desafortunadamente, non puiden localizar ningún canal de noticias para reproducir.",
+    "Opa! Parece que non hai ningunha emisora de noticias dispoñible agora mesmo.",
+    "Non atopei ningunha nova para ti.?",
+    "Non se atoparon emisoras de noticias.",
+    "Parece que as emisoras de noticias non están dispoñibles."
   ]
+
 }

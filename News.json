@@ -239,6 +239,42 @@
       "secondary_langs": [
         "en"
       ]
+    },
+    "EuroNews": {
+      "aliases": [
+        "Euro News",
+        "Euronews English"
+      ],
+      "uri": "youtube.channel.live//https://www.youtube.com/@euronews/live",
+      "image": "./res/images/EuroNews.png",
+      "world_news": true,
+      "secondary_langs": [
+        "en"
+      ]
+    },
+    "France24": {
+      "aliases": [
+        "France 24",
+        "France24 English"
+      ],
+      "uri": "youtube.channel.live//https://www.youtube.com/@France24_en/live",
+      "image": "./res/images/FR24_EN.png",
+      "world_news": true,
+      "secondary_langs": [
+        "en", "fr"
+      ]
+    },
+    "Al Jazeera": {
+      "aliases": [
+        "Al Jazeera",
+        "Al Jazeera English"
+      ],
+      "uri": "youtube.channel.live//https://www.youtube.com/@aljazeeraenglish/live",
+      "image": "./res/images/AJ.png",
+      "world_news": true,
+      "secondary_langs": [
+        "en"
+      ]
     }
   },
   "en-AU": {
@@ -292,9 +328,35 @@
       "secondary_langs": [
         "pt"
       ]
+    },
+    "EuroNews": {
+      "aliases": [
+        "Euro News",
+        "Euronews Portugal",
+        "Portuguese Euronews"
+      ],
+      "uri": "youtube.channel.live//https://www.youtube.com/@euronewspt/live",
+      "image": "./res/images/EuroNews.png",
+      "world_news": true,
+      "secondary_langs": [
+        "pt"
+      ]
     }
   },
   "de-DE": {
+    "EuroNews": {
+      "aliases": [
+        "Euro News",
+        "Euronews Germany",
+        "German Euronews"
+      ],
+      "uri": "youtube.channel.live//https://www.youtube.com/@euronewsde/live",
+      "image": "./res/images/EuroNews.png",
+      "world_news": true,
+      "secondary_langs": [
+        "de"
+      ]
+    },
     "DLF - Die Nachrichten": {
       "aliases": [
         "DLF",
@@ -490,6 +552,31 @@
       ],
       "uri": "rss//http://api.rtve.es/api/programas/36019/audios.rs",
       "image": "./res/images/rne.png"
+    },
+    "EuroNews": {
+      "aliases": [
+        "Euro News",
+        "Euronews Spain",
+        "Spanish Euronews"
+      ],
+      "uri": "youtube.channel.live//https://www.youtube.com/@euronewses/live",
+      "image": "./res/images/EuroNews.png",
+      "world_news": true,
+      "secondary_langs": [
+        "es"
+      ]
+    },
+    "France24": {
+      "aliases": [
+        "France 24",
+        "France24 Spanish"
+      ],
+      "uri": "youtube.channel.live//https://www.youtube.com/@France24_es/live",
+      "image": "./res/images/FR24_ES.png",
+      "world_news": true,
+      "secondary_langs": [
+        "es", "fr"
+      ]
     }
   },
   "ca-ES": {
@@ -557,6 +644,19 @@
     }
   },
   "it-IT": {
+    "EuroNews": {
+      "aliases": [
+        "Euro News",
+        "Euronews Italy",
+        "Italian Euronews"
+      ],
+      "uri": "youtube.channel.live//https://www.youtube.com/@euronewsit/live",
+      "image": "./res/images/EuroNews.png",
+      "world_news": true,
+      "secondary_langs": [
+        "it"
+      ]
+    },
     "GR1": {
       "aliases": [
         "GR1",
@@ -566,6 +666,49 @@
       ],
       "uri": "news//https://www.raiplaysound.it",
       "image": "./res/images/RG1.jpg"
+    }
+  },
+  "fr-FR": {
+    "EuroNews": {
+      "aliases": [
+        "Euro News",
+        "Euronews Portugal"
+      ],
+      "uri": "youtube.channel.live//https://www.youtube.com/@euronewsfr/live",
+      "image": "./res/images/EuroNews.png",
+      "world_news": true,
+      "secondary_langs": [
+        "fr"
+      ]
+    }
+  },
+  "ro-RO": {
+    "EuroNews": {
+      "aliases": [
+        "Euro News",
+        "Euronews Romania"
+      ],
+      "uri": "youtube.channel.live//https://www.youtube.com/@euronewsro/live",
+      "image": "./res/images/EuroNews.png",
+      "world_news": true,
+      "secondary_langs": [
+        "ro"
+      ]
+    }
+  },
+  "ru-RU":{
+    "EuroNews": {
+      "aliases": [
+        "Euro News",
+        "Euronews Russia",
+        "Russian Euronews"
+      ],
+      "uri": "youtube.channel.live//https://www.youtube.com/@euronewsru/live",
+      "image": "./res/images/EuroNews.png",
+      "world_news": true,
+      "secondary_langs": [
+        "ru"
+      ]
     }
   }
 }

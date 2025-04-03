@@ -35,6 +35,11 @@
   "news.voc": [
     "notícies"
   ],
+  "world_news.voc": [
+    "notícies internacionals",
+    "notícies globals",
+    "notícies del món"
+  ],
   "en-au.voc": [
     "Austràlia",
     "australià\naustraliana"
