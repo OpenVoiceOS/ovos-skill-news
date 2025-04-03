@@ -1,15 +1,28 @@
 {
   "news.intent": [
     "(escoltar|reprodueix) [les] notícies",
-    "(posem|digues-me|posa|toca|posa'm) (les|) notícies",
-    "quines són les notícies",
-    "quines notícies hi ha",
-    "(dona'm|informe|informa'm) de [les] notícies",
-    "[vull] escoltar les notícies",
-    "pots (llegir-me|dir-me) les notícies",
-    "últimes notícies",
-    "titulars de notícies",
-    "(Necessito saber|m'agradaria escoltar) [les] notícies",
-    "què ha passat al món?"
+    "(posem|digues-me|posa|toca) (las|les|) notícies",
+    "(quines són|quines hi ha|què hi ha a) les notícies",
+    "(dona'm|informa'm|actualitza’m amb) [les] notícies",
+    "[vull|m'agradaria|necessito] escoltar les notícies",
+    "(pots|em pots) llegir[-me] les notícies",
+    "(últimes|darreres) notícies",
+    "(titulars|resum|informació) de notícies",
+    "(m'agradaria escoltar|necessito saber|actualitza'm sobre) [les] notícies",
+    "què expliquen les notícies",
+    "posa les notícies del dia",
+    "(notícies d'última hora|qualsevol notícia d'última hora)",
+    "(diga'm|explica'm|llegeix-me) les notícies d'avui"
+  ],
+  "global_news.intent": [
+    "Què ha passat (al món|arreu del món|a nivell internacional|arreu del globus)",
+    "(Dóna'm|Porta'm) les (notícies mundials|internacionals|globals|del món)",
+    "(Posa|Reprodueix|Diga'm|Vull escoltar) les (notícies internacionals|notícies globals|notícies del món)",
+    "Explica’m què passa (al món|a nivell internacional|arreu del globus)",
+    "Quina és (l'actualitat|la situació) (global|internacional|mundial)?",
+    "Hi ha alguna notícia (internacional|mundial|global) important?",
+    "Quines són les notícies (d'arreu del món|a nivell global|a escala internacional)?",
+    "(Alguna notícia d'última hora a nivell mundial?|Hi ha alguna notícia internacional d'última hora?)",
+    "Com està (el món|el planeta) avui?"
   ]
 }

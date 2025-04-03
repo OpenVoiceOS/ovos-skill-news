@@ -9,6 +9,24 @@
     "can you read the news to me",
     "latest news update",
     "news headlines",
-    "I'd like to listen to the news"
+    "I'd like to listen to the news",
+    "what’s in the news",
+    "bring me the news",
+    "what’s happening in the news",
+    "update me on the news",
+    "give me a news briefing",
+    "tell me today’s news",
+    "any breaking news"
+  ],
+  "global_news.intent": [
+    "What has happened (in the world|around the globe|internationally)",
+    "(play|Give me|latest|I want|latest) (worldwide|world|international|global) news",
+    "Tell me about (worldwide|world|international|global) news",
+    "Give me a (global|international|worldwide|world) news update",
+    "What's the latest (global|international|worldwide|world) news",
+    "Tell me what’s happening around the (globe|world)",
+    "Any big news (globally|internationally|worldwide)",
+    "Is there any breaking news (globally|internationally|worldwide)",
+    "How's the world doing today?"
   ]
 }
