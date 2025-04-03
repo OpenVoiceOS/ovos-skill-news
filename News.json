@@ -552,6 +552,17 @@
       "uri": "rss//https://fapi-top.prisasd.com/podcast/playser/boletines.xml",
       "image": "./res/images/SER.png"
     },
+    "radio-andalucia-informacion": {
+      "aliases": [
+        "radio andalucia informacion",
+        "andalucia informacion"
+      ],
+      "uri": "https://rtva-live-radio.flumotion.com/rtva/rai.mp3",
+      "image": "./res/images/RAndaluciaInfo.png",
+      "secondary_langs": [
+        "es"
+      ]
+    },
     "RNE": {
       "aliases": [
         "RNE",
@@ -664,17 +675,6 @@
       "image": "./res/images/CCMA-nyt.png",
       "secondary_langs": [
         "es"
-      ]
-    },
-    "radio-andalucia-informacion": {
-      "aliases": [
-        "radio andalucia informacion",
-        "andalucia informacion"
-      ],
-      "uri": "https://rtva-live-radio.flumotion.com/rtva/rai.mp3",
-      "image": "./res/images/RAndaluciaInfo.png",
-      "secondary_langs": [
-        "es", "ca"
       ]
     },
     "RAC1": {
