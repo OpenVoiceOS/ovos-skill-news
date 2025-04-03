@@ -1,14 +1,32 @@
 {
   "news.intent": [
-    "(die) Nachrichten abspielen\nspiele (die) Nachrichten",
-    "erzähl mir die (Neuigkeiten|Nachrichten)\n",
-    "Was gibt es Neues\nWas sind die Nachrichten",
-    "Nachrichtenbericht\nNews Report",
-    "gib mir die (Neuigkeiten|Nachrichten)",
-    "Ich möchte die Nachrichten hören",
-    "kannst du mir die Nachrichten vorlesen",
-    "Aktuelle Nachrichten\nLetztes Nachrichten Update",
-    "(Nachrichten) Schlagzeilen",
-    "Ich möchte die Nachrichten hören"
+    "die (lokalen|regionalen|aktuellen|neuesten|) Nachrichten abspielen\nspiele die (lokalen|regionalen|aktuellen|neuesten|) Nachrichten ab",
+    "erzähl mir die (lokalen|regionalen|aktuellen|neuesten|) Nachrichten",
+    "was sind die (lokalen|regionalen|aktuellen|neuesten|) Nachrichten",
+    "(lokaler|regionaler|aktueller|neuester|) Nachrichtenbericht",
+    "gib mir die (lokalen|regionalen|aktuellen|neuesten|) Nachrichten",
+    "Ich möchte die (lokalen|regionalen|aktuellen|neuesten|) Nachrichten hören",
+    "kannst du mir die (lokalen|regionalen|aktuellen|neuesten|) Nachrichten vorlesen",
+    "(lokales|regionales|aktuelles|neuestes|) Nachrichten-Update",
+    "(lokale|regionale|aktuelle|neueste|) Schlagzeilen",
+    "Ich möchte die (lokalen|regionalen|aktuellen|neuesten|) Nachrichten hören",
+    "was ist in den (lokalen|regionalen|) Nachrichten",
+    "bring mir die (lokalen|regionalen|aktuellen|neuesten|) Nachrichten",
+    "was passiert in den (lokalen|regionalen|aktuellen|neuesten|) Nachrichten",
+    "informiere mich über die (lokalen|regionalen|aktuellen|neuesten|) Nachrichten",
+    "gib mir ein Nachrichten Update",
+    "erzähl mir die (lokalen|regionalen|) Nachrichten von heute",
+    "alle aktuellen (lokalen|regionalen|) Nachrichten"
+  ],
+  "global_news.intent": [
+    "Was ist (auf der Welt | rund um den Globus | international) passiert",
+    "(play | Gib mir | das Neueste | Ich will | das Neueste) (weltweite | weltweite | internationale | globale) Nachrichten",
+    "Erzähle mir von (weltweiten|weltweiten|internationalen|globalen) Nachrichten",
+    "Gib mir ein (globales|internationales|weltweites|weltweites) Nachrichten-Update",
+    "Was sind die neuesten (globalen|internationalen|weltweiten|weltweiten) Nachrichten",
+    "Erzähl mir, was auf der Welt passiert",
+    "Alle wichtigen Neuigkeiten (global|international|weltweit)",
+    "Gibt es aktuelle Nachrichten (global|international|weltweit)",
+    "Wie geht es der Welt heute?"
   ]
 }

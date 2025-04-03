@@ -1,125 +1,89 @@
 {
-    "video.voc": [
-        "Video",
-        "mit video"
-    ],
-    "rt.voc": [
-        "Russland heute"
-    ],
-    "it.voc": [
-        "aus italien",
-        "italien",
-        "italienisch",
-        "italienische"
-    ],
-    "en-ca.voc": [
-        "aus kanada",
-        "kanada",
-        "kanadisch",
-        "kanadische"
-    ],
-    "nl.voc": [
-        "aus holland",
-        "aus niederlande",
-        "aus den niederlanden",
-        "holland",
-        "niederland",
-        "holl\u00e4ndisch",
-        "holl\u00e4ndische",
-        "niederl\u00e4ndisch",
-        "niederl\u00e4ndische"
-    ],
-    "ca.voc": [
-        "aus katalonien",
-        "Katalonien",
-        "Katalanisch",
-        "katalonische"
-    ],
-    "euronews.voc": [
-        "Euronews"
-    ],
-    "fr.voc": [
-        "aus frankreich",
-        "frankreich",
-        "franz\u00f6sisch",
-        "franz\u00f6sische"
-    ],
-    "es.voc": [
-        "aus spanien",
-        "spanien",
-        "Spanisch",
-        "spanische"
-    ],
-    "news.voc": [
-        "die nachrichten",
-        "nachrichten"
-    ],
-    "en-au.voc": [
-        "aus Australien",
-        "Australien",
-        "australisch",
-        "australische"
-    ],
-    "pt-pt.voc": [
-        "aus portugal",
-        "portugal",
-        "portugiesisch",
-        "portugiesische"
-    ],
-    "euro.voc": [
-        "aus europa",
-        "europa",
-        "europ\u00e4isch",
-        "Europ\u00e4ische",
-        "Euro"
-    ],
-    "en.voc": [
-        "aus dem Vereinigten K\u00f6nigreich",
-        "aus England",
-        "england",
-        "englische"
-    ],
-    "de.voc": [
-        "aus deutschland",
-        "deutschland",
-        "deutsch",
-        "deutsche"
-    ],
-    "fr24.voc": [
-        "Frankreich 24",
-        "Frankreich zwanzig vier",
-        "Frankreich24",
-        "Frankreich zwanzig vierte"
-    ],
-    "fi.voc": [
-        "aus finnland",
-        "finnland",
-        "finnisch",
-        "finnische"
-    ],
-    "sv.voc": [
-        "aus schweden",
-        "schweden",
-        "schwedisch",
-        "schwedische"
-    ],
-    "en-gb.voc": [
-        "aus dem Vereinigten K\u00f6nigreich",
-        "aus England",
-        "england",
-        "englische"
-    ],
-    "ru.voc": [
-        "aus russland",
-        "russland",
-        "russisch",
-        "russische"
-    ],
-    "en-us.voc": [
-        "aus den vereinigten Staaten",
-        "aus amerika",
-        "amerika",
-        "amerikanisch",
-        "amerikanische"
-    ]
+  "video.voc": [
+    "Video"
+  ],
+  "rt.voc": [
+    "Russland heute"
+  ],
+  "it.voc": [
+    "aus italien",
+    "italien"
+  ],
+  "en-ca.voc": [
+    "aus kanada",
+    "kanada"
+  ],
+  "nl.voc": [
+    "aus holland",
+    "aus niederlande",
+    "aus den niederlanden"
+  ],
+  "ca.voc": [
+    "aus katalonien",
+    "Katalonien"
+  ],
+  "euronews.voc": [
+    "Euronews"
+  ],
+  "fr.voc": [
+    "aus frankreich",
+    "frankreich"
+  ],
+  "es.voc": [
+    "aus spanien"
+  ],
+  "news.voc": [
+    "die nachrichten"
+  ],
+  "world_news.voc": [
+    "Weltnachrichten",
+    "globale Nachrichten",
+    "Internationale Nachrichten"
+  ],
+  "en-au.voc": [
+    "aus Australien",
+    "Australien"
+  ],
+  "pt-pt.voc": [
+    "aus portugal",
+    "portugal"
+  ],
+  "euro.voc": [
+    "aus europa",
+    "europa"
+  ],
+  "en.voc": [
+    "aus dem Vereinigten Königreich"
+  ],
+  "de.voc": [
+    "aus deutschland"
+  ],
+  "fr24.voc": [
+    "Frankreich 24",
+    "Frankreich zwanzig vier",
+    "Frankreich24",
+    "Frankreich zwanzig vierte"
+  ],
+  "fi.voc": [
+    "aus finnland",
+    "finnland"
+  ],
+  "sv.voc": [
+    "aus schweden",
+    "schweden"
+  ],
+  "en-gb.voc": [
+    "aus dem Vereinigten Königreich",
+    "aus England",
+    "england"
+  ],
+  "ru.voc": [
+    "aus russland",
+    "russland"
+  ],
+  "en-us.voc": [
+    "aus den vereinigten Staaten",
+    "aus amerika",
+    "amerika"
+  ]
 }
