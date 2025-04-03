@@ -1,12 +1,13 @@
 # Changelog
 
-## [0.3.0a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.3.0a1) (2025-04-02)
+## [0.3.1a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.3.1a1) (2025-04-03)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.2.2...0.3.0a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.3.0...0.3.1a1)
 
 **Merged pull requests:**
 
-- feat: more catalan streams [\#79](https://github.com/OpenVoiceOS/ovos-skill-news/pull/79) ([JarbasAl](https://github.com/JarbasAl))
+- Update intents.json [\#83](https://github.com/OpenVoiceOS/ovos-skill-news/pull/83) ([c-armentano](https://github.com/c-armentano))
+- Create skill.json [\#81](https://github.com/OpenVoiceOS/ovos-skill-news/pull/81) ([c-armentano](https://github.com/c-armentano))
 
 
 
