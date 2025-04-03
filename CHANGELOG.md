@@ -1,13 +1,12 @@
 # Changelog
 
-## [0.3.1a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.3.1a1) (2025-04-03)
+## [0.4.0a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.0a1) (2025-04-03)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.3.0...0.3.1a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.3.1...0.4.0a1)
 
 **Merged pull requests:**
 
-- Update intents.json [\#83](https://github.com/OpenVoiceOS/ovos-skill-news/pull/83) ([c-armentano](https://github.com/c-armentano))
-- Create skill.json [\#81](https://github.com/OpenVoiceOS/ovos-skill-news/pull/81) ([c-armentano](https://github.com/c-armentano))
+- feat: global news [\#85](https://github.com/OpenVoiceOS/ovos-skill-news/pull/85) ([JarbasAl](https://github.com/JarbasAl))
 
 
 
