@@ -245,7 +245,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
 
         results = []
 
-        if entities or media_type == MediaType.NEWS:
+        if entities or media_type == MediaType.NEWS or world_news:
             for v in self.read_db(world_only=world_news, langs=langs):
                 s = self._score(phrase, v, langs=langs, base_score=base_score)
                 if s <= 50:
@@ -310,13 +310,16 @@ if __name__ == "__main__":
 
     s = NewsSkill(bus=FakeBus(), skill_id="t.fake")
 
-    for r in s.search_news("world news", MediaType.NEWS):
+    for r in s.search_news("portuguese world news", MediaType.GENERIC):
+        print(r)
+        # PluginStream(stream='https://www.youtube.com/@euronewspt/live', extractor_id='youtube.channel.live', title='EuroNews', artist='', match_confidence=100, skill_id='ovos.common_play', playback=<PlaybackType.AUDIO: 2>, status=<TrackState.DISAMBIGUATION: 1>, media_type=<MediaType.NEWS: 8>, length=0, image='/home/miro/PycharmProjects/OVOS-dev/ovos-skill-news/res/images/EuroNews.png', skill_icon='')
+
+    for r in s.search_news("portuguese news", MediaType.GENERIC):
         print(r)
         # {'aliases': ['TSF', 'TSF Rádio Notícias', 'TSF Notícias'], 'uri': 'news//https://www.tsf.pt/stream', 'image': '/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/res/images/tsf.png', 'secondary_langs': ['pt'], 'is_default': True, 'lang': 'pt-pt', 'title': 'TSF', 'bg_image': '/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/bg.jpg', 'skill_logo': 'https://github.com/OpenVoiceOS/ovos-ocp-audio-plugin/raw/master/ovos_plugin_common_play/ocp/res/ui/images/ocp.png', 'playback': <PlaybackType.AUDIO: 2>, 'media_type': <MediaType.NEWS: 8>, 'match_confidence': 80.0}
         # {'aliases': ['RTP', 'Antena 1', 'Noticiario Nacional'], 'uri': 'rss//http://www.rtp.pt/play/itunes/7496', 'image': '/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/res/images/RTP_1.png', 'secondary_langs': ['pt'], 'lang': 'pt-pt', 'title': 'RTP', 'bg_image': '/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/bg.jpg', 'skill_logo': 'https://github.com/OpenVoiceOS/ovos-ocp-audio-plugin/raw/master/ovos_plugin_common_play/ocp/res/ui/images/ocp.png', 'playback': <PlaybackType.AUDIO: 2>, 'media_type': <MediaType.NEWS: 8>, 'match_confidence': 50.0}
         # {'aliases': ['RDP', 'RDP Africa'], 'uri': 'rss//http://www.rtp.pt/play/itunes/5442', 'image': '/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/res/images/RDP.png', 'secondary_langs': ['pt'], 'lang': 'pt-pt', 'title': 'RDP', 'bg_image': '/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/bg.jpg', 'skill_logo': 'https://github.com/OpenVoiceOS/ovos-ocp-audio-plugin/raw/master/ovos_plugin_common_play/ocp/res/ui/images/ocp.png', 'playback': <PlaybackType.AUDIO: 2>, 'media_type': <MediaType.NEWS: 8>, 'match_confidence': 50.0}
 
-    exit()
     for r in s.search_news("NPR", MediaType.GENERIC):
         print(r)
         # {'aliases': ['NPR News', 'NPR', 'National Public Radio', 'National Public Radio News', 'NPR News Now'], 'uri': 'news//https://www.npr.org/podcasts/500005/npr-news-now', 'image': 'https://media.npr.org/assets/img/2018/08/06/nprnewsnow_podcasttile_sq.webp', 'secondary_langs': ['en'], 'is_default': True, 'lang': 'en-us', 'title': 'NPR', 'bg_image': '/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/bg.jpg', 'skill_logo': 'https://github.com/OpenVoiceOS/ovos-ocp-audio-plugin/raw/master/ovos_plugin_common_play/ocp/res/ui/images/ocp.png', 'playback': <PlaybackType.AUDIO: 2>, 'media_type': <MediaType.NEWS: 8>, 'match_confidence': 100}
