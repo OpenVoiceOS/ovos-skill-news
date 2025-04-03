@@ -697,18 +697,18 @@
     }
   },
   "ru-RU":{
-  "EuroNews": {
-    "aliases": [
-      "Euro News",
-      "Euronews Russia",
-      "Russian Euronews"
-    ],
-    "uri": "youtube.channel.live//https://www.youtube.com/@euronewsru/live",
-    "image": "./res/images/EuroNews.png",
-    "world_news": true,
-    "secondary_langs": [
-      "ru"
-    ]
-  }
+    "EuroNews": {
+      "aliases": [
+        "Euro News",
+        "Euronews Russia",
+        "Russian Euronews"
+      ],
+      "uri": "youtube.channel.live//https://www.youtube.com/@euronewsru/live",
+      "image": "./res/images/EuroNews.png",
+      "world_news": true,
+      "secondary_langs": [
+        "ru"
+      ]
+    }
   }
 }

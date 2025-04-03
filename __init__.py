@@ -1,6 +1,7 @@
 from os.path import join, dirname
 from typing import Iterable, Union, List
 
+from langcodes import closest_match
 from json_database import JsonStorage
 from ovos_utils import classproperty
 from ovos_utils.lang import standardize_lang_tag
@@ -48,6 +49,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         # self.export_ocp_keywords_csv("news.csv")
 
     def clean_phrase(self, phrase: str) -> str:
+        phrase = self.remove_voc(phrase, "world_news")
         phrase = self.remove_voc(phrase, "news")
 
         phrase = self.remove_voc(phrase, "pt-pt")
@@ -125,15 +127,20 @@ class NewsSkill(OVOSCommonPlaybackSkill):
 
         return min([match_confidence, 100])
 
-    def read_db(self, world_only=False, local_only=False) -> List[dict]:
+    def read_db(self, world_only=False, local_only=False, langs=None) -> List[dict]:
+        langs = langs or self.native_langs
         entries = []
         for lang in self.archive:
             std_lang = standardize_lang_tag(lang)
+            lang_score = closest_match(std_lang, langs)[-1]
+            if lang_score > 10:
+                self.log.debug(f"Ignoring news streams from foreign language: {std_lang}")
+                continue
             default_feed = self.langdefaults.get(lang)
             if std_lang == self.lang:
                 default_feed = self.settings.get("default_feed") or default_feed
             for feed, config in self.archive[lang].items():
-                if world_only and not config.get("world_news"):
+                if world_only and not config.get("world_news", False):
                     continue
                 if local_only and config.get("world_news"):
                     continue
@@ -218,7 +225,8 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "bg_image": "http://optional.audioservice.background.jpg"
             }
         """
-        base_score = 0
+        world_news = self.voc_match(phrase, "world_news")
+        base_score = 50 if world_news else 0
 
         entities = self.ocp_voc_match(phrase)
 
@@ -228,8 +236,6 @@ class NewsSkill(OVOSCommonPlaybackSkill):
             if not phrase.strip():
                 base_score += 20  # "play the news", no query
 
-        pl = self.news_playlist()
-
         # score individual results
         langs = self.match_lang(phrase) or self.native_langs
         if entities:
@@ -238,12 +244,9 @@ class NewsSkill(OVOSCommonPlaybackSkill):
             phrase = self.clean_phrase(phrase)
 
         results = []
-        # playlist result
-        if pl and base_score >= 50:
-            results.append(pl)
 
         if entities or media_type == MediaType.NEWS:
-            for v in self.read_db():
+            for v in self.read_db(world_only=world_news, langs=langs):
                 s = self._score(phrase, v, langs=langs, base_score=base_score)
                 if s <= 50:
                     continue
@@ -251,6 +254,11 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 v.match_confidence = min(100, s)
                 results.append(v)
 
+        # playlist result
+        if not world_news and (media_type == MediaType.NEWS or base_score >= 60):
+            pl = self.news_playlist()
+            if pl:
+                results.append(pl)
         return sorted(results, key=lambda k: k.match_confidence, reverse=True)
 
     @intent_handler("news.intent")
@@ -261,8 +269,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         # create a playlist with results sorted by relevance
         results = []
         for v in self.read_db(local_only=True):
-            s = self._score(utterance, v, langs=self.native_langs,
-                            base_score=30)
+            s = self._score(utterance, v, base_score=30)
             if s <= 50:
                 continue
             v = dict2entry(v)
@@ -283,8 +290,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         # create a playlist with results sorted by relevance
         results = []
         for v in self.read_db(world_only=True):
-            s = self._score(utterance, v, langs=self.native_langs,
-                            base_score=30)
+            s = self._score(utterance, v, base_score=30)
             if s <= 50:
                 continue
             v = dict2entry(v)
@@ -304,12 +310,13 @@ if __name__ == "__main__":
 
     s = NewsSkill(bus=FakeBus(), skill_id="t.fake")
 
-    for r in s.search_news("portuguese", MediaType.NEWS):
+    for r in s.search_news("world news", MediaType.NEWS):
         print(r)
         # {'aliases': ['TSF', 'TSF Rádio Notícias', 'TSF Notícias'], 'uri': 'news//https://www.tsf.pt/stream', 'image': '/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/res/images/tsf.png', 'secondary_langs': ['pt'], 'is_default': True, 'lang': 'pt-pt', 'title': 'TSF', 'bg_image': '/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/bg.jpg', 'skill_logo': 'https://github.com/OpenVoiceOS/ovos-ocp-audio-plugin/raw/master/ovos_plugin_common_play/ocp/res/ui/images/ocp.png', 'playback': <PlaybackType.AUDIO: 2>, 'media_type': <MediaType.NEWS: 8>, 'match_confidence': 80.0}
         # {'aliases': ['RTP', 'Antena 1', 'Noticiario Nacional'], 'uri': 'rss//http://www.rtp.pt/play/itunes/7496', 'image': '/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/res/images/RTP_1.png', 'secondary_langs': ['pt'], 'lang': 'pt-pt', 'title': 'RTP', 'bg_image': '/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/bg.jpg', 'skill_logo': 'https://github.com/OpenVoiceOS/ovos-ocp-audio-plugin/raw/master/ovos_plugin_common_play/ocp/res/ui/images/ocp.png', 'playback': <PlaybackType.AUDIO: 2>, 'media_type': <MediaType.NEWS: 8>, 'match_confidence': 50.0}
         # {'aliases': ['RDP', 'RDP Africa'], 'uri': 'rss//http://www.rtp.pt/play/itunes/5442', 'image': '/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/res/images/RDP.png', 'secondary_langs': ['pt'], 'lang': 'pt-pt', 'title': 'RDP', 'bg_image': '/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/bg.jpg', 'skill_logo': 'https://github.com/OpenVoiceOS/ovos-ocp-audio-plugin/raw/master/ovos_plugin_common_play/ocp/res/ui/images/ocp.png', 'playback': <PlaybackType.AUDIO: 2>, 'media_type': <MediaType.NEWS: 8>, 'match_confidence': 50.0}
 
+    exit()
     for r in s.search_news("NPR", MediaType.GENERIC):
         print(r)
         # {'aliases': ['NPR News', 'NPR', 'National Public Radio', 'National Public Radio News', 'NPR News Now'], 'uri': 'news//https://www.npr.org/podcasts/500005/npr-news-now', 'image': 'https://media.npr.org/assets/img/2018/08/06/nprnewsnow_podcasttile_sq.webp', 'secondary_langs': ['en'], 'is_default': True, 'lang': 'en-us', 'title': 'NPR', 'bg_image': '/home/miro/PycharmProjects/OCP_sprint/skills/skill-ovos-news/ui/bg.jpg', 'skill_logo': 'https://github.com/OpenVoiceOS/ovos-ocp-audio-plugin/raw/master/ovos_plugin_common_play/ocp/res/ui/images/ocp.png', 'playback': <PlaybackType.AUDIO: 2>, 'media_type': <MediaType.NEWS: 8>, 'match_confidence': 100}
