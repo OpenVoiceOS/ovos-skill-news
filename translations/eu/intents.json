@@ -13,7 +13,10 @@
     "zer diote albisteek",
     "jarri gaurko albisteak",
     "(azken orduko albisteak|zein albiste azken ordukoak)",
-    "(esan|esplikatu|irakurri) gaurko albisteak"
+    "(esan|esplikatu|irakurri) gaurko albisteak",
+    "eman albiste labur bat",
+    "kontatu gaurko (tokiko|eskualdeko|) berriak",
+    "edozein azken (tokiko|eskualdeko|) berri"
   ],
   "global_news.intent": [
     "Zer gertatu da (munduan|mundu osoan|nazioartean)?",
