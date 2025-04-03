@@ -248,6 +248,11 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         if entities or media_type == MediaType.NEWS or world_news:
             for v in self.read_db(world_only=world_news, langs=langs):
                 s = self._score(phrase, v, langs=langs, base_score=base_score)
+                if v.get("world_news"):
+                    if world_news:
+                        s += 10
+                    else:
+                        s -= 10
                 if s <= 50:
                     continue
                 v = dict2entry(v)
