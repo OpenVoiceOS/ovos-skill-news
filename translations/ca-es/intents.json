@@ -20,13 +20,13 @@
   ],
   "global_news.intent": [
     "Què ha passat (al món|arreu del món|a nivell internacional|arreu del globus)",
-    "(Dóna'm|Porta'm) les (notícies mundials|internacionals|globals|del món)",
-    "(Posa|Reprodueix|Diga'm|Vull escoltar) les (notícies internacionals|notícies globals|notícies del món)",
+    "(Dóna'm|Porta'm) les notícies (mundials|internacionals|globals|del món)",
+    "(Posa|Reprodueix|Diga'm|Vull escoltar) les notícies (internacionals|globals|del món)",
     "Explica’m què passa (al món|a nivell internacional|arreu del globus)",
     "Quina és (l'actualitat|la situació) (global|internacional|mundial)?",
     "Hi ha alguna notícia (internacional|mundial|global) important?",
     "Quines són les notícies (d'arreu del món|a nivell global|a escala internacional)?",
-    "(Alguna notícia d'última hora a nivell mundial?|Hi ha alguna notícia internacional d'última hora?)",
+    "[Hi ha] alguna notícia internacional [d'última hora]",
     "Com està (el món|el planeta) avui?"
   ]
 }
