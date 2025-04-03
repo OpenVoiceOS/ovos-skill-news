@@ -2,7 +2,6 @@ from os.path import join, dirname
 from typing import Iterable, Union, List
 
 from json_database import JsonStorage
-
 from ovos_utils import classproperty
 from ovos_utils.lang import standardize_lang_tag
 from ovos_utils.ocp import MediaType, PlaybackType, Playlist, PluginStream, dict2entry, MediaEntry
@@ -24,6 +23,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         "en-AU": "ABC",
         "en-CA": "CBC",
         "it-IT": "GR1",
+        "fr-FR": "EuroNews",
         "de-DE": "DLF - Die Nachrichten"
     }
 
@@ -125,7 +125,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
 
         return min([match_confidence, 100])
 
-    def read_db(self) -> List[dict]:
+    def read_db(self, world_only=False, local_only=False) -> List[dict]:
         entries = []
         for lang in self.archive:
             std_lang = standardize_lang_tag(lang)
@@ -133,6 +133,10 @@ class NewsSkill(OVOSCommonPlaybackSkill):
             if std_lang == self.lang:
                 default_feed = self.settings.get("default_feed") or default_feed
             for feed, config in self.archive[lang].items():
+                if world_only and not config.get("world_news"):
+                    continue
+                if local_only and config.get("world_news"):
+                    continue
                 if feed == default_feed:
                     config["is_default"] = True
                 config["lang"] = std_lang
@@ -143,8 +147,18 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 config["skill_logo"] = self.skill_icon
                 config["playback"] = PlaybackType.AUDIO
                 config["media_type"] = MediaType.NEWS
+
                 if config["uri"]:
-                    entries.append(config)
+                    if config["uri"].startswith("news//"):
+                        config["extractor_id"] = "news"
+                        config["stream"] = config["uri"].split("news//")[-1]
+                    elif config["uri"].startswith("rss//"):
+                        config["extractor_id"] = "rss"
+                        config["stream"] = config["uri"].split("rss//")[-1]
+                    elif config["uri"].startswith("youtube.channel.live//"):
+                        config["extractor_id"] = "youtube.channel.live"
+                        config["stream"] = config["uri"].split("youtube.channel.live//")[-1]
+                entries.append(config)
         return entries
 
     @ocp_featured_media()
@@ -233,12 +247,6 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 s = self._score(phrase, v, langs=langs, base_score=base_score)
                 if s <= 50:
                     continue
-                if v["uri"].startswith("news//"):
-                    v["extractor_id"] = "news"
-                    v["stream"] = v["uri"].split("news//")[-1]
-                elif v["uri"].startswith("rss//"):
-                    v["extractor_id"] = "rss"
-                    v["stream"] = v["uri"].split("rss//")[-1]
                 v = dict2entry(v)
                 v.match_confidence = min(100, s)
                 results.append(v)
@@ -250,10 +258,46 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         utterance = message.data["utterance"]
         self.acknowledge()  # short sound to know we are searching news
         # create a playlist with results sorted by relevance
-        playlist = list(self.search_news(utterance, media_type=MediaType.NEWS))
-        self.play_media(media=playlist[0],
-                        disambiguation=playlist,
-                        playlist=playlist)
+        # create a playlist with results sorted by relevance
+        results = []
+        for v in self.read_db(local_only=True):
+            s = self._score(utterance, v, langs=self.native_langs,
+                            base_score=30)
+            if s <= 50:
+                continue
+            v = dict2entry(v)
+            v.match_confidence = min(100, s)
+            results.append(v)
+
+        if not results:
+            self.speak_dialog("news.error")
+        else:
+            self.play_media(media=results[0],
+                            disambiguation=results,
+                            playlist=results)
+
+    @intent_handler("global_news.intent")
+    def handle_global_news(self, message):
+        utterance = message.data["utterance"]
+        self.acknowledge()  # short sound to know we are searching news
+        # create a playlist with results sorted by relevance
+        results = []
+        for v in self.read_db(world_only=True):
+            s = self._score(utterance, v, langs=self.native_langs,
+                            base_score=30)
+            if s <= 50:
+                continue
+            v = dict2entry(v)
+            v.match_confidence = min(100, s)
+            results.append(v)
+
+        if not results:
+            self.speak_dialog("news.error")
+        else:
+            self.play_media(media=results[0],
+                            disambiguation=results,
+                            playlist=results)
+
 
 if __name__ == "__main__":
     from ovos_utils.messagebus import FakeBus

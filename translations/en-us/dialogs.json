@@ -1,5 +1,12 @@
 {
-    "intro.dialog": [
-        "thank you for installing News Skill"
-    ]
+  "news.error": [
+    "I couldn't find any news streams to play.",
+    "Sorry, it seems like there are no available news streams at the moment.",
+    "I wasn't able to fetch any news. Please try again later.",
+    "Unfortunately, I couldn't locate any news channels to play for you.",
+    "Oops! It looks like there are no news streams available right now.",
+    "I couldn't find any news for you",
+    "No news streams found",
+    "It seems like the news streams are unavailable"
+  ]
 }
