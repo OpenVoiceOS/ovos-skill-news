@@ -1,6 +1,6 @@
 {
   "news.intent": [
-    "die (lokalen|regionalen|aktuellen|neuesten|) Nachrichten abspielen\nspiele die (lokalen|regionalen|aktuellen|neuesten|) Nachrichten ab",
+    "die (lokalen|regionalen|aktuellen|neuesten|) Nachrichten abspielen\nspiele die (lokalen|regionalen|aktuellen|neuesten|) Nachrichten",
     "erzähl mir die (lokalen|regionalen|aktuellen|neuesten|) Nachrichten",
     "was sind die (lokalen|regionalen|aktuellen|neuesten|) Nachrichten",
     "(lokaler|regionaler|aktueller|neuester|) Nachrichtenbericht",
@@ -20,13 +20,13 @@
   ],
   "global_news.intent": [
     "Was ist (auf der Welt | rund um den Globus | international) passiert",
-    "(play | Gib mir | das Neueste | Ich will | das Neueste) (weltweite | weltweite | internationale | globale) Nachrichten",
+    "(spiele| Gib mir | das Neueste | Ich will | das Neueste) (weltweite | weltweite | internationale | globale) Nachrichten",
     "Erzähle mir von (weltweiten|weltweiten|internationalen|globalen) Nachrichten",
     "Gib mir ein (globales|internationales|weltweites|weltweites) Nachrichten-Update",
     "Was sind die neuesten (globalen|internationalen|weltweiten|weltweiten) Nachrichten",
-    "Erzähl mir, was auf der Welt passiert",
-    "Alle wichtigen Neuigkeiten (global|international|weltweit)",
+    "Erzähl mir was auf der Welt passiert",
+    "Alle wichtigen Nachrichten (global|international|weltweit)",
     "Gibt es aktuelle Nachrichten (global|international|weltweit)",
-    "Wie geht es der Welt heute?"
+    "Wie geht es der Welt heute"
   ]
 }
