@@ -1,5 +1,13 @@
 {
-    "intro.dialog": [
-        "Obrigado por instalar Habilidade de not\u00edcias"
-    ]
+  "news.error": [
+    "Não consegui encontrar nenhuma estação de notícias para reproduzir.",
+    "Desculpa, parece que não há nenhuma estação de notícias disponível no momento.",
+    "Não consegui obter nenhuma notícia. Tente novamente mais tarde.",
+    "Infelizmente, não consegui localizar nenhum canal de notícias para reproduzir.",
+    "Ops! Parece que não há nenhuma estação de notícias disponível agora.",
+    "Não encontrei nenhuma notícia para ti.",
+    "Não foram encontradas estações de notícias.",
+    "Parece que as estações de notícias não estão disponíveis."
+  ]
+
 }

@@ -1,84 +1,89 @@
 {
-    "video.voc": [
-        "video"
-    ],
-    "rt.voc": [
-        "Russia Today"
-    ],
-    "it.voc": [
-        "Italian",
-        "Italy"
-    ],
-    "en-ca.voc": [
-        "canada",
-        "canadian"
-    ],
-    "nl.voc": [
-        "dutch",
-        "Nederlands",
-        "Netherlands"
-    ],
-    "ca.voc": [
-        "Catalan",
-        "Catalonia"
-    ],
-    "euronews.voc": [
-        "euronews"
-    ],
-    "fr.voc": [
-        "French",
-        "france"
-    ],
-    "es.voc": [
-        "Spanish"
-    ],
-    "news.voc": [
-        "news"
-    ],
-    "en-au.voc": [
-        "australia",
-        "australian"
-    ],
-    "pt-pt.voc": [
-        "Portuguese",
-        "Portugal"
-    ],
-    "euro.voc": [
-        "euro",
-        "european"
-    ],
-    "en.voc": [
-        "English"
-    ],
-    "de.voc": [
-        "German"
-    ],
-    "fr24.voc": [
-        "France24",
-        "France 24",
-        "France twenty four",
-        "France twenty fourth"
-    ],
-    "fi.voc": [
-        "finland",
-        "finnish"
-    ],
-    "sv.voc": [
-        "sweden",
-        "swedish"
-    ],
-    "en-gb.voc": [
-        "british",
-        "united kingdom",
-        "UK"
-    ],
-    "ru.voc": [
-        "russian",
-        "russia"
-    ],
-    "en-us.voc": [
-        "america",
-        "american",
-        "united states"
-    ]
+  "video.voc": [
+    "video"
+  ],
+  "rt.voc": [
+    "Russia Today"
+  ],
+  "it.voc": [
+    "Italian",
+    "Italy"
+  ],
+  "en-ca.voc": [
+    "canada",
+    "canadian"
+  ],
+  "nl.voc": [
+    "dutch",
+    "Nederlands",
+    "Netherlands"
+  ],
+  "ca.voc": [
+    "Catalan",
+    "Catalonia"
+  ],
+  "euronews.voc": [
+    "euronews"
+  ],
+  "fr.voc": [
+    "French",
+    "france"
+  ],
+  "es.voc": [
+    "Spanish"
+  ],
+  "news.voc": [
+    "news"
+  ],
+  "world_news.voc": [
+    "world news",
+    "global news",
+    "international news"
+  ],
+  "en-au.voc": [
+    "australia",
+    "australian"
+  ],
+  "pt-pt.voc": [
+    "Portuguese",
+    "Portugal"
+  ],
+  "euro.voc": [
+    "euro",
+    "european"
+  ],
+  "en.voc": [
+    "English"
+  ],
+  "de.voc": [
+    "German"
+  ],
+  "fr24.voc": [
+    "France24",
+    "France 24",
+    "France twenty four",
+    "France twenty fourth"
+  ],
+  "fi.voc": [
+    "finland",
+    "finnish"
+  ],
+  "sv.voc": [
+    "sweden",
+    "swedish"
+  ],
+  "en-gb.voc": [
+    "british",
+    "united kingdom",
+    "UK"
+  ],
+  "ru.voc": [
+    "russian",
+    "russia"
+  ],
+  "en-us.voc": [
+    "america",
+    "american",
+    "united states"
+  ]
 }

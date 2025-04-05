@@ -1,15 +1,32 @@
 {
   "news.intent": [
-    "(escoltar|reprodueix) [les] notícies",
-    "(posem|digues-me|posa|toca|posa'm) (les|) notícies",
-    "quines són les notícies",
-    "quines notícies hi ha",
-    "(dona'm|informe|informa'm) de [les] notícies",
-    "[vull] escoltar les notícies",
-    "pots (llegir-me|dir-me) les notícies",
-    "últimes notícies",
-    "titulars de notícies",
-    "(Necessito saber|m'agradaria escoltar) [les] notícies",
-    "què ha passat al món?"
+    "(escoltar|reprodueix|reproduïx|posa|posa'm) [les] notícies (locals|regionals|actuals|d'última hora|d'avui|de hui|del dia|)",
+    "(posem|digues-me|posa|toca|posa'm|digue'm) (les|) notícies (locals|regionals|actuals|d'última hora|d'avui|de hui|del dia|)",
+    "(quines són|què hi ha a) les notícies (locals|regionals|actuals|d'última hora|d'avui|del dia|de hui|)",
+    "quines notícies (locals|regionals|actuals|d'última hora|d'avui|del dia|) hi ha",
+    "(dona'm|informa'm|actualitza’m amb) [les] notícies (locals|regionals|actuals|d'última hora|d'avui|del dia|)",
+    "(vull|m'agradaria|necessito|) escoltar les notícies (locals|regionals|actuals|d'última hora|d'avui|del dia|)",
+    "(pots|em pots) llegir[-me] les notícies (locals|regionals|actuals|d'última hora|d'avui|del dia|)",
+    "(últimes|darreres) notícies (locals|regionals|actuals|d'última hora|d'avui|del dia|)",
+    "(titulars|resum|informació|butlletí) de notícies (locals|regionals|actuals|d'última hora|d'avui|del dia|)",
+    "(m'agradaria escoltar|necessito saber|actualitza'm sobre|actualitza’m amb) [les] notícies",
+    "què (expliquen|diuen) les notícies (locals|regionals|actuals|d'última hora|d'avui|de hui|del dia|)",
+    "(porta|posa)'m les notícies (locals|regionals|actuals|d'última hora|d'avui|de hui|del dia|)",
+    "què passa a les notícies (locals|regionals|actuals|d'última hora|d'avui|de hui|del dia|)",
+    "actualitza'm amb les notícies (locals|regionals|actuals|d'última hora|d'avui|de hui|del dia|)",
+    "(dona'm|fes-me) un resum de notícies (locals|regionals|actuals|d'última hora|d'avui|del dia|)",
+    "(diga'm|explica'm|llegeix-me) les notícies (locals|regionals|actuals|d'última hora|d'avui|de hui|del dia|)",
+    "(notícies d'última hora|qualsevol notícia d'última hora)"
+  ],
+  "global_news.intent": [
+    "Què ha passat (al món|arreu del món|a nivell internacional|arreu del globus)",
+    "(Dóna'm|Porta'm|Posa'm) les notícies (mundials|internacionals|globals|del món)",
+    "(Posa|Reprodueix|Reproduïx|Diga'm|Vull escoltar) les notícies (internacionals|globals|del món)",
+    "Explica’m què passa (al món|a nivell internacional|arreu del globus|arreu del món)",
+    "Quina és (l'actualitat|la situació) (global|internacional|mundial)?",
+    "Hi ha alguna notícia (internacional|mundial|global) important?",
+    "Quines són les notícies (d'arreu del món|a nivell global|a escala internacional)?",
+    "[Hi ha] alguna notícia internacional [d'última hora]",
+    "Com (està|va) (el món|el planeta) avui?"
   ]
 }

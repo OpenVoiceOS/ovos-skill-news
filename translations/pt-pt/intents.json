@@ -1,15 +1,32 @@
 {
   "news.intent": [
-    "reproduzir as notícias",
-    "diga-me as notícias",
-    "quais são as notícias",
-    "reportagem de notícias",
-    "diz[-me] as notícias",
-    "[quero] ouvir as notícias [de última hora]",
-    "pode[s] ler as notícias [para mim]",
+    "(ouvir|reproduzir) [as] notícias",
+    "(diga-me|conte-me|coloque|toque|põe) (as|) notícias [de última hora]",
+    "(quais são|o que tem nas|o que está a acontecer nas) notícias [de última hora]",
+    "relatório de notícias [de última hora]",
+    "(diz[-me]|informe-me|atualize-me com) [as] notícias [de última hora]",
+    "(quero|gostaria de|preciso) ouvir as notícias [de última hora]",
+    "(você pode|pode me|pode[s]) ler as notícias",
     "últimas notícias",
-    "manchetes de notícias",
-    "notícias de última hora",
-    "gostaria de ouvir as notícias"
+    "(manchetes|títulos) das notícias [de última hora]",
+    "(gostaria de ouvir|preciso saber|atualize-me sobre|atualize-me com) [as] notícias",
+    "o que dizem as notícias",
+    "coloque as notícias do dia",
+    "(notícias de última hora|qualquer notícia de última hora)",
+    "(me diga|explique-me|leia-me) as notícias de hoje",
+    "dê-me um resumo das notícias",
+    "diz-me as notícias de hoje (locais|regionais|)",
+    "alguma notícia de última hora (local|regional|)"
+  ],
+  "global_news.intent": [
+    "O que aconteceu (no mundo|ao redor do mundo|internacionalmente)?",
+    "(reproduza|me dê|últimas|quero|coloque) notícias (mundiais|do mundo|internacionais|globais)",
+    "Conte-me sobre as notícias (mundiais|do mundo|internacionais|globais)",
+    "Me dê uma atualização de notícias (globais|internacionais|mundiais|do mundo)",
+    "Qual é a última (notícia global|notícia internacional|notícia mundial)",
+    "Conte-me o que está acontecendo (no mundo|internacionalmente|ao redor do mundo)",
+    "Há alguma notícia importante (global|internacional|mundial)?",
+    "Há alguma notícia de última hora (globalmente|internacionalmente|mundialmente)?",
+    "Como está o mundo hoje?"
   ]
 }

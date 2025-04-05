@@ -1,5 +1,13 @@
 {
-    "intro.dialog": [
-        "eskerrik asko News Skill instalatzeagatik"
-    ]
+  "news.error": [
+    "Ez dut aurkitu berriak jotzeko emisiorik.",
+    "Barkatu, emankizun edo berriak ez daude eskuragarri momentu honetan.",
+    "Ez dut ezer lortu. Mesedez, saiatu berriro geroago.",
+    "Zoritxarrez, ez dut aurkitu berriak eskaintzen dituen kanalik.",
+    "Opa! Ez daude berriak entzuteko emisiorik momentu honetan.",
+    "Ez dut ezer aurkitu zuretzat. Beste zerbait probatu nahi al duzu?",
+    "Ez daude berriak eskaintzen dituen emisiorik. Beste zerbait bilatu nahi duzu?",
+    "Emisioak ez daude eskuragarri. Saiatu berriro?"
+  ]
+
 }

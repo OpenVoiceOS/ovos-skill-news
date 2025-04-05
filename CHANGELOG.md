@@ -1,13 +1,46 @@
 # Changelog
 
-## [0.3.1a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.3.1a1) (2025-04-03)
+## [0.4.0a6](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.0a6) (2025-04-05)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.3.0...0.3.1a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.0a4...0.4.0a6)
 
 **Merged pull requests:**
 
-- Update intents.json [\#83](https://github.com/OpenVoiceOS/ovos-skill-news/pull/83) ([c-armentano](https://github.com/c-armentano))
-- Create skill.json [\#81](https://github.com/OpenVoiceOS/ovos-skill-news/pull/81) ([c-armentano](https://github.com/c-armentano))
+- optimizing German translation for better usage [\#97](https://github.com/OpenVoiceOS/ovos-skill-news/pull/97) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+- Update intents.json [\#96](https://github.com/OpenVoiceOS/ovos-skill-news/pull/96) ([c-armentano](https://github.com/c-armentano))
+- Update dialogs.json [\#95](https://github.com/OpenVoiceOS/ovos-skill-news/pull/95) ([c-armentano](https://github.com/c-armentano))
+
+## [0.4.0a4](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.0a4) (2025-04-03)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.0a3...0.4.0a4)
+
+**Merged pull requests:**
+
+- adding German translations for new intents [\#93](https://github.com/OpenVoiceOS/ovos-skill-news/pull/93) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+
+## [0.4.0a3](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.0a3) (2025-04-03)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.0a2...0.4.0a3)
+
+**Merged pull requests:**
+
+- eu/translate [\#89](https://github.com/OpenVoiceOS/ovos-skill-news/pull/89) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+
+## [0.4.0a2](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.0a2) (2025-04-03)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.0a1...0.4.0a2)
+
+**Merged pull requests:**
+
+- pt-pt/translate [\#87](https://github.com/OpenVoiceOS/ovos-skill-news/pull/87) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+
+## [0.4.0a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.0a1) (2025-04-03)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.3.1...0.4.0a1)
+
+**Merged pull requests:**
+
+- feat: global news [\#85](https://github.com/OpenVoiceOS/ovos-skill-news/pull/85) ([JarbasAl](https://github.com/JarbasAl))
 
 
 
