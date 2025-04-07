@@ -1,46 +1,12 @@
 # Changelog
 
-## [0.4.0a6](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.0a6) (2025-04-05)
+## [0.4.1a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.1a1) (2025-04-07)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.0a4...0.4.0a6)
-
-**Merged pull requests:**
-
-- optimizing German translation for better usage [\#97](https://github.com/OpenVoiceOS/ovos-skill-news/pull/97) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-- Update intents.json [\#96](https://github.com/OpenVoiceOS/ovos-skill-news/pull/96) ([c-armentano](https://github.com/c-armentano))
-- Update dialogs.json [\#95](https://github.com/OpenVoiceOS/ovos-skill-news/pull/95) ([c-armentano](https://github.com/c-armentano))
-
-## [0.4.0a4](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.0a4) (2025-04-03)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.0a3...0.4.0a4)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.0...0.4.1a1)
 
 **Merged pull requests:**
 
-- adding German translations for new intents [\#93](https://github.com/OpenVoiceOS/ovos-skill-news/pull/93) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-
-## [0.4.0a3](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.0a3) (2025-04-03)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.0a2...0.4.0a3)
-
-**Merged pull requests:**
-
-- eu/translate [\#89](https://github.com/OpenVoiceOS/ovos-skill-news/pull/89) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-
-## [0.4.0a2](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.0a2) (2025-04-03)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.0a1...0.4.0a2)
-
-**Merged pull requests:**
-
-- pt-pt/translate [\#87](https://github.com/OpenVoiceOS/ovos-skill-news/pull/87) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-
-## [0.4.0a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.0a1) (2025-04-03)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.3.1...0.4.0a1)
-
-**Merged pull requests:**
-
-- feat: global news [\#85](https://github.com/OpenVoiceOS/ovos-skill-news/pull/85) ([JarbasAl](https://github.com/JarbasAl))
+- More streams [\#91](https://github.com/OpenVoiceOS/ovos-skill-news/pull/91) ([JarbasAl](https://github.com/JarbasAl))
 
 
 
