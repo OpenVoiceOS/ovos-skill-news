@@ -1,0 +1,32 @@
+{
+  "news.intent": [
+    "afspil \n(lokale|regionale|aktuelle|seneste|) nyheder",
+    "fortæl mig de (lokale|regionale|aktuelle|seneste|) nyheder",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    "hvad er der (i|af)  (lokale|regionale|) nyheder",
+    null,
+    null,
+    "opdater mig om (de|)  (lokale|regionale|aktuelle|seneste|) nyheder",
+    null,
+    null,
+    "nogen breaking (lokal|regional|) nyheder"
+  ],
+  "global_news.intent": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ]
+}
