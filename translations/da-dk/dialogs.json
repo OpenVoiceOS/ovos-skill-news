@@ -1,4 +1,12 @@
 {
-
-
+  "news.error": [
+    "Jeg kunne ikke finde nogen nyhedsstreams at afspille.",
+    "Beklager, det ser ud til, at der ikke er nogen tilgængelige nyhedsstrømme i øjeblikket.",
+    "Jeg var ikke i stand til at hente nogen nyheder. Prøv venligst igen senere.",
+    "Desværre kunne jeg ikke finde nogen nyhedskanaler til at spille for dig.",
+    "Ups! Det ser ud til, at der ikke er nogen tilgængelige nyhedsstrømme lige nu.",
+    "Jeg kunne ikke finde nogen nyheder til dig",
+    "Ingen nyhedsstrømme fundet",
+    "Det ser ud til, at nyhedsstrømmene ikke er tilgængelige"
+  ]
 }
