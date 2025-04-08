@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.4.1a2](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.1a2) (2025-04-08)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.1a1...0.4.1a2)
+
+**Merged pull requests:**
+
+- da-dk/translate [\#101](https://github.com/OpenVoiceOS/ovos-skill-news/pull/101) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+- es-es/translate [\#100](https://github.com/OpenVoiceOS/ovos-skill-news/pull/100) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+
 ## [0.4.1a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.1a1) (2025-04-07)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.0...0.4.1a1)
