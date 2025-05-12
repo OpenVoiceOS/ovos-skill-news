@@ -1,21 +1,12 @@
 # Changelog
 
-## [0.4.1a2](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.1a2) (2025-04-08)
+## [0.4.2a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.2a1) (2025-05-12)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.1a1...0.4.1a2)
-
-**Merged pull requests:**
-
-- da-dk/translate [\#101](https://github.com/OpenVoiceOS/ovos-skill-news/pull/101) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-- es-es/translate [\#100](https://github.com/OpenVoiceOS/ovos-skill-news/pull/100) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-
-## [0.4.1a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.1a1) (2025-04-07)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.0...0.4.1a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.1...0.4.2a1)
 
 **Merged pull requests:**
 
-- More streams [\#91](https://github.com/OpenVoiceOS/ovos-skill-news/pull/91) ([JarbasAl](https://github.com/JarbasAl))
+- gl/translate [\#103](https://github.com/OpenVoiceOS/ovos-skill-news/pull/103) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 
 
