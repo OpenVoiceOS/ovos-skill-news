@@ -35,6 +35,11 @@
   "news.voc": [
     "(novas|noticias)"
   ],
+  "world_news.voc": [
+    "(novas|noticias) mundiais",
+    "(novas|noticias) globais",
+    "(novas|noticias) internacionais"
+  ],
   "en-au.voc": [
     "Australia",
     "(australiano|australiana)"
@@ -68,7 +73,7 @@
     "sueco"
   ],
   "en-gb.voc": [
-    "británico ",
+    "(británico|británica)",
     "Reino Unido",
     "Reino Unido"
   ],
