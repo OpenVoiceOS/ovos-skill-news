@@ -10,7 +10,7 @@ from skill_ovos_news import NewsSkill, create_skill
 class TestSkillLoading(unittest.TestCase):
     @classmethod
     def setUpClass(self):
-        self.skill_id = "skill-ovos-news.openvoiceos"
+        self.skill_id = "ovos-skill-news.openvoiceos"
         self.path = dirname(dirname(dirname(__file__)))
 
     def test_from_class(self):
