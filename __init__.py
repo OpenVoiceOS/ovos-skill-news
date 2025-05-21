@@ -93,30 +93,35 @@ class NewsSkill(OVOSCommonPlaybackSkill):
     def _score(self, phrase, entry, langs=None, base_score=0):
         # self.log.debug(f"### {entry}")
         score = base_score
-        langs = langs or self.native_langs
+        target_langs = langs or self.native_langs
         # self.log.debug(f"\t- base score: {score}")
 
         # match name
-        _, alias_score = match_one(phrase, entry["aliases"],
+        _, alias_score = match_one(phrase, entry.get("aliases") or [entry["title"]],
                                    strategy=MatchStrategy.TOKEN_SORT_RATIO)
-        match_confidence = score + alias_score * 60
         # self.log.debug(f"\t- fuzzy score: {match_confidence}")
 
         # match languages
-        elang = standardize_lang_tag(entry["lang"])
-        elangs = set(standardize_lang_tag(l) for l in entry.get("secondary_langs", []))
-        elangs.add(elang)
-        if elang in langs:
-            match_confidence += 25  # lang bonus
-        elif any([lang in elangs for lang in langs]):
-            match_confidence += 10  # smaller lang bonus
-        else:
-            match_confidence -= 20  # wrong language penalty
+        entry_lang = standardize_lang_tag(entry["lang"])
+        entry_langs = set(standardize_lang_tag(l) for l in entry.get("secondary_langs", []))
+        entry_langs.add(entry_lang)
+
+        match_confidence = score + alias_score * 50
+
+        if langs: # if specific lang was requested
+            if any([lang in target_langs for lang in entry_langs]):
+                match_confidence += 30  # explicitly requested lang match bonus
+            else:
+                match_confidence -= 20  # wrong language penalty
+        elif entry_lang in target_langs:
+            # if no languages explicitly requested, assume user prefers their native lang
+            match_confidence += 10  # known main language bonus
+
         # self.log.debug(f"\t- lang score: {match_confidence}")
 
         # match country code
         country = self.location["city"]["state"]["country"]["code"]
-        if any((l.endswith(f"-{country}") for l in elangs)):
+        if any((l.endswith(f"-{country}") for l in entry_langs)):
             match_confidence += 20  # bonus for news stations from user location
             # self.log.debug(f"\t- location score: {match_confidence}")
 
@@ -128,12 +133,12 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         return min([match_confidence, 100])
 
     def read_db(self, world_only=False, local_only=False, langs=None) -> List[dict]:
-        langs = langs or self.native_langs
+        target_langs = langs or self.native_langs
         entries = []
         for lang in self.archive:
             std_lang = standardize_lang_tag(lang)
-            lang_score = closest_match(std_lang, langs)[-1]
-            if lang_score > 10:
+            lang_score = closest_match(std_lang, target_langs)[-1]
+            if lang_score > 10 and langs:
                 self.log.debug(f"Ignoring news streams from foreign language: {std_lang}")
                 continue
             default_feed = self.langdefaults.get(lang)
@@ -206,7 +211,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 )
         return entries
 
-    @ocp_search()
+    @ocp_search()  # generic "play" handler
     def search_news(self, phrase, media_type) -> Iterable[Union[Playlist, MediaType, PluginStream]]:
         """Analyze phrase to see if it is a play-able phrase with this skill.
 
@@ -229,9 +234,12 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         base_score = 50 if world_news else 0
 
         entities = self.ocp_voc_match(phrase)
-
         base_score += 20 * len(entities)
-        if media_type == MediaType.NEWS or self.voc_match(phrase, "news"):
+
+        if self.voc_match(phrase, "news"):
+            media_type = MediaType.NEWS
+            base_score += 20
+        elif media_type == MediaType.NEWS:
             base_score += 30
             if not phrase.strip():
                 base_score += 20  # "play the news", no query
@@ -248,7 +256,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         if entities or media_type == MediaType.NEWS or world_news:
             for v in self.read_db(world_only=world_news, langs=langs):
                 s = self._score(phrase, v, langs=langs, base_score=base_score)
-                if v.get("world_news"):
+                if v.get("world_news"): # station flagged specifically as international
                     if world_news:
                         s += 10
                     else:
@@ -259,8 +267,8 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 v.match_confidence = min(100, s)
                 results.append(v)
 
-        # playlist result
-        if not world_news and (media_type == MediaType.NEWS or base_score >= 60):
+        # default playlist result
+        if not langs and not world_news and (media_type == MediaType.NEWS or base_score >= 60):
             pl = self.news_playlist()
             if pl:
                 results.append(pl)
@@ -270,11 +278,11 @@ class NewsSkill(OVOSCommonPlaybackSkill):
     def handle_play_the_news(self, message):
         utterance = message.data["utterance"]
         self.acknowledge()  # short sound to know we are searching news
-        # create a playlist with results sorted by relevance
+        langs = self.match_lang(utterance) or self.native_langs # user may request specific lang
         # create a playlist with results sorted by relevance
         results = []
-        for v in self.read_db(local_only=True):
-            s = self._score(utterance, v, base_score=30)
+        for v in self.read_db(local_only=True, langs=langs):
+            s = self._score(utterance, v, base_score=30, langs=langs)
             if s <= 50:
                 continue
             v = dict2entry(v)
@@ -292,10 +300,12 @@ class NewsSkill(OVOSCommonPlaybackSkill):
     def handle_global_news(self, message):
         utterance = message.data["utterance"]
         self.acknowledge()  # short sound to know we are searching news
+        langs = self.match_lang(utterance) # user may request specific lang
         # create a playlist with results sorted by relevance
         results = []
-        for v in self.read_db(world_only=True):
-            s = self._score(utterance, v, base_score=30)
+        for v in self.read_db(world_only=True, langs=langs):
+            # NOTE: if langs is None then all languages are considered equally
+            s = self._score(utterance, v, base_score=30, langs=langs)
             if s <= 50:
                 continue
             v = dict2entry(v)
@@ -311,7 +321,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
 
 
 if __name__ == "__main__":
-    from ovos_utils.messagebus import FakeBus
+    from ovos_utils.fakebus import FakeBus
 
     s = NewsSkill(bus=FakeBus(), skill_id="t.fake")
 
