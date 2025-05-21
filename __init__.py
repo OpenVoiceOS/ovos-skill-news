@@ -92,6 +92,20 @@ class NewsSkill(OVOSCommonPlaybackSkill):
 
     def _score(self, phrase, entry, langs=None, base_score=0):
         # self.log.debug(f"### {entry}")
+        """
+        Calculates a relevance score for a news entry based on a search phrase and language preferences.
+        
+        The score is determined by fuzzy matching the phrase to the entry's aliases or title, language matches (including explicit requests and native preferences), country code alignment, and whether the entry is marked as a default news feed. The final score is capped at 100.
+        
+        Args:
+            phrase: The user search phrase.
+            entry: The news entry dictionary to score.
+            langs: Optional list of requested language codes. If not provided, native languages are used.
+            base_score: Optional initial score to start from.
+        
+        Returns:
+            A float representing the match confidence score, capped at 100.
+        """
         score = base_score
         target_langs = langs or self.native_langs
         # self.log.debug(f"\t- base score: {score}")
@@ -133,6 +147,17 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         return min([match_confidence, 100])
 
     def read_db(self, world_only=False, local_only=False, langs=None) -> List[dict]:
+        """
+        Reads and returns news feed entries from the archive, filtered by language and news type.
+        
+        Args:
+            world_only: If True, includes only world news feeds.
+            local_only: If True, includes only local news feeds.
+            langs: Optional list of language codes to filter feeds; if not provided, uses native languages.
+        
+        Returns:
+            A list of dictionaries representing news feed entries, each enriched with metadata such as language, title, images, playback type, media type, and stream information.
+        """
         target_langs = langs or self.native_langs
         entries = []
         for lang in self.archive:
@@ -175,6 +200,13 @@ class NewsSkill(OVOSCommonPlaybackSkill):
 
     @ocp_featured_media()
     def news_playlist(self) -> Playlist:
+        """
+        Creates a playlist containing the latest news streams from all configured providers.
+        
+        Returns:
+            Playlist: A playlist of news streams, with each entry represented as a PluginStream
+            or MediaEntry depending on the URI scheme.
+        """
         entries = Playlist(title="Latest News (Station Playlist)")
         for config in self.read_db():
             if config["uri"].startswith("rss//"):
@@ -213,22 +245,17 @@ class NewsSkill(OVOSCommonPlaybackSkill):
 
     @ocp_search()  # generic "play" handler
     def search_news(self, phrase, media_type) -> Iterable[Union[Playlist, MediaType, PluginStream]]:
-        """Analyze phrase to see if it is a play-able phrase with this skill.
-
-        Arguments:
-            phrase (str): User phrase uttered after "Play", e.g. "some music"
-            media_type (MediaType): requested CPSMatchType to media for
-
+        """
+        Searches for news streams matching the user's phrase and requested media type.
+        
+        Analyzes the input phrase to detect news-related keywords, provider entities, and language preferences. Filters and scores news entries from the database based on relevance to the phrase, requested languages, and whether world news is specified. Returns a sorted list of matching news streams or playlists, each with associated metadata and confidence score.
+        
+        Args:
+            phrase: The user's spoken or typed request.
+            media_type: The requested media type (e.g., NEWS).
+        
         Returns:
-            search_results (list): list of dictionaries with result entries
-            {
-                "match_confidence": MatchConfidence.HIGH,
-                "media_type":  CPSMatchType.MUSIC,
-                "uri": "https://audioservice.or.gui.will.play.this",
-                "playback": PlaybackType.VIDEO,
-                "image": "http://optional.audioservice.jpg",
-                "bg_image": "http://optional.audioservice.background.jpg"
-            }
+            An iterable of news stream entries or playlists, sorted by match confidence.
         """
         world_news = self.voc_match(phrase, "world_news")
         base_score = 50 if world_news else 0
@@ -276,6 +303,11 @@ class NewsSkill(OVOSCommonPlaybackSkill):
 
     @intent_handler("news.intent")
     def handle_play_the_news(self, message):
+        """
+        Handles the user intent to play local news and initiates playback of the most relevant news stream.
+        
+        Analyzes the user's utterance for language preferences, searches for matching local news entries, ranks them by relevance, and plays the top result. If no suitable news is found, notifies the user with an error dialog.
+        """
         utterance = message.data["utterance"]
         self.acknowledge()  # short sound to know we are searching news
         langs = self.match_lang(utterance) or self.native_langs # user may request specific lang
@@ -298,6 +330,11 @@ class NewsSkill(OVOSCommonPlaybackSkill):
 
     @intent_handler("global_news.intent")
     def handle_global_news(self, message):
+        """
+        Handles the user intent to play global or world news.
+        
+        Detects requested languages from the user's utterance, retrieves relevant world news entries, scores them for relevance, and plays the top result. If no suitable news entries are found, notifies the user with an error dialog.
+        """
         utterance = message.data["utterance"]
         self.acknowledge()  # short sound to know we are searching news
         langs = self.match_lang(utterance) # user may request specific lang
