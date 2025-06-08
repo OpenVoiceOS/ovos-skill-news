@@ -1,12 +1,20 @@
 # Changelog
 
-## [0.4.4a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.4a1) (2025-05-15)
+## [0.4.5a2](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.5a2) (2025-06-08)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.3...0.4.4a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.5a1...0.4.5a2)
 
 **Merged pull requests:**
 
-- fix: standardize urls / skill-id / pypi-name [\#107](https://github.com/OpenVoiceOS/ovos-skill-news/pull/107) ([JarbasAl](https://github.com/JarbasAl))
+- workshop 7.X.X [\#112](https://github.com/OpenVoiceOS/ovos-skill-news/pull/112) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.4.5a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.5a1) (2025-05-21)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.4...0.4.5a1)
+
+**Merged pull requests:**
+
+- fix: improve language matching, allow world\_news [\#109](https://github.com/OpenVoiceOS/ovos-skill-news/pull/109) ([JarbasAl](https://github.com/JarbasAl))
 
 
 
