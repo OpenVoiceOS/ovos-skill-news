@@ -1,20 +1,12 @@
 # Changelog
 
-## [0.4.5a2](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.5a2) (2025-06-08)
+## [0.4.6a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.6a1) (2025-09-05)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.5a1...0.4.5a2)
-
-**Merged pull requests:**
-
-- workshop 7.X.X [\#112](https://github.com/OpenVoiceOS/ovos-skill-news/pull/112) ([JarbasAl](https://github.com/JarbasAl))
-
-## [0.4.5a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.5a1) (2025-05-21)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.4...0.4.5a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.5...0.4.6a1)
 
 **Merged pull requests:**
 
-- fix: improve language matching, allow world\_news [\#109](https://github.com/OpenVoiceOS/ovos-skill-news/pull/109) ([JarbasAl](https://github.com/JarbasAl))
+- fix: make orjson optional [\#114](https://github.com/OpenVoiceOS/ovos-skill-news/pull/114) ([JarbasAl](https://github.com/JarbasAl))
 
 
 
