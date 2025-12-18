@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.6a2](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.6a2) (2025-12-18)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.6a1...0.4.6a2)
+
+**Merged pull requests:**
+
+- chore: Configure Renovate [\#116](https://github.com/OpenVoiceOS/ovos-skill-news/pull/116) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [0.4.6a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.6a1) (2025-09-05)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.5...0.4.6a1)
