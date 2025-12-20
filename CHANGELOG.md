@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.6a4](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.6a4) (2025-12-20)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.6a3...0.4.6a4)
+
+**Merged pull requests:**
+
+- chore\(deps\): update dependency ovos-workshop to v8 [\#124](https://github.com/OpenVoiceOS/ovos-skill-news/pull/124) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [0.4.6a3](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.6a3) (2025-12-19)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.6a2...0.4.6a3)
