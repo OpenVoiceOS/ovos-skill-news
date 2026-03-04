@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.4.6a5](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.6a5) (2026-03-04)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.6a4...0.4.6a5)
+
+**Merged pull requests:**
+
+- da-dk/translate [\#127](https://github.com/OpenVoiceOS/ovos-skill-news/pull/127) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+- chore\(deps\): update actions/setup-python action to v6 [\#123](https://github.com/OpenVoiceOS/ovos-skill-news/pull/123) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update actions/checkout action to v6 [\#122](https://github.com/OpenVoiceOS/ovos-skill-news/pull/122) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [0.4.6a4](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.6a4) (2025-12-20)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.6a3...0.4.6a4)
