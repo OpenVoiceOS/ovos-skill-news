@@ -35,6 +35,11 @@
   "news.voc": [
     "nyheder"
   ],
+  "world_news.voc": [
+    "world news",
+    "global news",
+    "international news"
+  ],
   "en-au.voc": [
     "Australien",
     "australske"
