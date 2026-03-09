@@ -1,0 +1,26 @@
+{
+  "skill_id": "ovos-skill-news.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-news",
+  "extra_plugins": {
+    "core": [],
+    "PHAL": [],
+    "listener": [],
+    "audio": ["ovos-ocp-news-plugin"],
+    "media": ["ovos-ocp-news-plugin"],
+    "gui": []
+  },
+  "name": "Flux d'actualités",
+  "description": "Des flux d'actualités du monde entier.",
+  "examples": [
+    "Joue les actualités",
+    "Joue les actualités de NPR",
+    "Joue Euronews",
+    "Joue les actualités catalanes",
+    "Joue les actualités portugaises",
+    "Joue les actualités en espagnol"
+  ],
+  "tags": [
+    "actualités",
+    "information"
+  ]
+}
