@@ -1,82 +1,81 @@
 {
     "video.voc": [
-        "vid\u00e9o"
+        "vidéo"
     ],
     "rt.voc": [
         "Russie aujourd'hui"
     ],
     "it.voc": [
-        "Italien",
+        "italiennes",
         "Italie"
     ],
     "en-ca.voc": [
-        "canadian",
-        "canada"
+        "canadiennes",
+        "Canada"
     ],
     "nl.voc": [
-        "Nederlands ?",
-        "hollandaise",
+        "néerlandaises",
+        "hollandaises",
         "Pays-Bas"
     ],
     "ca.voc": [
         "Catalogne",
-        "Catalan"
+        "catalanes"
     ],
     "euronews.voc": [
         "euronews"
     ],
     "fr.voc": [
-        "france",
-        "Fran\u00e7ais"
+        "France",
+        "françaises"
     ],
     "es.voc": [
-        "Espagnol"
+        "espagnoles"
     ],
     "news.voc": [
         "nouvelles"
     ],
     "en-au.voc": [
-        "australian",
-        "australia"
+        "australiennes",
+        "Australie"
     ],
     "pt-pt.voc": [
-        "Portugais",
+        "portugaises",
         "Portugal"
     ],
     "euro.voc": [
-        "european",
-        "euro"
+        "européennes",
+        "Europe"
     ],
     "en.voc": [
-        "Anglais"
+        "anglais"
     ],
     "de.voc": [
-        "Allemand"
+        "allemandes"
     ],
     "fr24.voc": [
         "France 24",
         "France24",
-        "France"
+        "France vingt-quatre"
     ],
     "fi.voc": [
-        "finland",
-        "finnish"
+        "Finlande",
+        "finlandaises"
     ],
     "sv.voc": [
-        "su\u00e9dois"
+        "suédoises"
     ],
     "en-gb.voc": [
-        "royaume uni",
-        "british",
-        "UK"
+        "Royaume-Uni",
+        "britanniques"
     ],
     "ru.voc": [
-        "russe",
-        "russie"
+        "russes",
+        "Russie"
     ],
     "en-us.voc": [
-        "america",
-        "am\u00e9ricains",
-        "Etats unis"
+        "États-Unis",
+        "américaines",
+        "américains"
     ]
 }
