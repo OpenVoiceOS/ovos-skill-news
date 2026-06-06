@@ -20,9 +20,8 @@ class TestNewsSkillLoads(TestCase):
             cls.minicroft.stop()
 
     def test_skill_loaded(self):
-        """Skill must appear in the loaded skill set."""
-        loaded_ids = [s.skill_id for s in self.minicroft.skills]
-        self.assertIn(self.skill_id, loaded_ids)
+        """Skill must appear in the loaded plugin skills."""
+        self.assertIn(self.skill_id, self.minicroft.plugin_skills)
 
     def test_play_news_padatious(self):
         session = Session("test-news-01")

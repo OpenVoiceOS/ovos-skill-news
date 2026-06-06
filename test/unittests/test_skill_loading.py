@@ -2,27 +2,19 @@ import unittest
 from os.path import dirname
 
 from ovos_plugin_manager.skills import find_skill_plugins
-from ovos_utils.messagebus import FakeBus
+from ovos_utils.fakebus import FakeBus
 from ovos_workshop.skill_launcher import PluginSkillLoader
-from ovos_skill_news import NewsSkill, create_skill
+from ovos_skill_news import NewsSkill
 
 
 class TestSkillLoading(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.skill_id = "ovos-skill-news.openvoiceos"
-        cls.path = dirname(dirname(dirname(__file__)))
 
     def test_from_class(self):
         bus = FakeBus()
         skill = NewsSkill()
-        skill._startup(bus, self.skill_id)
-        self.assertEqual(skill.bus, bus)
-        self.assertEqual(skill.skill_id, self.skill_id)
-
-    def test_from_func(self):
-        bus = FakeBus()
-        skill = create_skill()
         skill._startup(bus, self.skill_id)
         self.assertEqual(skill.bus, bus)
         self.assertEqual(skill.skill_id, self.skill_id)
