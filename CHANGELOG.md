@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.9a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.9a1) (2026-06-07)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.8a2...0.4.9a1)
+
+**Merged pull requests:**
+
+- fix\(deps\): allow ovos-bus-client 2.x \(widen cap to \<3.0.0\) [\#138](https://github.com/OpenVoiceOS/ovos-skill-news/pull/138) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.4.8a2](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.8a2) (2026-04-04)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.8a1...0.4.8a2)
