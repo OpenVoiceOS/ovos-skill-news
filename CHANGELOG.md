@@ -1,50 +1,45 @@
 # Changelog
 
-## [0.4.6a6](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.6a6) (2026-03-04)
+## [0.4.9a2](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.9a2) (2026-07-12)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.6a5...0.4.6a6)
-
-## [0.4.6a5](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.6a5) (2026-03-04)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.6a4...0.4.6a5)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.9a1...0.4.9a2)
 
 **Merged pull requests:**
 
-- da-dk/translate [\#127](https://github.com/OpenVoiceOS/ovos-skill-news/pull/127) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-- chore\(deps\): update actions/setup-python action to v6 [\#123](https://github.com/OpenVoiceOS/ovos-skill-news/pull/123) ([renovate[bot]](https://github.com/apps/renovate))
-- chore\(deps\): update actions/checkout action to v6 [\#122](https://github.com/OpenVoiceOS/ovos-skill-news/pull/122) ([renovate[bot]](https://github.com/apps/renovate))
+- fix: allow ovos-workshop 9.x [\#141](https://github.com/OpenVoiceOS/ovos-skill-news/pull/141) ([JarbasAl](https://github.com/JarbasAl))
 
-## [0.4.6a4](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.6a4) (2025-12-20)
+## [0.4.9a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.9a1) (2026-06-07)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.6a3...0.4.6a4)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.8a2...0.4.9a1)
 
 **Merged pull requests:**
 
-- chore\(deps\): update dependency ovos-workshop to v8 [\#124](https://github.com/OpenVoiceOS/ovos-skill-news/pull/124) ([renovate[bot]](https://github.com/apps/renovate))
+- fix\(deps\): allow ovos-bus-client 2.x \(widen cap to \<3.0.0\) [\#138](https://github.com/OpenVoiceOS/ovos-skill-news/pull/138) ([JarbasAl](https://github.com/JarbasAl))
 
-## [0.4.6a3](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.6a3) (2025-12-19)
+## [0.4.8a2](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.8a2) (2026-04-04)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.6a2...0.4.6a3)
-
-**Merged pull requests:**
-
-- chore\(deps\): update dependency python to 3.14 [\#117](https://github.com/OpenVoiceOS/ovos-skill-news/pull/117) ([renovate[bot]](https://github.com/apps/renovate))
-
-## [0.4.6a2](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.6a2) (2025-12-18)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.6a1...0.4.6a2)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.8a1...0.4.8a2)
 
 **Merged pull requests:**
 
-- chore: Configure Renovate [\#116](https://github.com/OpenVoiceOS/ovos-skill-news/pull/116) ([renovate[bot]](https://github.com/apps/renovate))
+- ci: modernize GitHub workflows [\#136](https://github.com/OpenVoiceOS/ovos-skill-news/pull/136) ([JarbasAl](https://github.com/JarbasAl))
+- fix\(i18n\): normalize locale folders to canonical BCP-47 [\#135](https://github.com/OpenVoiceOS/ovos-skill-news/pull/135) ([JarbasAl](https://github.com/JarbasAl))
 
-## [0.4.6a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.6a1) (2025-09-05)
+## [0.4.8a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.8a1) (2026-03-24)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.5...0.4.6a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.7a1...0.4.8a1)
 
 **Merged pull requests:**
 
-- fix: make orjson optional [\#114](https://github.com/OpenVoiceOS/ovos-skill-news/pull/114) ([JarbasAl](https://github.com/JarbasAl))
+- fix: rename bare lang code locale directories [\#133](https://github.com/OpenVoiceOS/ovos-skill-news/pull/133) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+
+## [0.4.7a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.7a1) (2026-03-09)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.6...0.4.7a1)
+
+**Merged pull requests:**
+
+- Complete French news locale metadata [\#131](https://github.com/OpenVoiceOS/ovos-skill-news/pull/131) ([goldyfruit](https://github.com/goldyfruit))
 
 
 
