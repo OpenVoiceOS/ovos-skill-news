@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.4.9a3](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.9a3) (2026-08-25)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.9a2...0.4.9a3)
+
+**Merged pull requests:**
+
+- translate\(kab-DZ\): update global\_news.intent [\#146](https://github.com/OpenVoiceOS/ovos-skill-news/pull/146) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+- translate\(kab-DZ\): update news.voc [\#145](https://github.com/OpenVoiceOS/ovos-skill-news/pull/145) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+- translate\(kab-DZ\): update world\_news.voc [\#144](https://github.com/OpenVoiceOS/ovos-skill-news/pull/144) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+- translate\(kab-DZ\): update video.voc [\#143](https://github.com/OpenVoiceOS/ovos-skill-news/pull/143) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+
 ## [0.4.9a2](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.9a2) (2026-07-12)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.9a1...0.4.9a2)
