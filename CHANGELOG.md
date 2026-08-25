@@ -1,8 +1,8 @@
 # Changelog
 
-## [0.4.9a3](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.9a3) (2026-08-25)
+## [0.4.9a4](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.9a4) (2026-08-25)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.9a2...0.4.9a3)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.9a2...0.4.9a4)
 
 **Merged pull requests:**
 
