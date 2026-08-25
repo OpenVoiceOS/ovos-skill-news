@@ -1,28 +1,20 @@
 import unittest
 from os.path import dirname
 
-from mycroft.skills.skill_loader import PluginSkillLoader, SkillLoader
 from ovos_plugin_manager.skills import find_skill_plugins
-from ovos_utils.messagebus import FakeBus
-from skill_ovos_news import NewsSkill, create_skill
+from ovos_utils.fakebus import FakeBus
+from ovos_workshop.skill_launcher import PluginSkillLoader
+from ovos_skill_news import NewsSkill
 
 
 class TestSkillLoading(unittest.TestCase):
     @classmethod
-    def setUpClass(self):
-        self.skill_id = "ovos-skill-news.openvoiceos"
-        self.path = dirname(dirname(dirname(__file__)))
+    def setUpClass(cls):
+        cls.skill_id = "ovos-skill-news.openvoiceos"
 
     def test_from_class(self):
         bus = FakeBus()
         skill = NewsSkill()
-        skill._startup(bus, self.skill_id)
-        self.assertEqual(skill.bus, bus)
-        self.assertEqual(skill.skill_id, self.skill_id)
-
-    def test_from_func(self):
-        bus = FakeBus()
-        skill = create_skill()
         skill._startup(bus, self.skill_id)
         self.assertEqual(skill.bus, bus)
         self.assertEqual(skill.skill_id, self.skill_id)
@@ -38,13 +30,6 @@ class TestSkillLoading(unittest.TestCase):
                 break
         else:
             raise RuntimeError("plugin not found")
-
-    def test_from_loader(self):
-        bus = FakeBus()
-        loader = SkillLoader(bus, self.path)
-        loader.load()
-        self.assertEqual(loader.instance.bus, bus)
-        self.assertEqual(loader.instance.root_dir, self.path)
 
     def test_from_plugin_loader(self):
         bus = FakeBus()
