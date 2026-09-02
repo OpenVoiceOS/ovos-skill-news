@@ -5,11 +5,14 @@ from langcodes import closest_match
 from json_database import JsonStorage
 from ovos_utils import classproperty
 from ovos_utils.lang import standardize_lang_tag
+from ovos_utils.log import log_deprecation
 from ovos_utils.ocp import MediaType, PlaybackType, Playlist, PluginStream, dict2entry, MediaEntry
 from ovos_utils.parse import match_one, MatchStrategy
 from ovos_utils.process_utils import RuntimeRequirements
 from ovos_workshop.decorators import ocp_search, ocp_featured_media, intent_handler
 from ovos_workshop.skills.common_play import OVOSCommonPlaybackSkill
+
+from version import VERSION_MAJOR
 
 
 # Unified News Skill
@@ -29,6 +32,11 @@ class NewsSkill(OVOSCommonPlaybackSkill):
     }
 
     def __init__(self, *args, **kwargs):
+        log_deprecation("ovos-skill-news is deprecated and will be replaced by "
+                         "ovos-media-provider-news once the OCP pipeline's "
+                         "MediaProvider dispatch becomes the default search path "
+                         "— install that MediaProvider plugin instead",
+                         deprecation_version=f"{VERSION_MAJOR + 1}.0.0")
         self.default_bg = join(dirname(__file__), "res", "bg.jpg")
         self.archive = JsonStorage(f"{dirname(__file__)}/News.json")
         super().__init__(supported_media=[MediaType.NEWS, MediaType.GENERIC],
