@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.10a4](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.10a4) (2026-09-02)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.10a3...0.4.10a4)
+
+**Merged pull requests:**
+
+- Unify news and global\_news into one dispatching intent [\#152](https://github.com/OpenVoiceOS/ovos-skill-news/pull/152) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.4.10a3](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.10a3) (2026-09-02)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.10a2...0.4.10a3)
