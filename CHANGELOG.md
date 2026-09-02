@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.10a3](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.10a3) (2026-09-02)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.10a2...0.4.10a3)
+
+**Merged pull requests:**
+
+- docs: deprecation notice — superseded by MediaProvider plugins [\#140](https://github.com/OpenVoiceOS/ovos-skill-news/pull/140) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.4.10a2](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.10a2) (2026-09-02)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.10a1...0.4.10a2)
