@@ -304,43 +304,25 @@ class NewsSkill(OVOSCommonPlaybackSkill):
     @intent_handler("news.intent")
     def handle_play_the_news(self, message):
         """
-        Handles the user intent to play local news and initiates playback of the most relevant news stream.
-        
-        Analyzes the user's utterance for language preferences, searches for matching local news entries, ranks them by relevance, and plays the top result. If no suitable news is found, notifies the user with an error dialog.
+        Handles the user intent to play news, dispatching between global and
+        local coverage based on the wording of the utterance.
+
+        If the utterance matches ``global.voc`` (eg. "world", "global",
+        "international", "worldwide") global news entries are searched,
+        otherwise local news entries are searched. Analyzes the user's
+        utterance for language preferences, ranks the matching entries by
+        relevance, and plays the top result. If no suitable news is found,
+        notifies the user with an error dialog.
         """
         utterance = message.data["utterance"]
         self.acknowledge()  # short sound to know we are searching news
-        langs = self.match_lang(utterance) or self.native_langs # user may request specific lang
+        is_global = self.voc_match(utterance, "global")
+        langs = self.match_lang(utterance)  # user may request specific lang
+        if not is_global:
+            langs = langs or self.native_langs
         # create a playlist with results sorted by relevance
         results = []
-        for v in self.read_db(local_only=True, langs=langs):
-            s = self._score(utterance, v, base_score=30, langs=langs)
-            if s <= 50:
-                continue
-            v = dict2entry(v)
-            v.match_confidence = min(100, s)
-            results.append(v)
-
-        if not results:
-            self.speak_dialog("news.error")
-        else:
-            self.play_media(media=results[0],
-                            disambiguation=results,
-                            playlist=results)
-
-    @intent_handler("global_news.intent")
-    def handle_global_news(self, message):
-        """
-        Handles the user intent to play global or world news.
-        
-        Detects requested languages from the user's utterance, retrieves relevant world news entries, scores them for relevance, and plays the top result. If no suitable news entries are found, notifies the user with an error dialog.
-        """
-        utterance = message.data["utterance"]
-        self.acknowledge()  # short sound to know we are searching news
-        langs = self.match_lang(utterance) # user may request specific lang
-        # create a playlist with results sorted by relevance
-        results = []
-        for v in self.read_db(world_only=True, langs=langs):
+        for v in self.read_db(world_only=is_global, local_only=not is_global, langs=langs):
             # NOTE: if langs is None then all languages are considered equally
             s = self._score(utterance, v, base_score=30, langs=langs)
             if s <= 50:
