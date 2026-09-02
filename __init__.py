@@ -5,11 +5,14 @@ from langcodes import closest_match
 from json_database import JsonStorage
 from ovos_utils import classproperty
 from ovos_utils.lang import standardize_lang_tag
+from ovos_utils.log import log_deprecation
 from ovos_utils.ocp import MediaType, PlaybackType, Playlist, PluginStream, dict2entry, MediaEntry
 from ovos_utils.parse import match_one, MatchStrategy
 from ovos_utils.process_utils import RuntimeRequirements
 from ovos_workshop.decorators import ocp_search, ocp_featured_media, intent_handler
 from ovos_workshop.skills.common_play import OVOSCommonPlaybackSkill
+
+from version import VERSION_MAJOR
 
 
 # Unified News Skill
@@ -29,6 +32,11 @@ class NewsSkill(OVOSCommonPlaybackSkill):
     }
 
     def __init__(self, *args, **kwargs):
+        log_deprecation("ovos-skill-news is deprecated and will be replaced by "
+                         "ovos-media-provider-news once the OCP pipeline's "
+                         "MediaProvider dispatch becomes the default search path "
+                         "— install that MediaProvider plugin instead",
+                         deprecation_version=f"{VERSION_MAJOR + 1}.0.0")
         self.default_bg = join(dirname(__file__), "res", "bg.jpg")
         self.archive = JsonStorage(f"{dirname(__file__)}/News.json")
         super().__init__(supported_media=[MediaType.NEWS, MediaType.GENERIC],
@@ -304,43 +312,25 @@ class NewsSkill(OVOSCommonPlaybackSkill):
     @intent_handler("news.intent")
     def handle_play_the_news(self, message):
         """
-        Handles the user intent to play local news and initiates playback of the most relevant news stream.
-        
-        Analyzes the user's utterance for language preferences, searches for matching local news entries, ranks them by relevance, and plays the top result. If no suitable news is found, notifies the user with an error dialog.
+        Handles the user intent to play news, dispatching between global and
+        local coverage based on the wording of the utterance.
+
+        If the utterance matches ``global.voc`` (eg. "world", "global",
+        "international", "worldwide") global news entries are searched,
+        otherwise local news entries are searched. Analyzes the user's
+        utterance for language preferences, ranks the matching entries by
+        relevance, and plays the top result. If no suitable news is found,
+        notifies the user with an error dialog.
         """
         utterance = message.data["utterance"]
         self.acknowledge()  # short sound to know we are searching news
-        langs = self.match_lang(utterance) or self.native_langs # user may request specific lang
+        is_global = self.voc_match(utterance, "global")
+        langs = self.match_lang(utterance)  # user may request specific lang
+        if not is_global:
+            langs = langs or self.native_langs
         # create a playlist with results sorted by relevance
         results = []
-        for v in self.read_db(local_only=True, langs=langs):
-            s = self._score(utterance, v, base_score=30, langs=langs)
-            if s <= 50:
-                continue
-            v = dict2entry(v)
-            v.match_confidence = min(100, s)
-            results.append(v)
-
-        if not results:
-            self.speak_dialog("news.error")
-        else:
-            self.play_media(media=results[0],
-                            disambiguation=results,
-                            playlist=results)
-
-    @intent_handler("global_news.intent")
-    def handle_global_news(self, message):
-        """
-        Handles the user intent to play global or world news.
-        
-        Detects requested languages from the user's utterance, retrieves relevant world news entries, scores them for relevance, and plays the top result. If no suitable news entries are found, notifies the user with an error dialog.
-        """
-        utterance = message.data["utterance"]
-        self.acknowledge()  # short sound to know we are searching news
-        langs = self.match_lang(utterance) # user may request specific lang
-        # create a playlist with results sorted by relevance
-        results = []
-        for v in self.read_db(world_only=True, langs=langs):
+        for v in self.read_db(world_only=is_global, local_only=not is_global, langs=langs):
             # NOTE: if langs is None then all languages are considered equally
             s = self._score(utterance, v, base_score=30, langs=langs)
             if s <= 50:
