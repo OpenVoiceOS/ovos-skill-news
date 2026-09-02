@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.10a2](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.10a2) (2026-09-02)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.10a1...0.4.10a2)
+
+**Merged pull requests:**
+
+- test: add golden-utterance e2e coverage for news/global\_news intents [\#151](https://github.com/OpenVoiceOS/ovos-skill-news/pull/151) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.4.10a1](https://github.com/OpenVoiceOS/ovos-skill-news/tree/0.4.10a1) (2026-08-26)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-news/compare/0.4.9a4...0.4.10a1)
